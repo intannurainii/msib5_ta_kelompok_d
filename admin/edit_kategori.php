@@ -99,46 +99,25 @@
 			</div>
 
             <!-- Kategori -->
-            <div class="container" style="margin-top:30px">
-                <div class="row">
-                    <div class="col-md-8">
-                        <?php
-                        include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT * FROM kategori ORDER BY id_kategori ASC");
-                        ?>
+            <?php
+            include '../koneksi.php';
 
-                        <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_kategori.php"> Tambah Kategori </a>
+            $kategori = mysqli_query($conn,"SELECT * from kategori where id_kategori='$_GET[id_kategori]'");
 
-                        <table id="data-produk" class="table table-striped table-bordered">
-                            <thead>
-                                <tr style="text-align:center">
-                                    <th style="width:50px">No</th>
-                                    <th>Nama Kategori</th>
-                                    <th style="width:140px">Aksi</th>
-                                </tr>
-                            </thead>
+            while($k = mysqli_fetch_array($kategori)){
+                $id_kategori = $k["id_kategori"];
+                $nama_kategori = $k["nama_kategori"];
+            }
+            ?>
 
-                            <tbody>
-                                <?php 
-                                if(mysqli_num_rows($query)>0){ 
-                                $no = 1;
-                                while($data = mysqli_fetch_array($query)){
-                                ?>
-                                
-                                <tr>
-                                    <td><?php echo $no ?></td>
-                                    <td><?php echo $data["nama_kategori"] ?></td>
-                                    <td> <a href="edit_kategori.php?id_kategori=<?php echo $data["id_kategori"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
-                                    <a href="proses_hapus_kategori.php?id_kategori=<?php echo $data["id_kategori"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
-                                </tr>
-
-                                <?php  $no++; } ?>
-                                <?php } ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+            <form action="proses_edit_kategori.php?id_kategori=<?php echo $id_kategori ?>" method="post" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
+                <h3 style="padding-top:10px; padding-bottom:15px"><center>Edit Kategori</center></h3>
+                
+                <label class="form-label">Nama Kategori</label>
+                <input type="text" name="nama_kategori" class="form-control" value="<?php echo $nama_kategori ?>">
+                    
+                <input class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px" onclick="return confirm('Simpan perubahan data?')">
+            </form>
         </main>
 	</section>
 </body>
