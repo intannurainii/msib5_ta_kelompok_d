@@ -29,13 +29,13 @@
 					<span class="text">Berita</span>
 				</a>
 			</li>
-			<li id="active">
+			<li>
 				<a href="kategori.php" class="nav-link">
 					<i class='bx bxs-category'></i>
 					<span class="text">Kategori</span>
 				</a>
 			</li>
-			<li>
+			<li id="active">
 				<a href="penulis.php" class="nav-link">
 					<i class='bx bxs-user'></i>
 					<span class="text">Penulis</span>
@@ -92,29 +92,31 @@
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a id="active" href="#" class="nav-link">Kategori</a>
+							<a id="active" href="#" class="nav-link">Penulis</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 
-            <!-- Kategori -->
+            <!-- Penulis -->
             <div class="container" style="margin-top:30px">
                 <div class="row">
                     <div class="col-md-8">
                         <?php
                         include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT * FROM kategori ORDER BY id_kategori ASC");
+                        $query = mysqli_query($conn, "SELECT * FROM penulis ORDER BY id_penulis ASC");
                         ?>
 
-                        <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_kategori.php"> Tambah Kategori </a>
+                        <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_penulis.php"> Tambah Penulis </a>
 
-                        <table id="data-kategori" class="table table-striped table-bordered">
+                        <table id="data-penulis" class="table table-striped table-bordered">
                             <thead>
                                 <tr style="text-align:center">
                                     <th style="width:50px">No</th>
-                                    <th>Nama Kategori</th>
-                                    <th style="width:140px">Aksi</th>
+                                    <th>Nama Penulis</th>
+                                    <th>Email</th>
+                                    <th>Foto Profil</th>
+                                    <th style="width:135px">Aksi</th>
                                 </tr>
                             </thead>
 
@@ -127,9 +129,11 @@
                                 
                                 <tr>
                                     <td><?php echo $no ?></td>
-                                    <td><?php echo $data["nama_kategori"] ?></td>
-                                    <td> <a href="edit_kategori.php?id_kategori=<?php echo $data["id_kategori"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
-                                    <a href="proses_hapus_kategori.php?id_kategori=<?php echo $data["id_kategori"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
+                                    <td><?php echo $data["nama_penulis"] ?></td>
+                                    <td><?php echo $data["email_penulis"] ?></td>
+                                    <td> <img src="<?php echo $data["foto_profil"] ?>" width="100px"> </td>
+                                    <td> <a href="edit_penulis.php?id_penulis=<?php echo $data["id_penulis"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
+                                    <a href="proses_hapus_penulis.php?id_penulis=<?php echo $data["id_penulis"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
                                 </tr>
 
                                 <?php  $no++; } ?>

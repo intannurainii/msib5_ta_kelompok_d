@@ -19,7 +19,7 @@
 		<ul class="side-menu top">
 			<li id="active">
 				<a href="index.php" class="nav-link">
-					<i class='bx bxs-dashboard' ></i>
+					<i class='bx bxs-home' ></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
@@ -77,7 +77,7 @@
 				<span class="num">8</span>
 			</a>
 			<a href="#" class="profile">
-				<img src="img/people.png">
+				<img src="../img/user.png">
 			</a>
 		</nav>
 
@@ -102,21 +102,39 @@
 				<li>
 					<i class='bx bxs-news'></i>
 					<span class="text">
-						<h3>0</h3>
+						<?php
+                        include '../koneksi.php';
+                        $data_berita = mysqli_query($conn, "SELECT * FROM berita");
+						$jumlah_berita = mysqli_num_rows($data_berita);
+                        ?>
+
+						<h3><?php echo $jumlah_berita; ?></h3>
 						<p>Berita</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-category'></i>
 					<span class="text">
-						<h3>0</h3>
+						<?php
+                        include '../koneksi.php';
+                        $data_kategori = mysqli_query($conn, "SELECT * FROM kategori");
+						$jumlah_kategori = mysqli_num_rows($data_kategori);
+                        ?>
+						
+						<h3><?php echo $jumlah_kategori; ?></h3>
 						<p>Kategori</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-user'></i>
 					<span class="text">
-						<h3>0</h3>
+						<?php
+                        include '../koneksi.php';
+                        $data_penulis = mysqli_query($conn, "SELECT * FROM penulis");
+						$jumlah_penulis = mysqli_num_rows($data_penulis);
+                        ?>
+						
+						<h3><?php echo $jumlah_penulis; ?></h3>
 						<p>Penulis</p>
 					</span>
 				</li>
@@ -125,5 +143,6 @@
 		</main>
 	</section>
 </body>
+<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>

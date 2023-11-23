@@ -19,7 +19,7 @@
 		<ul class="side-menu top">
 			<li>
 				<a href="index.php" class="nav-link">
-					<i class='bx bxs-dashboard' ></i>
+					<i class='bx bxs-home' ></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
@@ -77,7 +77,7 @@
 				<span class="num">8</span>
 			</a>
 			<a href="#" class="profile">
-				<img src="img/people.png">
+				<img src="../img/user.png">
 			</a>
 		</nav>
 
@@ -114,5 +114,6 @@
         </main>
 	</section>
 </body>
+<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>

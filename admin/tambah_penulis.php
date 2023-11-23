@@ -29,13 +29,13 @@
 					<span class="text">Berita</span>
 				</a>
 			</li>
-			<li id="active">
+			<li>
 				<a href="kategori.php" class="nav-link">
 					<i class='bx bxs-category'></i>
 					<span class="text">Kategori</span>
 				</a>
 			</li>
-			<li>
+			<li id="active">
 				<a href="penulis.php" class="nav-link">
 					<i class='bx bxs-user'></i>
 					<span class="text">Penulis</span>
@@ -92,53 +92,31 @@
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a id="active" href="#" class="nav-link">Kategori</a>
+							<a id="active" href="#" class="nav-link">Penulis</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 
-            <!-- Kategori -->
-            <div class="container" style="margin-top:30px">
-                <div class="row">
-                    <div class="col-md-8">
-                        <?php
-                        include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT * FROM kategori ORDER BY id_kategori ASC");
-                        ?>
+            <!-- Penulis -->
+            <?php
+            include '../koneksi.php';
+            ?>
 
-                        <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_kategori.php"> Tambah Kategori </a>
+            <form action="proses_tambah_penulis.php" method="post" name="form" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
+                <h3 style="padding-top:10px; padding-bottom:15px"><center>Tambah Penulis</center></h3>
 
-                        <table id="data-kategori" class="table table-striped table-bordered">
-                            <thead>
-                                <tr style="text-align:center">
-                                    <th style="width:50px">No</th>
-                                    <th>Nama Kategori</th>
-                                    <th style="width:140px">Aksi</th>
-                                </tr>
-                            </thead>
+                <label class="form-label">Nama Penulis</label>
+                <input id="nama_penulis" type="text" onkeyup="checkform()" name="nama_penulis" class="form-control">
 
-                            <tbody>
-                                <?php 
-                                if(mysqli_num_rows($query)>0){ 
-                                $no = 1;
-                                while($data = mysqli_fetch_array($query)){
-                                ?>
-                                
-                                <tr>
-                                    <td><?php echo $no ?></td>
-                                    <td><?php echo $data["nama_kategori"] ?></td>
-                                    <td> <a href="edit_kategori.php?id_kategori=<?php echo $data["id_kategori"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
-                                    <a href="proses_hapus_kategori.php?id_kategori=<?php echo $data["id_kategori"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
-                                </tr>
-
-                                <?php  $no++; } ?>
-                                <?php } ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+                <label class="form-label">Email</label>
+                <input id="email_penulis" type="text" onkeyup="checkform()" name="email_penulis" class="form-control">
+                
+                <label class="form-label">Foto Profil</label>
+                <input id="fileToUpload" type="file" onkeyup="checkform()" name="fileToUpload" class="form-control">
+                
+                <input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
+            </form>
         </main>
 	</section>
 </body>
