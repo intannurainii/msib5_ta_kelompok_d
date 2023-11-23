@@ -3179,10 +3179,10 @@ figcaption {
 .contact-item {
 	padding: 3px 0; }
 
-.contact-name,
+/* .contact-name,
 .contact-email,
 .contact-subject {
-	max-width: 266px; }
+	max-width: 100%; } */
 
 /*-------------------------------------------------------*/
 /* 404
