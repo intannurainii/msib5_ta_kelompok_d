@@ -92,7 +92,7 @@
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a id="active" href="#" class="nav-link">Kategori</a>
+							<a id="active" href="#" class="nav-link">Berita</a>
 						</li>
 					</ul>
 				</div>
