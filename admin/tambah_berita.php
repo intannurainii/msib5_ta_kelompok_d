@@ -99,31 +99,66 @@
 			</div>
 
             <!-- berita -->
-            <?php
-            include '../koneksi.php';
-            ?>
+			<?php
+			include '../koneksi.php';
 
-            <form action="proses_tambah_berita.php" method="post" name="form" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
-                <h3 style="padding-top:10px; padding-bottom:15px"><center>Tambah Berita</center></h3>
+			// Mendapatkan daftar kategori
+			$query_kategori = "SELECT id_kategori, nama_kategori FROM kategori";
+			$result_kategori = mysqli_query($conn, $query_kategori);
 
-                <label class="form-label">Judul Berita</label>
-                <input id="judul_berita" type="text" onkeyup="checkform()" name="judul_berita" class="form-control">
-                <label class="form-label">Gambar</label>
-                <input id="gambar_berita" type="file" onkeyup="checkform()" name="gambar_berita" class="form-control">
-                <label class="form-label"> ID Kategori</label>
-                <input id="id_kategori" type="text" onkeyup="checkform()" name="id_kategori" class="form-control">
-                <label class="form-label">Content</label>
-                <input id="isi_berita" type="text" onkeyup="checkform()" name="isi_berita" class="form-control">
-                <label class="form-label">Tanggal Publish</label>
-                <input id="tanggal_publish" type="date" onkeyup="checkform()" name="tanggal_publish" class="form-control">
-                <label class="form-label">ID Penulis</label>
-                <input id="id_penulis" type="text" onkeyup="checkform()" name="id_penulis" class="form-control">
-                <label class="form-label">ID Komen</label>
-                <input id="id_komen" type="text" onkeyup="checkform()" name="id_komen" class="form-control">
+			// Mendapatkan daftar penulis
+			$query_penulis = "SELECT id_penulis, nama_penulis FROM penulis";
+			$result_penulis = mysqli_query($conn, $query_penulis);
 
-                
-                <input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
-            </form>
+			// Mendapatkan daftar komen
+			$query_komen = "SELECT id_komen, nama FROM komen";
+			$result_komen = mysqli_query($conn, $query_komen);
+			?>
+
+			<form action="proses_tambah_berita.php" method="post" name="form" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
+				<h3 style="padding-top:10px; padding-bottom:15px"><center>Tambah Berita</center></h3>
+
+				<label class="form-label">Judul Berita</label>
+				<input id="judul_berita" type="text" onkeyup="checkform()" name="judul_berita" class="form-control">
+
+				<label class="form-label">Gambar</label>
+				<input id="fileToUpload" type="file" onkeyup="checkform()"  name="fileToUpload"  class="form-control">
+
+				<label class="form-label">Kategori</label>
+				<select id="id_kategori" name="id_kategori" class="form-control">
+					<?php
+					while ($row_kategori = mysqli_fetch_assoc($result_kategori)) {
+						echo "<option value='{$row_kategori['id_kategori']}'>{$row_kategori['nama_kategori']}</option>";
+					}
+					?>
+				</select>
+
+				<label class="form-label">Content</label>
+				<input id="isi_berita" type="text" onkeyup="checkform()" name="isi_berita" class="form-control">
+
+				<label class="form-label">Tanggal Publish</label>
+				<input id="tanggal_publish" type="date" onkeyup="checkform()" name="tanggal_publish" class="form-control">
+
+				<label class="form-label">Penulis</label>
+				<select id="id_penulis" name="id_penulis" class="form-control">
+					<?php
+					while ($row_penulis = mysqli_fetch_assoc($result_penulis)) {
+						echo "<option value='{$row_penulis['id_penulis']}'>{$row_penulis['nama_penulis']}</option>";
+					}
+					?>
+				</select>
+
+				<label class="form-label">Komen</label>
+				<select id="id_komen" name="id_komen" class="form-control">
+					<?php
+					while ($row_komen = mysqli_fetch_assoc($result_komen)) {
+						echo "<option value='{$row_komen['id_komen']}'>{$row_komen['nama']}</option>";
+					}
+					?>
+				</select>
+
+				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
+			</form>
         </main>
 	</section>
 </body>
