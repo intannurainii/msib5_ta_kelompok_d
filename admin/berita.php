@@ -44,12 +44,6 @@
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#" class="nav-link">
-					<i class='bx bxs-cog' ></i>
-					<span class="text">Settings</span>
-				</a>
-			</li>
-			<li>
 				<a href="#" class="nav-link" id="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
@@ -62,22 +56,8 @@
 	<section id="content">
 		<!-- Navbar -->
 		<nav>
-			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Categories</a>
-			<form action="#">
-				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-				</div>
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>
 			<a href="#" class="profile">
-				<img src="../img/user.png">
+				<img src="../img/user.png" style="margin-left:1000px">
 			</a>
 		</nav>
 
@@ -101,10 +81,10 @@
             <!-- berita -->
             <div class="container" style="margin-top:30px">
                 <div class="row">
-                    <div class="col-md-16">
+                    <div class="col-md-12">
                         <?php
                         include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis join komen as k on b.id_komen = k.id_komen");
+                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis join komen as k on b.id_berita = k.id_berita ");
                         ?>
 
                         <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_berita.php"> Tambah Berita </a>
@@ -112,15 +92,15 @@
                         <table id="data-produk" class="table table-striped table-bordered">
                             <thead>
                                 <tr style="text-align:center">
-                                    <th style="width:50px">No</th>
-                                    <th style="width:250px">Judul Berita</th>
+                                    <th>No</th>
+                                    <th>Judul Berita</th>
                                     <th>Gambar</th>
                                     <th>Kategori</th>
-                                    <th style="width:1000px">Content</th>
-                                    <th style="width:200px">Tanggal Publish</th>
+                                    <th>Content</th>
+                                    <th>Tanggal Publish</th>
                                     <th>Penulis</th>
                                     <th>Komen</th>
-                                    <th style="width:140px">Aksi</th>
+                                    <th style="width:135px">Aksi</th>
                                 </tr>
                             </thead>
 
@@ -134,14 +114,14 @@
                                 <tr>
                                     <td><?php echo $no ?></td>
                                     <td><?php echo $data["judul_berita"] ?></td>
-                                    <td> <img src="<?php echo $data["gambar_berita"] ?>" width="100px"> </td>
+                                    <td><img src="<?php echo $data["gambar_berita"] ?>" width="100px"></td>
                                     <td><?php echo $data["nama_kategori"] ?></td>
                                     <td><?php echo $data["isi_berita"] ?></td>
                                     <td><?php echo $data["tanggal_publish"] ?></td>
                                     <td><?php echo $data["nama_penulis"] ?></td>
                                     <td><?php echo $data["isi_komen"] ?></td>
                                     <td> <a href="edit_berita.php?id_berita=<?php echo $data["id_berita"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
-                                    <a href="proses_hapus_berita.php?id_berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
+                                    <a href="proses_hapus_berita.php?id_berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a></td>
                                 </tr>
 
                                 <?php  $no++; } ?>

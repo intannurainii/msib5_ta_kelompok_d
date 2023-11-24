@@ -23,13 +23,13 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
+			<li id="active">
 				<a href="berita.php" class="nav-link">
 					<i class='bx bxs-news'></i>
 					<span class="text">Berita</span>
 				</a>
 			</li>
-			<li id="active">
+			<li>
 				<a href="kategori.php" class="nav-link">
 					<i class='bx bxs-category'></i>
 					<span class="text">Kategori</span>
@@ -44,12 +44,6 @@
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#" class="nav-link">
-					<i class='bx bxs-cog' ></i>
-					<span class="text">Settings</span>
-				</a>
-			</li>
-			<li>
 				<a href="#" class="nav-link" id="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
@@ -62,22 +56,8 @@
 	<section id="content">
 		<!-- Navbar -->
 		<nav>
-			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Categories</a>
-			<form action="#">
-				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-				</div>
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>
 			<a href="#" class="profile">
-				<img src="img/people.png">
+				<img src="../img/user.png" style="margin-left:1000px">
 			</a>
 		</nav>
 
@@ -98,21 +78,17 @@
 				</div>
 			</div>
 
-            <!-- berita -->
+            <!-- Berita -->
 			<?php
 			include '../koneksi.php';
 
 			// Mendapatkan daftar kategori
-			$query_kategori = "SELECT id_kategori, nama_kategori FROM kategori";
+			$query_kategori = "SELECT * FROM kategori";
 			$result_kategori = mysqli_query($conn, $query_kategori);
 
 			// Mendapatkan daftar penulis
-			$query_penulis = "SELECT id_penulis, nama_penulis FROM penulis";
+			$query_penulis = "SELECT * FROM penulis";
 			$result_penulis = mysqli_query($conn, $query_penulis);
-
-			// Mendapatkan daftar komen
-			$query_komen = "SELECT id_komen, nama FROM komen";
-			$result_komen = mysqli_query($conn, $query_komen);
 			?>
 
 			<form action="proses_tambah_berita.php" method="post" name="form" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
@@ -125,10 +101,14 @@
 				<input id="fileToUpload" type="file" onkeyup="checkform()"  name="fileToUpload"  class="form-control">
 
 				<label class="form-label">Kategori</label>
-				<select id="id_kategori" name="id_kategori" class="form-control">
+				<select id="kategori" name="kategori" class="form-control">
 					<?php
-					while ($row_kategori = mysqli_fetch_assoc($result_kategori)) {
-						echo "<option value='{$row_kategori['id_kategori']}'>{$row_kategori['nama_kategori']}</option>";
+					if(mysqli_num_rows($result_kategori)>0){
+						while($data = mysqli_fetch_array($result_kategori)){
+							echo "<option value='" . $data["id_kategori"] . "'>" . $data["nama_kategori"] . "</option>";
+						}
+					} else {
+						echo "<option value=''>No items available</option>";
 					}
 					?>
 				</select>
@@ -140,19 +120,14 @@
 				<input id="tanggal_publish" type="date" onkeyup="checkform()" name="tanggal_publish" class="form-control">
 
 				<label class="form-label">Penulis</label>
-				<select id="id_penulis" name="id_penulis" class="form-control">
+				<select id="penulis" name="penulis" class="form-control">
 					<?php
-					while ($row_penulis = mysqli_fetch_assoc($result_penulis)) {
-						echo "<option value='{$row_penulis['id_penulis']}'>{$row_penulis['nama_penulis']}</option>";
-					}
-					?>
-				</select>
-
-				<label class="form-label">Komen</label>
-				<select id="id_komen" name="id_komen" class="form-control">
-					<?php
-					while ($row_komen = mysqli_fetch_assoc($result_komen)) {
-						echo "<option value='{$row_komen['id_komen']}'>{$row_komen['nama']}</option>";
+					if(mysqli_num_rows($result_penulis)>0){
+						while($data = mysqli_fetch_array($result_penulis)){
+							echo "<option value='" . $data["id_penulis"] . "'>" . $data["nama_penulis"] . "</option>";
+						}
+					} else {
+						echo "<option value=''>No items available</option>";
 					}
 					?>
 				</select>
