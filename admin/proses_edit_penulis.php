@@ -23,3 +23,4 @@ $result = mysqli_query($conn, "UPDATE `penulis` set `nama_penulis` = '$nama_penu
 header("Location:penulis.php");
 
 ?>
+

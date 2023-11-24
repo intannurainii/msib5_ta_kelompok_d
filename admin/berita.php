@@ -84,7 +84,7 @@
                     <div class="col-md-12">
                         <?php
                         include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis join komen as k on b.id_berita = k.id_berita ");
+                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis left join komen as k on b.id_berita = k.id_berita ");
                         ?>
 
                         <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_berita.php"> Tambah Berita </a>
