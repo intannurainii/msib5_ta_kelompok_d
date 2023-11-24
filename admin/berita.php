@@ -44,12 +44,6 @@
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#" class="nav-link">
-					<i class='bx bxs-cog' ></i>
-					<span class="text">Settings</span>
-				</a>
-			</li>
-			<li>
 				<a href="#" class="nav-link" id="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
@@ -62,22 +56,8 @@
 	<section id="content">
 		<!-- Navbar -->
 		<nav>
-			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Categories</a>
-			<form action="#">
-				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-				</div>
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>
 			<a href="#" class="profile">
-				<img src="../img/user.png">
+				<img src="../img/user.png" style="margin-left:1000px">
 			</a>
 		</nav>
 
@@ -119,7 +99,6 @@
                                     <th style="width:1000px">Content</th>
                                     <th style="width:200px">Tanggal Publish</th>
                                     <th>Penulis</th>
-                                    <th>Komen</th>
                                     <th style="width:140px">Aksi</th>
                                 </tr>
                             </thead>
@@ -139,7 +118,6 @@
                                     <td><?php echo $data["isi_berita"] ?></td>
                                     <td><?php echo $data["tanggal_publish"] ?></td>
                                     <td><?php echo $data["nama_penulis"] ?></td>
-                                    <td><?php echo $data["nama"] ?></td>
                                     <td> <a href="edit_berita.php?id_berita=<?php echo $data["id_berita"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
                                     <a href="proses_hapus_berita.php?id_berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
                                 </tr>
