@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2023 at 03:37 PM
+-- Generation Time: Nov 23, 2023 at 02:17 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -47,16 +47,15 @@ CREATE TABLE `berita` (
   `id_kategori` int(11) NOT NULL,
   `isi_berita` text NOT NULL,
   `tanggal_publish` date NOT NULL,
-  `id_penulis` int(11) NOT NULL,
-  `id_komen` int(11) NOT NULL
+  `id_penulis` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `berita`
 --
 
-INSERT INTO `berita` (`id_berita`, `judul_berita`, `gambar_berita`, `id_kategori`, `isi_berita`, `tanggal_publish`, `id_penulis`, `id_komen`) VALUES
-(1, 'Indonesia Vs Vietnam', 'berita1.jpg', 1, 'indonesia merupakan negara yang saat ini', '2023-11-21', 1, 1);
+INSERT INTO `berita` (`id_berita`, `judul_berita`, `gambar_berita`, `id_kategori`, `isi_berita`, `tanggal_publish`, `id_penulis`) VALUES
+(1, 'Indonesia Vs Vietnam', '../img/indo.jpeg', 1, 'indonesia merupakan negara yang saat ini', '2023-11-21', 1);
 
 -- --------------------------------------------------------
 
@@ -86,6 +85,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
 
 CREATE TABLE `komen` (
   `id_komen` int(11) NOT NULL,
+  `id_berita` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `isi_komen` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -94,8 +94,9 @@ CREATE TABLE `komen` (
 -- Dumping data for table `komen`
 --
 
-INSERT INTO `komen` (`id_komen`, `nama`, `isi_komen`) VALUES
-(1, 'Eka Kurnia', 'bagus kok websitenya menarik');
+INSERT INTO `komen` (`id_komen`, `id_berita`, `nama`, `isi_komen`) VALUES
+(1, 1, 'Eka Kurnia', 'bagus kok websitenya menarik'),
+(2, 1, 'Winda Kurnia', 'nice website');
 
 -- --------------------------------------------------------
 
@@ -115,8 +116,10 @@ CREATE TABLE `penulis` (
 --
 
 INSERT INTO `penulis` (`id_penulis`, `nama_penulis`, `email_penulis`, `foto_profil`) VALUES
-(1, 'Dina Safitri', 'dinasaf@gmail.com', 'dina.jpg'),
-(2, 'Dewa Nugroho', 'dewa@gmail.com', 'dewa.jpg');
+(1, 'Dina Safitri', 'dinasaf@gmail.com', '../img/dina.png'),
+(2, 'Dewa Nugroho', 'dewa@gmail.com', '../img/dewa.png'),
+(3, 'Bagas Wijayanto', 'bagas@gmail.com', '../img/user.png'),
+(4, 'Sandra', 'sandra@gmail.com', '../img/dina.png');
 
 --
 -- Indexes for dumped tables
@@ -134,8 +137,7 @@ ALTER TABLE `admin`
 ALTER TABLE `berita`
   ADD PRIMARY KEY (`id_berita`),
   ADD KEY `id_kategori` (`id_kategori`),
-  ADD KEY `id_penulis` (`id_penulis`,`id_komen`),
-  ADD KEY `id_komen` (`id_komen`);
+  ADD KEY `id_penulis` (`id_penulis`);
 
 --
 -- Indexes for table `kategori`
@@ -147,7 +149,8 @@ ALTER TABLE `kategori`
 -- Indexes for table `komen`
 --
 ALTER TABLE `komen`
-  ADD PRIMARY KEY (`id_komen`);
+  ADD PRIMARY KEY (`id_komen`),
+  ADD KEY `id_berita` (`id_berita`);
 
 --
 -- Indexes for table `penulis`
@@ -181,13 +184,13 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `komen`
 --
 ALTER TABLE `komen`
-  MODIFY `id_komen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_komen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `penulis`
 --
 ALTER TABLE `penulis`
-  MODIFY `id_penulis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_penulis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -197,9 +200,14 @@ ALTER TABLE `penulis`
 -- Constraints for table `berita`
 --
 ALTER TABLE `berita`
-  ADD CONSTRAINT `berita_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `berita_ibfk_2` FOREIGN KEY (`id_penulis`) REFERENCES `penulis` (`id_penulis`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `berita_ibfk_3` FOREIGN KEY (`id_komen`) REFERENCES `komen` (`id_komen`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `berita_ibfk_3` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `komen`
+--
+ALTER TABLE `komen`
+  ADD CONSTRAINT `komen_ibfk_1` FOREIGN KEY (`id_berita`) REFERENCES `berita` (`id_berita`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

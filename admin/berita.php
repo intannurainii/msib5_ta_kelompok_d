@@ -113,7 +113,7 @@
                                 <tr>
                                     <td><?php echo $no ?></td>
                                     <td><?php echo $data["judul_berita"] ?></td>
-                                    <td> <img src="<?php echo $data["gambar_berita"] ?>" width="100px"> </td>
+                                    <td><img src="<?php echo $data["gambar_berita"] ?>" width="100px"> </td>
                                     <td><?php echo $data["nama_kategori"] ?></td>
                                     <td><?php echo $data["isi_berita"] ?></td>
                                     <td><?php echo $data["tanggal_publish"] ?></td>
