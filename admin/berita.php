@@ -81,10 +81,10 @@
             <!-- berita -->
             <div class="container" style="margin-top:30px">
                 <div class="row">
-                    <div class="col-md-16">
+                    <div class="col-md-12">
                         <?php
                         include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis join komen as k on b.id_komen = k.id_komen");
+                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis ORDER BY id_berita ASC");
                         ?>
 
                         <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_berita.php"> Tambah Berita </a>
@@ -92,14 +92,14 @@
                         <table id="data-produk" class="table table-striped table-bordered">
                             <thead>
                                 <tr style="text-align:center">
-                                    <th style="width:50px">No</th>
-                                    <th style="width:250px">Judul Berita</th>
+                                    <th>No</th>
+                                    <th>Judul Berita</th>
                                     <th>Gambar</th>
                                     <th>Kategori</th>
-                                    <th style="width:1000px">Content</th>
-                                    <th style="width:200px">Tanggal Publish</th>
+                                    <th>Content</th>
+                                    <th>Tanggal Publish</th>
                                     <th>Penulis</th>
-                                    <th style="width:140px">Aksi</th>
+                                    <th style="width:135px">Aksi</th>
                                 </tr>
                             </thead>
 
@@ -113,13 +113,13 @@
                                 <tr>
                                     <td><?php echo $no ?></td>
                                     <td><?php echo $data["judul_berita"] ?></td>
-                                    <td><img src="<?php echo $data["gambar_berita"] ?>" width="100px"> </td>
+                                    <td><img src="<?php echo $data["gambar_berita"] ?>" width="100px"></td>
                                     <td><?php echo $data["nama_kategori"] ?></td>
                                     <td><?php echo $data["isi_berita"] ?></td>
                                     <td><?php echo $data["tanggal_publish"] ?></td>
                                     <td><?php echo $data["nama_penulis"] ?></td>
                                     <td> <a href="edit_berita.php?id_berita=<?php echo $data["id_berita"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
-                                    <a href="proses_hapus_berita.php?id_berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
+                                    <a href="proses_hapus_berita.php?id_berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a></td>
                                 </tr>
 
                                 <?php  $no++; } ?>

@@ -23,13 +23,13 @@
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
+			<li id="active">
 				<a href="berita.php" class="nav-link">
 					<i class='bx bxs-news'></i>
 					<span class="text">Berita</span>
 				</a>
 			</li>
-			<li id="active">
+			<li>
 				<a href="kategori.php" class="nav-link">
 					<i class='bx bxs-category'></i>
 					<span class="text">Kategori</span>
