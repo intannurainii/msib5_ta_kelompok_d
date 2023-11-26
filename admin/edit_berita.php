@@ -105,7 +105,6 @@ if ($data = mysqli_fetch_assoc($result)) {
     $nama_penulis = $data['nama_penulis'];
     $isi_komen = $data['isi_komen'];
 
-    // Menampilkan formulir edit
     ?>
 
 <form action="proses_edit_berita.php?id_berita=<?php echo $id_berita ?>" method="post" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
@@ -153,7 +152,7 @@ if ($data = mysqli_fetch_assoc($result)) {
             ?>
         </select> 
 		<label class="form-label">Komen</label>
-				<input id="isi_komen" type="text" onkeyup="checkform()" name="isi_komen" class="form-control" value="<?php echo $isi_komen; ?>">
+				<input id="isi_komen" type="text"  name="isi_komen" class="form-control" disabled value="<?php echo $isi_komen; ?>">
 
 				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
         </form>
