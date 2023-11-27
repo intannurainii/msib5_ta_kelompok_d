@@ -47,7 +47,7 @@
     </div> <!-- end top bar -->
 
     <!-- Navigation -->
-<?php include "navbar.php" ?>
+    <?php include "navbar.php" ?>
     <!-- end navigation -->
 
 
@@ -275,14 +275,15 @@
               $query = "SELECT * FROM `kategori`";
               $sql = mysqli_query($conn, $query);
               while ($result = mysqli_fetch_array($sql)) {
-                $nama_kategori_atas = $result['nama_kategori'];
+                $nama_kategori_group = $result['nama_kategori'];
               ?>
-                <div class="tabs__content-pane" id="tab-<?php echo $nama_kategori_atas ?>">
+                <div class="tabs__content-pane" id="tab-<?php echo $nama_kategori_group ?>">
+                <div class="row card-row">
                   <?php
                   $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
                      LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis 
-                     WHERE kategori.nama_kategori = '$nama_kategori_atas'";
+                     WHERE kategori.nama_kategori = '$nama_kategori_group'";
                   $sql_berita = mysqli_query($conn, $query_berita);
                   while ($result_berita = mysqli_fetch_array($sql_berita)) {
                     $judul_berita = $result_berita['judul_berita'];
@@ -292,13 +293,12 @@
                     $gambar_berita = $result_berita['gambar_berita'];
                     $isi_berita = $result_berita['isi_berita'];
                   ?>
-                    <div class="row card-row">
                       <div class="col-md-6">
                         <article class="entry card">
                           <div class="entry__img-holder card__img-holder">
                             <a href="single-post.html">
                               <div class="thumb-container thumb-70">
-                                <img data-src="<?php echo $gambar_berita ?>" src="img/empty.png" class="entry__img lazyload" alt="" />
+                                <img data-src="<?php echo $gambar_berita ?>" src="<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
                               </div>
                             </a>
                             <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange"><?php echo $nama_kategori ?></a>
@@ -324,10 +324,10 @@
                           </div>
                         </article>
                       </div>
-                    </div>
-                  <?php
+                      <?php
                   }
                   ?>
+                  </div>
                 </div> <!-- end pane for current category -->
               <?php
               }
