@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Deus | Single Post</title>
 
@@ -35,325 +36,12 @@
       <div></div>
     </div>
   </div>
-  
+
   <!-- Bg Overlay -->
   <div class="content-overlay"></div>
-
-  <!-- Sidenav -->    
-  <header class="sidenav" id="sidenav">
-
-    <!-- close -->
-    <div class="sidenav__close">
-      <button class="sidenav__close-button" id="sidenav__close-button" aria-label="close sidenav">
-        <i class="ui-close sidenav__close-icon"></i>
-      </button>
-    </div>
-    
-    <!-- Nav -->
-    <nav class="sidenav__menu-container">
-      <ul class="sidenav__menu" role="menubar">
-        <li>
-          <a href="#" class="sidenav__menu-url">Home</a>
-          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-          <ul class="sidenav__menu-dropdown">
-            <li><a href="index.html" class="sidenav__menu-url">Home Default</a></li>
-            <li><a href="index-politics.html" class="sidenav__menu-url">Home Politics</a></li>
-            <li><a href="index-fashion.html" class="sidenav__menu-url">Home Fashion</a></li>
-            <li><a href="index-games.html" class="sidenav__menu-url">Home Games</a></li>
-            <li><a href="index-videos.html" class="sidenav__menu-url">Home Videos</a></li>
-            <li><a href="index-music.html" class="sidenav__menu-url">Home Music</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Pages</a>
-          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-          <ul class="sidenav__menu-dropdown">
-            <li><a href="about.html" class="sidenav__menu-url">About</a></li>
-            <li><a href="contact.html" class="sidenav__menu-url">Contact</a></li>
-            <li><a href="search-results.html" class="sidenav__menu-url">Search Results</a></li>
-            <li><a href="categories.html" class="sidenav__menu-url">Categories</a></li>
-            <li><a href="404.html" class="sidenav__menu-url">404</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Features</a>
-          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-          <ul class="sidenav__menu-dropdown">
-            <li>
-              <a href="#" class="sidenav__menu-url">Single Post</a>
-              <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-              <ul class="sidenav__menu-dropdown">
-                <li><a href="single-post.html" class="sidenav__menu-url">Style 1</a></li>
-                <li><a href="single-post-politics.html" class="sidenav__menu-url">Style 2</a></li>
-                <li><a href="single-post-fashion.html" class="sidenav__menu-url">Style 3</a></li>
-                <li><a href="single-post-games.html" class="sidenav__menu-url">Style 4</a></li>
-                <li><a href="single-post-videos.html" class="sidenav__menu-url">Style 5</a></li>
-                <li><a href="single-post-music.html" class="sidenav__menu-url">Style 6</a></li>
-              </ul>
-            </li>
-            <li><a href="shortcodes.html" class="sidenav__menu-url">Shortcodes</a></li>
-          </ul>
-        </li>        
-
-        <!-- Categories -->
-        <li>
-          <a href="#" class="sidenav__menu-url">World</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Business</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Fashion</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Lifestyle</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Advertise</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="socials sidenav__socials"> 
-      <a class="social social-facebook" href="#" target="_blank" aria-label="facebook">
-        <i class="ui-facebook"></i>
-      </a>
-      <a class="social social-twitter" href="#" target="_blank" aria-label="twitter">
-        <i class="ui-twitter"></i>
-      </a>
-      <a class="social social-google-plus" href="#" target="_blank" aria-label="google">
-        <i class="ui-google"></i>
-      </a>
-      <a class="social social-youtube" href="#" target="_blank" aria-label="youtube">
-        <i class="ui-youtube"></i>
-      </a>
-      <a class="social social-instagram" href="#" target="_blank" aria-label="instagram">
-        <i class="ui-instagram"></i>
-      </a>
-    </div>
-  </header> <!-- end sidenav -->
-
-
   <main class="main oh" id="main">
-
-    <!-- Top Bar -->
-    <div class="top-bar d-none d-lg-block">
-      <div class="container">
-        <div class="row">
-
-          <!-- Top menu -->
-          <div class="col-lg-6">
-            <ul class="top-menu">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Advertise</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          
-          <!-- Socials -->
-          <div class="col-lg-6">
-            <div class="socials nav__socials socials--nobase socials--white justify-content-end"> 
-              <a class="social social-facebook" href="#" target="_blank" aria-label="facebook">
-                <i class="ui-facebook"></i>
-              </a>
-              <a class="social social-twitter" href="#" target="_blank" aria-label="twitter">
-                <i class="ui-twitter"></i>
-              </a>
-              <a class="social social-google-plus" href="#" target="_blank" aria-label="google">
-                <i class="ui-google"></i>
-              </a>
-              <a class="social social-youtube" href="#" target="_blank" aria-label="youtube">
-                <i class="ui-youtube"></i>
-              </a>
-              <a class="social social-instagram" href="#" target="_blank" aria-label="instagram">
-                <i class="ui-instagram"></i>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div> <!-- end top bar -->
-        
-
     <!-- Navigation -->
-    <header class="nav">
-
-      <div class="nav__holder nav--sticky">
-        <div class="container relative">
-          <div class="flex-parent">
-
-            <!-- Side Menu Button -->
-            <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu">
-              <span class="nav-icon-toggle__box">
-                <span class="nav-icon-toggle__inner"></span>
-              </span>
-            </button> 
-
-            <!-- Logo -->
-            <a href="index.html" class="logo">
-              <img class="logo__img" src="img/logo_default.png" srcset="img/logo_default.png 1x, img/logo_default@2x.png 2x" alt="logo">
-            </a>
-
-            <!-- Nav-wrap -->
-            <nav class="flex-child nav__wrap d-none d-lg-block">              
-              <ul class="nav__menu">
-
-                <li class="nav__dropdown active">
-                  <a href="index.html">Home</a>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="index.html">Home Default</a></li>
-                    <li><a href="index-politics.html">Home Politics</a></li>
-                    <li><a href="index-fashion.html">Home Fashion</a></li>
-                    <li><a href="index-games.html">Home Games</a></li>
-                    <li><a href="index-videos.html">Home Videos</a></li>
-                    <li><a href="index-music.html">Home Music</a></li>
-                  </ul>
-                </li>
-
-                <li class="nav__dropdown">
-                  <a href="#">Posts</a>
-                  <ul class="nav__dropdown-menu nav__megamenu">
-                    <li>
-                      <div class="nav__megamenu-wrap">
-                        <div class="row">
-
-                          <div class="col nav__megamenu-item">
-                            <article class="entry">
-                              <div class="entry__img-holder">
-                                <a href="single-post.html">
-                                  <img src="img/content/grid/grid_post_1.jpg" alt="" class="entry__img">
-                                </a>
-                                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">world</a>
-                              </div>
-
-                              <div class="entry__body">   
-                                <h2 class="entry__title">
-                                  <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                                </h2>
-                              </div>
-                            </article>
-                          </div>
-
-                          <div class="col nav__megamenu-item">
-                            <article class="entry">
-                              <div class="entry__img-holder">
-                                <a href="single-post.html">
-                                  <img src="img/content/grid/grid_post_2.jpg" alt="" class="entry__img">
-                                </a>
-                                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">fashion</a>
-                              </div>
-
-                              <div class="entry__body">   
-                                <h2 class="entry__title">
-                                  <a href="single-post.html">3 Things You Can Do to Get Your Customers Talking About Your Business</a>
-                                </h2>
-                              </div>
-                            </article>
-                          </div>
-
-                          <div class="col nav__megamenu-item">
-                            <article class="entry">
-                              <div class="entry__img-holder">
-                                <a href="single-post.html">
-                                  <img src="img/content/grid/grid_post_3.jpg" alt="" class="entry__img">
-                                </a>
-                                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--blue">business</a>
-                              </div>
-
-                              <div class="entry__body">   
-                                <h2 class="entry__title">
-                                  <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                                </h2>
-                              </div>
-                            </article>
-                          </div>
-
-                          <div class="col nav__megamenu-item">
-                            <article class="entry">
-                              <div class="entry__img-holder">
-                                <a href="single-post.html">
-                                  <img src="img/content/grid/grid_post_4.jpg" alt="" class="entry__img">
-                                </a>
-                                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green">lifestyle</a>
-                              </div>
-
-                              <div class="entry__body">   
-                                <h2 class="entry__title">
-                                  <a href="single-post.html">10 Horrible Habits You're Doing Right Now That Are Draining Your Energy</a>
-                                </h2>
-                              </div>
-                            </article>
-                          </div>
-
-                        </div>
-                      </div>
-                    </li>
-                  </ul> <!-- end megamenu -->
-                </li>
-
-                <li class="nav__dropdown">
-                  <a href="#">Pages</a>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="search-results.html">Search Results</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="404.html">404</a></li>
-                  </ul>
-                </li>                
-
-                <li class="nav__dropdown">
-                  <a href="#">Features</a>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="shortcodes.html">Shortcodes</a></li>
-                    <li class="nav__dropdown">
-                      <a href="#">Single Post</a>
-                      <ul class="nav__dropdown-menu">
-                        <li><a href="single-post.html">Style 1</a></li>
-                        <li><a href="single-post-politics.html">Style 2</a></li>
-                        <li><a href="single-post-fashion.html">Style 3</a></li>
-                        <li><a href="single-post-games.html">Style 4</a></li>
-                        <li><a href="single-post-videos.html">Style 5</a></li>
-                        <li><a href="single-post-music.html">Style 6</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="#">Purchase</a>
-                </li>
-
-
-              </ul> <!-- end menu -->
-            </nav> <!-- end nav-wrap -->
-
-            <!-- Nav Right -->
-            <div class="nav__right">
-
-              <!-- Search -->
-              <div class="nav__right-item nav__search">
-                <a href="#" class="nav__search-trigger" id="nav__search-trigger">
-                  <i class="ui-search nav__search-trigger-icon"></i>
-                </a>
-                <div class="nav__search-box" id="nav__search-box">
-                  <form class="nav__search-form">
-                    <input type="text" placeholder="Search an article" class="nav__search-input">
-                    <button type="submit" class="search-button btn btn-lg btn-color btn-button">
-                      <i class="ui-search nav__search-icon"></i>
-                    </button>
-                  </form>
-                </div>                
-              </div>             
-
-            </div> <!-- end nav right -->            
-        
-          </div> <!-- end flex-parent -->
-        </div> <!-- end container -->
-
-      </div>
-    </header> <!-- end navigation -->
+    <?php include "navbar.php" ?> <!-- end navigation -->
 
     <!-- Breadcrumbs -->
     <div class="container">
@@ -374,14 +62,14 @@
 
       <!-- Content -->
       <div class="row">
-            
+
         <!-- post content -->
         <div class="col-lg-8 blog__content mb-72">
-          <div class="content-box">           
+          <div class="content-box">
 
             <!-- standard post -->
             <article class="entry mb-0">
-              
+
               <div class="single-post__entry-header entry__header">
                 <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--green">Lifestyle</a>
                 <h1 class="single-post__entry-title">
@@ -436,7 +124,7 @@
                         <i class="ui-pinterest"></i>
                       </a>
                     </div>
-                  </div>                  
+                  </div>
                 </div> <!-- share -->
 
                 <div class="entry__article">
@@ -444,8 +132,9 @@
 
                   <p><strong>Think about it:</strong> If you make one additional ask per day and convert at around 10 percent. Then you have three people each month providing you with benefits that you'd have missed otherwise It's essential to make sure that your ask relates to some direct path to what you want, whether it is revenue, a business relationship or anything else of prime importance to you.</p>
 
-                  <blockquote><p>“Dreams and dedication are powerful combination.”</p>
-                  </blockquote>                          
+                  <blockquote>
+                    <p>“Dreams and dedication are powerful combination.”</p>
+                  </blockquote>
 
                   <p>Music can help you get into a “flow state” -- losing yourself in the task at hand. Even repetitive tasks or mundane assignments seem more bearable, or even fun, when your favorite tunes are in your ears.</p>
 
@@ -457,7 +146,7 @@
                       <img data-src="img/content/single/single_post_img_1.jpg" src="img/empty.png" alt="" class="lazyload">
                       <figcaption>Having specific asks</figcaption>
                     </a>
-                  </figure>             
+                  </figure>
 
                   <p>Nulla rhoncus orci varius purus lobortis euismod. Fusce tincidunt dictum est et rhoncus. <strong>Vivamus hendrerit congue nisi, et nisl tincida</strong> vestibulum elit tincidunt eu. Vivamus ac pharetra orci, in feugiat massa. Proin congue mauris pretium, ultricies tortor in, aliquam urna. Vivamus mi tortor, <a href="#">finibus a interdum</a> ac, ultricies in elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere hendrerit ex eu scelerisque.</p>
 
@@ -471,7 +160,7 @@
                       <img data-src="img/content/single/single_post_img_2.jpg" src="img/empty.png" alt="" class="lazyload">
                       <figcaption>make it happen</figcaption>
                     </a>
-                  </figure>  
+                  </figure>
 
                   <p>Stimulating interest in person can be powerful, especially if you surround yourself with the right people and the right ideas. A study by Nielsen found that <strong>83 percent of people trust referrals</strong> from others they know. If you have a product, service, content or any other value that you provide to others, let them know when you talk in person or over the phone. As an example, if you're working with a charity organization, <a href="#">tell a story</a> about how much money you helped raise for another charity you're affiliated with.</p>
 
@@ -484,14 +173,14 @@
                     <li>Lightning fast</li>
                     <li>BEM methodology</li>
                     <li>Organized JS/Sass files</li>
-                  </ul>                  
+                  </ul>
 
                   <h6>Summary</h6>
-                  
+
                   <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. And finally the subconscious is the mechanism through which thought impulses which are repeated regularly with feeling and emotion are quickened, charged. And finally the subconscious is the mechanism through which thought impulses which are repeated regularly with feeling and emotion.</p>
 
                   <!-- Final Review -->
-                  <div class="final-review" style="background-image: url('img/content/single/final_review.jpg')">                    
+                  <div class="final-review" style="background-image: url('img/content/single/final_review.jpg')">
                     <div class="final-review__score">
                       <span class="final-review__score-number">9.2</span>
                     </div>
@@ -510,7 +199,7 @@
 
                 </div> <!-- end entry article -->
               </div> <!-- end entry article wrap -->
-              
+
 
               <!-- Newsletter Wide -->
               <div class="newsletter-wide">
@@ -533,8 +222,8 @@
                           </div>
                         </div>
                       </form>
-                    </div> 
-                  </div>         
+                    </div>
+                  </div>
                 </div>
               </div> <!-- end newsletter wide -->
 
@@ -567,7 +256,7 @@
                   </h6>
                   <p class="mb-0">But unfortunately for most of us our role as gardener has never been explained to us. And in misunderstanding our role, we have allowed seeds of all types, both good and bad, to enter our inner garden.</p>
                 </div>
-              </div>              
+              </div>
 
               <!-- Related Posts -->
               <section class="section related-posts mt-40 mb-0">
@@ -580,7 +269,7 @@
                   <article class="entry thumb thumb--size-1">
                     <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_1.jpg');">
                       <div class="bottom-gradient"></div>
-                      <div class="thumb-text-holder">   
+                      <div class="thumb-text-holder">
                         <h2 class="thumb-entry-title">
                           <a href="single-post.html">9 Things to Consider Before Accepting a New Job</a>
                         </h2>
@@ -591,7 +280,7 @@
                   <article class="entry thumb thumb--size-1">
                     <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">
                       <div class="bottom-gradient"></div>
-                      <div class="thumb-text-holder">   
+                      <div class="thumb-text-holder">
                         <h2 class="thumb-entry-title">
                           <a href="single-post.html">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
                         </h2>
@@ -602,7 +291,7 @@
                   <article class="entry thumb thumb--size-1">
                     <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_3.jpg');">
                       <div class="bottom-gradient"></div>
-                      <div class="thumb-text-holder">   
+                      <div class="thumb-text-holder">
                         <h2 class="thumb-entry-title">
                           <a href="single-post.html">(Infographic) Is Work-Life Balance Even Possible?</a>
                         </h2>
@@ -613,7 +302,7 @@
                   <article class="entry thumb thumb--size-1">
                     <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_4.jpg');">
                       <div class="bottom-gradient"></div>
-                      <div class="thumb-text-holder">   
+                      <div class="thumb-text-holder">
                         <h2 class="thumb-entry-title">
                           <a href="single-post.html">Is Uber Considering To Sell its Southeast Asia Business to Grab?</a>
                         </h2>
@@ -622,9 +311,9 @@
                     </div>
                   </article>
                   <article class="entry thumb thumb--size-1">
-                    <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">              
+                    <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">
                       <div class="bottom-gradient"></div>
-                      <div class="thumb-text-holder">   
+                      <div class="thumb-text-holder">
                         <h2 class="thumb-entry-title">
                           <a href="single-post.html">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
                         </h2>
@@ -634,7 +323,7 @@
                   </article>
                 </div> <!-- end slider -->
 
-              </section> <!-- end related posts -->            
+              </section> <!-- end related posts -->
 
             </article> <!-- end standard post -->
 
@@ -644,7 +333,7 @@
                 <h3 class="section-title">3 comments</h3>
               </div>
               <ul class="comment-list">
-                <li class="comment">  
+                <li class="comment">
                   <div class="comment-body">
                     <div class="comment-avatar">
                       <img alt="" src="img/content/single/comment_1.jpg">
@@ -653,7 +342,7 @@
                       <h6 class="comment-author">Joeby Ragpa</h6>
                       <div class="comment-metadata">
                         <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
-                      </div>                      
+                      </div>
                       <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
                       <a href="#" class="comment-reply">Reply</a>
                     </div>
@@ -668,8 +357,8 @@
                         <div class="comment-text">
                           <h6 class="comment-author">Alexander Samokhin</h6>
                           <div class="comment-metadata">
-                            <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>  
-                          </div>                      
+                            <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
+                          </div>
                           <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
                           <a href="#" class="comment-reply">Reply</a>
                         </div>
@@ -687,15 +376,15 @@
                     <div class="comment-text">
                       <h6 class="comment-author">Chris Root</h6>
                       <div class="comment-metadata">
-                        <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>  
-                      </div>                      
+                        <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
+                      </div>
                       <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
                       <a href="#" class="comment-reply">Reply</a>
                     </div>
                   </div>
                 </li> <!-- end 3 comment -->
 
-              </ul>         
+              </ul>
             </div> <!-- end comments -->
 
             <!-- Comment Form -->
@@ -727,13 +416,13 @@
                 <p class="comment-form-submit">
                   <input type="submit" class="btn btn-lg btn-color btn-button" value="Post Comment" id="submit-message">
                 </p>
-                
+
               </form>
             </div> <!-- end comment form -->
 
           </div> <!-- end content box -->
         </div> <!-- end post content -->
-        
+
         <!-- Sidebar -->
         <aside class="col-lg-4 sidebar sidebar--right">
 
@@ -763,7 +452,7 @@
                         Jan 21, 2018
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </article>
               </li>
               <li class="post-list-small__item">
@@ -788,7 +477,7 @@
                         Jan 21, 2018
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </article>
               </li>
               <li class="post-list-small__item">
@@ -813,7 +502,7 @@
                         Jan 21, 2018
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </article>
               </li>
               <li class="post-list-small__item">
@@ -838,10 +527,10 @@
                         Jan 21, 2018
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </article>
               </li>
-            </ul>           
+            </ul>
           </aside> <!-- end widget popular posts -->
 
           <!-- Widget Newsletter -->
@@ -895,13 +584,13 @@
                     <i class="ui-rss"></i>
                     <span class="social__text">Rss</span>
                   </a>
-                </div>                
-              </div>            
+                </div>
+              </div>
             </div>
           </aside> <!-- end widget socials -->
 
         </aside> <!-- end sidebar -->
-      
+
       </div> <!-- end content -->
     </div> <!-- end main container -->
 
@@ -917,7 +606,9 @@
                   <img src="img/logo_default_white.png" srcset="img/logo_default_white.png 1x, img/logo_default_white@2x.png 2x" class="logo__img" alt="">
                 </a>
                 <p class="copyright">
-                  &copy; <script>document.querySelector(".copyright").innerHTML += new Date().getFullYear();</script> Deus  |  Made by <a href="https://deothemes.com">DeoThemes</a>
+                  &copy; <script>
+                    document.querySelector(".copyright").innerHTML += new Date().getFullYear();
+                  </script> Deus | Made by <a href="https://deothemes.com">DeoThemes</a>
                 </p>
                 <div class="socials socials--large socials--rounded mb-24">
                   <a href="#" class="social social-facebook" aria-label="facebook"><i class="ui-facebook"></i></a>
@@ -941,7 +632,7 @@
                   <li><a href="shortcodes.html">Contact</a></li>
                 </ul>
               </aside>
-            </div>  
+            </div>
 
             <div class="col-lg-4 col-md-6">
               <aside class="widget widget-popular-posts">
@@ -969,7 +660,7 @@
                             Jan 21, 2018
                           </li>
                         </ul>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -994,11 +685,11 @@
                             Jan 21, 2018
                           </li>
                         </ul>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                 </ul>
-              </aside>              
+              </aside>
             </div>
 
             <div class="col-lg-3 col-md-6">
@@ -1017,12 +708,12 @@
                       <input type="submit" class="btn btn-lg btn-color" value="Sign Up">
                     </div>
                   </div>
-                </form>                
+                </form>
               </aside>
             </div>
 
           </div>
-        </div>    
+        </div>
       </div> <!-- end container -->
     </footer> <!-- end footer -->
 
@@ -1032,7 +723,7 @@
 
   </main> <!-- end main-wrapper -->
 
-  
+
   <!-- jQuery Scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -1047,4 +738,5 @@
   <script src="js/scripts.js"></script>
 
 </body>
+
 </html>

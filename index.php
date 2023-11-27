@@ -40,101 +40,6 @@
 
   <!-- Bg Overlay -->
   <div class="content-overlay"></div>
-
-  <!-- Sidenav -->
-  <header class="sidenav" id="sidenav">
-
-    <!-- close -->
-    <div class="sidenav__close">
-      <button class="sidenav__close-button" id="sidenav__close-button" aria-label="close sidenav">
-        <i class="ui-close sidenav__close-icon"></i>
-      </button>
-    </div>
-
-    <!-- Nav -->
-    <nav class="sidenav__menu-container">
-      <ul class="sidenav__menu" role="menubar">
-        <li>
-          <a href="#" class="sidenav__menu-url">Home</a>
-          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-          <ul class="sidenav__menu-dropdown">
-            <li><a href="index.html" class="sidenav__menu-url">Home Default</a></li>
-            <li><a href="index-politics.html" class="sidenav__menu-url">Home Politics</a></li>
-            <li><a href="index-fashion.html" class="sidenav__menu-url">Home Fashion</a></li>
-            <li><a href="index-games.html" class="sidenav__menu-url">Home Games</a></li>
-            <li><a href="index-videos.html" class="sidenav__menu-url">Home Videos</a></li>
-            <li><a href="index-music.html" class="sidenav__menu-url">Home Music</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Pages</a>
-          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-          <ul class="sidenav__menu-dropdown">
-            <li><a href="about.html" class="sidenav__menu-url">About</a></li>
-            <li><a href="contact.html" class="sidenav__menu-url">Contact</a></li>
-            <li><a href="search-results.html" class="sidenav__menu-url">Search Results</a></li>
-            <li><a href="categories.html" class="sidenav__menu-url">Categories</a></li>
-            <li><a href="404.html" class="sidenav__menu-url">404</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Features</a>
-          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-          <ul class="sidenav__menu-dropdown">
-            <li>
-              <a href="#" class="sidenav__menu-url">Single Post</a>
-              <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-              <ul class="sidenav__menu-dropdown">
-                <li><a href="single-post.html" class="sidenav__menu-url">Style 1</a></li>
-                <li><a href="single-post-politics.html" class="sidenav__menu-url">Style 2</a></li>
-                <li><a href="single-post-fashion.html" class="sidenav__menu-url">Style 3</a></li>
-                <li><a href="single-post-games.html" class="sidenav__menu-url">Style 4</a></li>
-                <li><a href="single-post-videos.html" class="sidenav__menu-url">Style 5</a></li>
-                <li><a href="single-post-music.html" class="sidenav__menu-url">Style 6</a></li>
-              </ul>
-            </li>
-            <li><a href="shortcodes.html" class="sidenav__menu-url">Shortcodes</a></li>
-          </ul>
-        </li>
-
-        <!-- Categories -->
-        <li>
-          <a href="#" class="sidenav__menu-url">World</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Business</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Fashion</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Lifestyle</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-url">Advertise</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="socials sidenav__socials">
-      <a class="social social-facebook" href="#" target="_blank" aria-label="facebook">
-        <i class="ui-facebook"></i>
-      </a>
-      <a class="social social-twitter" href="#" target="_blank" aria-label="twitter">
-        <i class="ui-twitter"></i>
-      </a>
-      <a class="social social-google-plus" href="#" target="_blank" aria-label="google">
-        <i class="ui-google"></i>
-      </a>
-      <a class="social social-youtube" href="#" target="_blank" aria-label="youtube">
-        <i class="ui-youtube"></i>
-      </a>
-      <a class="social social-instagram" href="#" target="_blank" aria-label="instagram">
-        <i class="ui-instagram"></i>
-      </a>
-    </div>
-  </header> <!-- end sidenav -->
-
   <main class="main oh" id="main">
 
     </div>
@@ -142,47 +47,7 @@
     </div> <!-- end top bar -->
 
     <!-- Navigation -->
-    <header class="nav">
-      <div class="nav__holder nav--sticky">
-        <div class="container relative">
-          <div class="flex-parent">
-            <!-- Side Menu Button -->
-            <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu">
-              <span class="nav-icon-toggle__box">
-                <span class="nav-icon-toggle__inner"></span>
-              </span>
-            </button>
-
-            <!-- Logo -->
-            <a href="index.html" class="logo">
-              <img class="logo__img" src="img/logo_default.png" srcset="img/logo_default.png 1x, img/logo_default@2x.png 2x" alt="logo" />
-            </a>
-
-            <!-- Nav-wrap -->
-            <nav class="flex-child nav__wrap d-none d-lg-block">
-              <ul class="nav__menu">
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-                <li>
-                  <a href="about.html">About</a>
-                </li>
-
-                <li>
-                  <a href="contact.html">Contact Us</a>
-                </li>
-              </ul>
-              <!-- end menu -->
-            </nav>
-            <!-- end nav-wrap -->
-
-
-          </div>
-          <!-- end flex-parent -->
-        </div>
-        <!-- end container -->
-      </div>
-    </header>
+<?php include "navbar.php" ?>
     <!-- end navigation -->
 
 
@@ -1167,14 +1032,6 @@
             </article>
           </section> <!-- end worldwide news -->
 
-          <!-- Pagination -->
-          <nav class="pagination">
-            <span class="pagination__page pagination__page--current">1</span>
-            <a href="#" class="pagination__page">2</a>
-            <a href="#" class="pagination__page">3</a>
-            <a href="#" class="pagination__page">4</a>
-            <a href="#" class="pagination__page pagination__icon pagination__page--next"><i class="ui-arrow-right"></i></a>
-          </nav>
 
         </div> <!-- end posts -->
 
@@ -1200,83 +1057,6 @@
               <li><a href="categories.html">Technology <span class="categories-count">6</span></a></li>
             </ul>
           </aside> <!-- end widget categories -->
-
-          <!-- Widget Recommended (Rating) -->
-          <aside class="widget widget-rating-posts">
-            <h4 class="widget-title">Recommended</h4>
-            <article class="entry">
-              <div class="entry__img-holder">
-                <a href="single-post.html">
-                  <div class="thumb-container thumb-60">
-                    <img data-src="img/content/review/review_post_1.jpg" src="img/empty.png" class="entry__img lazyload" alt="">
-                  </div>
-                </a>
-              </div>
-
-              <div class="entry__body">
-                <div class="entry__header">
-
-                  <h2 class="entry__title">
-                    <a href="single-post.html">UN’s WFP Building Up Blockchain-Based Payments System</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-rating">
-                      <i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star-empty"></i>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            <article class="entry">
-              <div class="entry__img-holder">
-                <a href="single-post.html">
-                  <div class="thumb-container thumb-60">
-                    <img data-src="img/content/review/review_post_2.jpg" src="img/empty.png" class="entry__img lazyload" alt="">
-                  </div>
-                </a>
-              </div>
-
-              <div class="entry__body">
-                <div class="entry__header">
-
-                  <h2 class="entry__title">
-                    <a href="single-post.html">4 credit card tips to make business travel easier</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-rating">
-                      <i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star-empty"></i>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-          </aside> <!-- end widget recommended (rating) -->
         </aside> <!-- end sidebar 1 -->
       </div> <!-- content secondary -->
 
