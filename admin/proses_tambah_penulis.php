@@ -5,7 +5,7 @@ $nama_penulis = $_POST["nama_penulis"];
 $email_penulis = $_POST["email_penulis"];
 
 // Upload Proses
-$target_dir = "../img/berita"; 
+$target_dir = "../img/berita/"; 
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]); 
 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) { 
     echo "The file ". htmlspecialchars(basename($_FILES["fileToUpload"]["name"])). " has been uploaded.<br>";
