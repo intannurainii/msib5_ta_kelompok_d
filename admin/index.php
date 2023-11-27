@@ -56,9 +56,6 @@
 	<section id="content">
 		<!-- Navbar -->
 		<nav>
-			<a href="#" class="profile">
-				<img src="../img/user.png" style="margin-left:1000px">
-			</a>
 		</nav>
 
 		<!-- Main -->

@@ -19,7 +19,7 @@
 		<ul class="side-menu top">
 			<li>
 				<a href="index.php" class="nav-link">
-					<i class='bx bxs-dashboard' ></i>
+					<i class='bx bxs-home'></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
@@ -56,9 +56,6 @@
 	<section id="content">
 		<!-- Navbar -->
 		<nav>
-			<a href="#" class="profile">
-				<img src="../img/user.png" style="margin-left:1000px">
-			</a>
 		</nav>
 
         <!-- Main -->
