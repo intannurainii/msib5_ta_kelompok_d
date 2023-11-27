@@ -110,7 +110,7 @@
                                     <td><?php echo $data["email_penulis"] ?></td>
                                     <td> <img src="<?php echo $data["foto_profil"] ?>" width="100px"> </td>
                                     <td> <a href="edit_penulis.php?id_penulis=<?php echo $data["id_penulis"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
-                                    <a href="proses_hapus_penulis.php?id_penulis=<?php echo $data["id_penulis"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
+                                    <a href="proses_hapus.php?penulis=<?php echo $data["id_penulis"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
                                 </tr>
 
                                 <?php  $no++; } ?>

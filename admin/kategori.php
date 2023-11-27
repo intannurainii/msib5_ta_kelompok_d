@@ -106,7 +106,7 @@
                                     <td><?php echo $no ?></td>
                                     <td><?php echo $data["nama_kategori"] ?></td>
                                     <td> <a href="edit_kategori.php?id_kategori=<?php echo $data["id_kategori"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
-                                    <a href="proses_hapus_kategori.php?id_kategori=<?php echo $data["id_kategori"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
+                                    <a href="proses_hapus.php?kategori=<?php echo $data["id_kategori"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a> </td>
                                 </tr>
 
                                 <?php  $no++; } ?>

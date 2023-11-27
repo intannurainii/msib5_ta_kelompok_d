@@ -81,7 +81,7 @@
                     <div class="col-md-12">
                         <?php
                         include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis left join komen as k on b.id_berita = k.id_berita ");
+                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis");
                         ?>
 
                         <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_berita.php"> Tambah Berita </a>
@@ -96,7 +96,6 @@
                                     <th>Content</th>
                                     <th>Tanggal Publish</th>
                                     <th>Penulis</th>
-                                    <th>Komen</th>
                                     <th style="width:135px">Aksi</th>
                                 </tr>
                             </thead>
@@ -106,6 +105,7 @@
                                 if(mysqli_num_rows($query)>0){ 
                                 $no = 1;
                                 while($data = mysqli_fetch_array($query)){
+									$judul_berita = $data["judul_berita"];
                                 ?>
                                 
                                 <tr>
@@ -116,9 +116,8 @@
                                     <td><?php echo $data["isi_berita"] ?></td>
                                     <td><?php echo $data["tanggal_publish"] ?></td>
                                     <td><?php echo $data["nama_penulis"] ?></td>
-                                    <td><?php echo $data["isi_komen"] ?></td>
                                     <td> <a href="edit_berita.php?id_berita=<?php echo $data["id_berita"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
-                                    <a href="proses_hapus_berita.php?id_berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger" style="padding:2px"> Delete </a></td>
+                                    <a href="proses_hapus.php?berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini <?php echo $judul_berita ?>?')" class="btn btn-danger" style="padding:2px"> Delete </a></td>
                                 </tr>
 
                                 <?php  $no++; } ?>
