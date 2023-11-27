@@ -238,7 +238,7 @@
                   <div class="col-md-6">
                     <article class="entry card">
                       <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
+                        <a href="single-post.php">
                           <div class="thumb-container thumb-70">
                             <img data-src="img/content/grid/grid_post_1.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
                           </div>
@@ -250,7 +250,7 @@
                         <div class="entry__header">
 
                           <h2 class="entry__title">
-                            <a href="single-post.html">Follow These Smartphone Habits os</a>
+                            <a href="single-post.php">Follow These Smartphone Habits os</a>
                           </h2>
                           <ul class="entry__meta">
                             <li class="entry__meta-author">
@@ -296,7 +296,7 @@
                       <div class="col-md-6">
                         <article class="entry card">
                           <div class="entry__img-holder card__img-holder">
-                            <a href="single-post.html">
+                            <a href="single-post.php">
                               <div class="thumb-container thumb-70">
                                 <img data-src="<?php echo $gambar_berita ?>" src="<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
                               </div>
@@ -306,7 +306,7 @@
                           <div class="entry__body card__body">
                             <div class="entry__header">
                               <h2 class="entry__title">
-                                <a href="single-post.html"><?php echo $judul_berita ?></a>
+                                <a href="single-post.php"><?php echo $judul_berita ?></a>
                               </h2>
                               <ul class="entry__meta">
                                 <li class="entry__meta-author">
@@ -328,7 +328,8 @@
                   }
                   ?>
                   </div>
-                </div> <!-- end pane for current category -->
+                </div>
+                 <!-- end pane for current category -->
               <?php
               }
               ?>
@@ -1064,127 +1065,8 @@
     </div> <!-- end main container -->
 
     <!-- Footer -->
-    <footer class="footer footer--dark">
-      <div class="container">
-        <div class="footer__widgets">
-          <div class="row">
-
-            <div class="col-lg-3 col-md-6">
-              <aside class="widget widget-logo">
-                <a href="index.html">
-                  <img src="img/logo_default_white.png" srcset="img/logo_default_white.png 1x, img/logo_default_white@2x.png 2x" class="logo__img" alt="">
-                </a>
-                <p class="copyright">
-                  &copy; <script>
-                    document.querySelector(".copyright").innerHTML += new Date().getFullYear();
-                  </script> Deus | Made by <a href="https://deothemes.com">DeoThemes</a>
-                </p>
-                <div class="socials socials--large socials--rounded mb-24">
-                  <a href="#" class="social social-facebook" aria-label="facebook"><i class="ui-facebook"></i></a>
-                  <a href="#" class="social social-twitter" aria-label="twitter"><i class="ui-twitter"></i></a>
-                  <a href="#" class="social social-google-plus" aria-label="google+"><i class="ui-google"></i></a>
-                  <a href="#" class="social social-youtube" aria-label="youtube"><i class="ui-youtube"></i></a>
-                  <a href="#" class="social social-instagram" aria-label="instagram"><i class="ui-instagram"></i></a>
-                </div>
-              </aside>
-            </div>
-
-            <div class="col-lg-2 col-md-6">
-              <aside class="widget widget_nav_menu">
-                <h4 class="widget-title">Useful Links</h4>
-                <ul>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">News</a></li>
-                  <li><a href="categories.html">Advertise</a></li>
-                  <li><a href="shortcodes.html">Support</a></li>
-                  <li><a href="shortcodes.html">Features</a></li>
-                  <li><a href="shortcodes.html">Contact</a></li>
-                </ul>
-              </aside>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-              <aside class="widget widget-popular-posts">
-                <h4 class="widget-title">Popular Posts</h4>
-                <ul class="post-list-small">
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry clearfix">
-                      <div class="post-list-small__img-holder">
-                        <div class="thumb-container thumb-100">
-                          <a href="single-post.html">
-                            <img data-src="img/content/post_small/post_small_1.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                          </a>
-                        </div>
-                      </div>
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                        </h3>
-                        <ul class="entry__meta">
-                          <li class="entry__meta-author">
-                            <span>by</span>
-                            <a href="#">DeoThemes</a>
-                          </li>
-                          <li class="entry__meta-date">
-                            Jan 21, 2018
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry clearfix">
-                      <div class="post-list-small__img-holder">
-                        <div class="thumb-container thumb-100">
-                          <a href="single-post.html">
-                            <img data-src="img/content/post_small/post_small_2.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                          </a>
-                        </div>
-                      </div>
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                        </h3>
-                        <ul class="entry__meta">
-                          <li class="entry__meta-author">
-                            <span>by</span>
-                            <a href="#">DeoThemes</a>
-                          </li>
-                          <li class="entry__meta-date">
-                            Jan 21, 2018
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                  </li>
-                </ul>
-              </aside>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <aside class="widget widget_mc4wp_form_widget">
-                <h4 class="widget-title">Newsletter</h4>
-                <p class="newsletter__text">
-                  <i class="ui-email newsletter__icon"></i>
-                  Subscribe for our daily news
-                </p>
-                <form class="mc4wp-form" method="post">
-                  <div class="mc4wp-form-fields">
-                    <div class="form-group">
-                      <input type="email" name="EMAIL" placeholder="Your email" required="">
-                    </div>
-                    <div class="form-group">
-                      <input type="submit" class="btn btn-lg btn-color" value="Sign Up">
-                    </div>
-                  </div>
-                </form>
-              </aside>
-            </div>
-
-          </div>
-        </div>
-      </div> <!-- end container -->
-    </footer> <!-- end footer -->
+<?php include "footer.php" ?>
+    <!-- end footer -->
 
     <div id="back-to-top">
       <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
