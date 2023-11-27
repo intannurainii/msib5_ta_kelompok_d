@@ -86,8 +86,7 @@ $id_berita = $_GET['id_berita'];
 // Query untuk mendapatkan data yang akan diedit
 $query = "SELECT * FROM berita AS b
           JOIN kategori AS kat ON b.id_kategori = kat.id_kategori
-          JOIN penulis AS p ON b.id_penulis = p.id_penulis JOIN komen as k on b.id_berita = k.id_berita
-          WHERE b.id_berita = $id_berita";
+          JOIN penulis AS p ON b.id_penulis = p.id_penulis WHERE b.id_berita = '$id_berita'";
 
 $result = mysqli_query($conn, $query);
 
@@ -100,7 +99,6 @@ if ($data = mysqli_fetch_assoc($result)) {
     $isi_berita = $data['isi_berita'];
     $tanggal_publish = $data['tanggal_publish'];
     $nama_penulis = $data['nama_penulis'];
-    $isi_komen = $data['isi_komen'];
 
     ?>
 
@@ -148,9 +146,6 @@ if ($data = mysqli_fetch_assoc($result)) {
             }
             ?>
         </select> 
-		<label class="form-label">Komen</label>
-				<input id="isi_komen" type="text"  name="isi_komen" class="form-control" disabled value="<?php echo $isi_komen; ?>">
-
 				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
         </form>
         </main>
