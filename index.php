@@ -1,5 +1,7 @@
+<?php include "koneksi.php" ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Deus | Home 1 Default</title>
 
@@ -39,7 +41,7 @@
   <!-- Bg Overlay -->
   <div class="content-overlay"></div>
 
-  <!-- Sidenav -->    
+  <!-- Sidenav -->
   <header class="sidenav" id="sidenav">
 
     <!-- close -->
@@ -48,7 +50,7 @@
         <i class="ui-close sidenav__close-icon"></i>
       </button>
     </div>
-    
+
     <!-- Nav -->
     <nav class="sidenav__menu-container">
       <ul class="sidenav__menu" role="menubar">
@@ -93,7 +95,7 @@
             </li>
             <li><a href="shortcodes.html" class="sidenav__menu-url">Shortcodes</a></li>
           </ul>
-        </li>        
+        </li>
 
         <!-- Categories -->
         <li>
@@ -114,7 +116,7 @@
       </ul>
     </nav>
 
-    <div class="socials sidenav__socials"> 
+    <div class="socials sidenav__socials">
       <a class="social social-facebook" href="#" target="_blank" aria-label="facebook">
         <i class="ui-facebook"></i>
       </a>
@@ -135,63 +137,54 @@
 
   <main class="main oh" id="main">
 
-        </div>
-      </div>
-    </div> <!-- end top bar -->        
+    </div>
+    </div>
+    </div> <!-- end top bar -->
 
-      <!-- Navigation -->
-      <header class="nav">
-        <div class="nav__holder nav--sticky">
-          <div class="container relative">
-            <div class="flex-parent">
-              <!-- Side Menu Button -->
-              <button
-                class="nav-icon-toggle"
-                id="nav-icon-toggle"
-                aria-label="Open side menu"
-              >
-                <span class="nav-icon-toggle__box">
-                  <span class="nav-icon-toggle__inner"></span>
-                </span>
-              </button>
+    <!-- Navigation -->
+    <header class="nav">
+      <div class="nav__holder nav--sticky">
+        <div class="container relative">
+          <div class="flex-parent">
+            <!-- Side Menu Button -->
+            <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu">
+              <span class="nav-icon-toggle__box">
+                <span class="nav-icon-toggle__inner"></span>
+              </span>
+            </button>
 
-              <!-- Logo -->
-              <a href="index.html" class="logo">
-                <img
-                  class="logo__img"
-                  src="img/logo_default.png"
-                  srcset="img/logo_default.png 1x, img/logo_default@2x.png 2x"
-                  alt="logo"
-                />
-              </a>
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+              <img class="logo__img" src="img/logo_default.png" srcset="img/logo_default.png 1x, img/logo_default@2x.png 2x" alt="logo" />
+            </a>
 
-              <!-- Nav-wrap -->
-              <nav class="flex-child nav__wrap d-none d-lg-block">
-                <ul class="nav__menu">
-                  <li>
-                    <a href="index.html">Home</a>
-                  </li>
-                  <li>
-                    <a href="about.html">About</a>
-                  </li>
+            <!-- Nav-wrap -->
+            <nav class="flex-child nav__wrap d-none d-lg-block">
+              <ul class="nav__menu">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="about.html">About</a>
+                </li>
 
-                  <li>
-                    <a href="contact.html">Contact Us</a>
-                  </li>
-                </ul>
-                <!-- end menu -->
-              </nav>
-              <!-- end nav-wrap -->
+                <li>
+                  <a href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+              <!-- end menu -->
+            </nav>
+            <!-- end nav-wrap -->
 
-           
-            </div>
-            <!-- end flex-parent -->
+
           </div>
-          <!-- end container -->
+          <!-- end flex-parent -->
         </div>
-      </header>
-      <!-- end navigation -->
-  
+        <!-- end container -->
+      </div>
+    </header>
+    <!-- end navigation -->
+
 
     <!-- Trending Now -->
     <div class="container">
@@ -204,7 +197,7 @@
           <ul class="newsticker__list">
             <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url">A-HA theme is multi-purpose solution for any kind of business</a></li>
             <li class="newsticker__item"><a href="single-post-1.html" class="newsticker__item-url">Satelite cost tens of millions or even hundreds of millions of dollars to build</a></li>
-            <li class="newsticker__item"><a href="single-post-3.html" class="newsticker__item-url">8 Hidden Costs of Starting and Running a Business</a></li>          
+            <li class="newsticker__item"><a href="single-post-3.html" class="newsticker__item-url">8 Hidden Costs of Starting and Running a Business</a></li>
           </ul>
         </div>
         <div class="newsticker-buttons">
@@ -214,7 +207,7 @@
       </div>
     </div>
 
-    <!-- Featured Posts Grid -->      
+    <!-- Featured Posts Grid -->
     <section class="featured-posts-grid">
       <div class="container">
         <div class="row row-8">
@@ -230,7 +223,7 @@
                   <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">World</a>
                 </div>
 
-                <div class="entry__body post-list__body card__body">  
+                <div class="entry__body post-list__body card__body">
                   <h2 class="entry__title">
                     <a href="single-post.html">3 Founders With Booming Businesses Share Stories About Their Difficult Early</a>
                   </h2>
@@ -241,7 +234,7 @@
                     </li>
                     <li class="entry__meta-date">
                       Jan 21, 2018
-                    </li>              
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -256,7 +249,7 @@
                   <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">Fashion</a>
                 </div>
 
-                <div class="entry__body post-list__body card__body">  
+                <div class="entry__body post-list__body card__body">
                   <h2 class="entry__title">
                     <a href="single-post.html">3 Things You Can Do to Get Your Customers Talking About Your Business</a>
                   </h2>
@@ -267,7 +260,7 @@
                     </li>
                     <li class="entry__meta-date">
                       Jan 21, 2018
-                    </li>              
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -282,7 +275,7 @@
                   <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--blue">Business</a>
                 </div>
 
-                <div class="entry__body post-list__body card__body">  
+                <div class="entry__body post-list__body card__body">
                   <h2 class="entry__title">
                     <a href="single-post.html">These Are the 20 Best Places to Work in 2018</a>
                   </h2>
@@ -293,7 +286,7 @@
                     </li>
                     <li class="entry__meta-date">
                       Jan 21, 2018
-                    </li>              
+                    </li>
                   </ul>
                 </div>
               </article>
@@ -313,7 +306,7 @@
                   <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green">Lifestyle</a>
                 </div>
 
-                <div class="entry__body card__body">   
+                <div class="entry__body card__body">
                   <h2 class="entry__title">
                     <a href="single-post.html">What Days and Hours are PH Online Shoppers Most Likely to Buy?</a>
                   </h2>
@@ -324,54 +317,57 @@
                     </li>
                     <li class="entry__meta-date">
                       Jan 21, 2018
-                    </li>              
+                    </li>
                   </ul>
                 </div>
               </article>
             </div> <!-- end large post -->
-          </div>          
+          </div>
 
         </div>
       </div>
     </section> <!-- end featured posts grid -->
 
-    <div class="main-container container pt-24" id="main-container">         
+    <div class="main-container container pt-24" id="main-container">
 
       <!-- Content -->
       <div class="row">
 
         <!-- Posts -->
         <div class="col-lg-8 blog__content">
-          
+
           <!-- Latest News -->
           <section class="section tab-post mb-16">
             <div class="title-wrap title-wrap--line">
               <h3 class="section-title">Latest News</h3>
 
-              <div class="tabs tab-post__tabs"> 
+              <div class="tabs tab-post__tabs">
                 <ul class="tabs__list">
                   <li class="tabs__item tabs__item--active">
                     <a href="#tab-all" class="tabs__trigger">All</a>
                   </li>
-                  <li class="tabs__item">
-                    <a href="#tab-world" class="tabs__trigger">World</a>
-                  </li>
-                  <li class="tabs__item">
-                    <a href="#tab-lifestyle" class="tabs__trigger">Lifestyle</a>
-                  </li>
-                  <li class="tabs__item">
-                    <a href="#tab-business" class="tabs__trigger">Business</a>
-                  </li>
-                  <li class="tabs__item">
-                    <a href="#tab-fashion" class="tabs__trigger">Fashion</a>
-                  </li>
+                  <!-- Kategori From Database -->
+                  <?php
+                  $query = "SELECT * FROM `kategori`";
+                  $sql = mysqli_query($conn, $query);
+                  while ($result = mysqli_fetch_array($sql)) {
+                    $nama_kategori = $result['nama_kategori'];
+
+                  ?>
+                    <li class="tabs__item">
+                      <a href="#tab-<?php echo $nama_kategori ?>" class="tabs__trigger"><?php echo $nama_kategori ?></a>
+                    </li>
+                  <?php
+                  };
+                  ?>
+                  <!-- Kategori From Database -->
                 </ul> <!-- end tabs -->
               </div>
             </div>
 
             <!-- tab content -->
             <div class="tabs__content tabs__content-trigger tab-post__tabs-content">
-              
+
               <div class="tabs__content-pane tabs__content-pane--active" id="tab-all">
                 <div class="row card-row">
                   <div class="col-md-6">
@@ -387,108 +383,9 @@
 
                       <div class="entry__body card__body">
                         <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_2.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">fashion</a>
-                      </div>
 
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
                           <h2 class="entry__title">
-                            <a href="single-post.html">3 Things You Can Do to Get Your Customers Talking About Your Business</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_3.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange">mining</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_4.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green">lifestyle</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">10 Horrible Habits You're Doing Right Now That Are Draining Your Energy</a>
+                            <a href="single-post.html">Follow These Smartphone Habits os</a>
                           </h2>
                           <ul class="entry__meta">
                             <li class="entry__meta-author">
@@ -508,555 +405,69 @@
                   </div>
                 </div>
               </div> <!-- end pane 1 -->
-
-              <div class="tabs__content-pane" id="tab-world">
-                <div class="row card-row">
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_3.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
+              <!-- Kategori From Database -->
+              <?php
+              $query = "SELECT * FROM `kategori`";
+              $sql = mysqli_query($conn, $query);
+              while ($result = mysqli_fetch_array($sql)) {
+                $nama_kategori_atas = $result['nama_kategori'];
+              ?>
+                <div class="tabs__content-pane" id="tab-<?php echo $nama_kategori_atas ?>">
+                  <?php
+                  $query_berita = "SELECT * FROM `kategori` 
+                     LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
+                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis 
+                     WHERE kategori.nama_kategori = '$nama_kategori_atas'";
+                  $sql_berita = mysqli_query($conn, $query_berita);
+                  while ($result_berita = mysqli_fetch_array($sql_berita)) {
+                    $judul_berita = $result_berita['judul_berita'];
+                    $nama_kategori = $result_berita['nama_kategori'];
+                    $nama_penulis = $result_berita['nama_penulis'];
+                    $tanggal_publish = $result_berita['tanggal_publish'];
+                    $gambar_berita = $result_berita['gambar_berita'];
+                    $isi_berita = $result_berita['isi_berita'];
+                  ?>
+                    <div class="row card-row">
+                      <div class="col-md-6">
+                        <article class="entry card">
+                          <div class="entry__img-holder card__img-holder">
+                            <a href="single-post.html">
+                              <div class="thumb-container thumb-70">
+                                <img data-src="<?php echo $gambar_berita ?>" src="img/empty.png" class="entry__img lazyload" alt="" />
+                              </div>
+                            </a>
+                            <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange"><?php echo $nama_kategori ?></a>
                           </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange">mining</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_4.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
+                          <div class="entry__body card__body">
+                            <div class="entry__header">
+                              <h2 class="entry__title">
+                                <a href="single-post.html"><?php echo $judul_berita ?></a>
+                              </h2>
+                              <ul class="entry__meta">
+                                <li class="entry__meta-author">
+                                  <span>by</span>
+                                  <a href="#"><?php echo $nama_penulis ?></a>
+                                </li>
+                                <li class="entry__meta-date">
+                                  <?php echo $tanggal_publish ?>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="entry__excerpt">
+                              <p><?php echo $isi_berita ?></p>
+                            </div>
                           </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green">lifestyle</a>
+                        </article>
                       </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">10 Horrible Habits You're Doing Right Now That Are Draining Your Energy</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_1.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">world</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_2.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">fashion</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">3 Things You Can Do to Get Your Customers Talking About Your Business</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>                  
-                </div>
-              </div> <!-- end pane 2 -->
-
-              <div class="tabs__content-pane" id="tab-lifestyle">
-                <div class="row card-row">
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_1.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">world</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_2.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">fashion</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">3 Things You Can Do to Get Your Customers Talking About Your Business</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_3.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange">mining</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_4.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green">lifestyle</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">10 Horrible Habits You're Doing Right Now That Are Draining Your Energy</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div> <!-- end pane 3 -->
-
-              <div class="tabs__content-pane" id="tab-business">
-                <div class="row card-row">
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_3.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange">mining</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_4.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green">lifestyle</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">10 Horrible Habits You're Doing Right Now That Are Draining Your Energy</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_1.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">world</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_2.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">fashion</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">3 Things You Can Do to Get Your Customers Talking About Your Business</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>                  
-                </div>
-              </div> <!-- end pane 4 -->
-
-              <div class="tabs__content-pane" id="tab-fashion">
-                <div class="row card-row">
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_1.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">world</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_2.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">fashion</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">3 Things You Can Do to Get Your Customers Talking About Your Business</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_3.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange">mining</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.html">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_4.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
-                          </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green">lifestyle</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-                          
-                          <h2 class="entry__title">
-                            <a href="single-post.html">10 Horrible Habits You're Doing Right Now That Are Draining Your Energy</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div> <!-- end pane 5 -->
-            </div> <!-- end tab content -->            
+                    </div>
+                  <?php
+                  }
+                  ?>
+                </div> <!-- end pane for current category -->
+              <?php
+              }
+              ?>
+            </div> <!-- end tab content -->
           </section> <!-- end latest news -->
 
         </div> <!-- end posts -->
@@ -1090,7 +501,7 @@
                         Jan 21, 2018
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </article>
               </li>
               <li class="post-list-small__item">
@@ -1115,7 +526,7 @@
                         Jan 21, 2018
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </article>
               </li>
               <li class="post-list-small__item">
@@ -1140,7 +551,7 @@
                         Jan 21, 2018
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </article>
               </li>
               <li class="post-list-small__item">
@@ -1165,13 +576,13 @@
                         Jan 21, 2018
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </article>
               </li>
-            </ul>           
+            </ul>
           </aside> <!-- end widget popular posts -->
 
-          
+
 
           <!-- Widget Socials -->
           <aside class="widget widget-socials">
@@ -1205,16 +616,16 @@
                     <i class="ui-rss"></i>
                     <span class="social__text">Rss</span>
                   </a>
-                </div>                
-              </div>            
+                </div>
+              </div>
             </div>
           </aside> <!-- end widget socials -->
 
         </aside> <!-- end sidebar -->
-  
+
       </div> <!-- end content -->
 
-      
+
 
       <!-- Carousel posts -->
       <section class="section mb-0">
@@ -1227,7 +638,7 @@
           <article class="entry thumb thumb--size-1">
             <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_1.jpg');">
               <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">   
+              <div class="thumb-text-holder">
                 <h2 class="thumb-entry-title">
                   <a href="single-post.html">9 Things to Consider Before Accepting a New Job</a>
                 </h2>
@@ -1238,7 +649,7 @@
           <article class="entry thumb thumb--size-1">
             <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">
               <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">   
+              <div class="thumb-text-holder">
                 <h2 class="thumb-entry-title">
                   <a href="single-post.html">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
                 </h2>
@@ -1249,7 +660,7 @@
           <article class="entry thumb thumb--size-1">
             <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_3.jpg');">
               <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">   
+              <div class="thumb-text-holder">
                 <h2 class="thumb-entry-title">
                   <a href="single-post.html">(Infographic) Is Work-Life Balance Even Possible?</a>
                 </h2>
@@ -1260,7 +671,7 @@
           <article class="entry thumb thumb--size-1">
             <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_4.jpg');">
               <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">   
+              <div class="thumb-text-holder">
                 <h2 class="thumb-entry-title">
                   <a href="single-post.html">Is Uber Considering To Sell its Southeast Asia Business to Grab?</a>
                 </h2>
@@ -1269,9 +680,9 @@
             </div>
           </article>
           <article class="entry thumb thumb--size-1">
-            <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">              
+            <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">
               <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">   
+              <div class="thumb-text-holder">
                 <h2 class="thumb-entry-title">
                   <a href="single-post.html">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
                 </h2>
@@ -1298,7 +709,7 @@
                 <article class="entry thumb thumb--size-2">
                   <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/thumb/thumb_post_1.jpg');">
                     <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder thumb-text-holder--1">   
+                    <div class="thumb-text-holder thumb-text-holder--1">
                       <h2 class="thumb-entry-title">
                         <a href="single-post.html">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
                       </h2>
@@ -1324,7 +735,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">Need a Website for Your Business? Google Can Help</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1333,7 +744,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">Here Are Ways You Can Earn From the Sharing Economy</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1342,7 +753,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">19 Crazy Facts You Probably Didn't Know About Google</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1351,12 +762,12 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">What Household Chores Would Filipinos Love to Assign to Robots?</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                 </ul>
               </div>
-            </div>            
+            </div>
           </div> <!-- end technology -->
 
           <!-- Travel -->
@@ -1369,7 +780,7 @@
                 <article class="entry thumb thumb--size-2">
                   <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/thumb/thumb_post_2.jpg');">
                     <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder thumb-text-holder--1">   
+                    <div class="thumb-text-holder thumb-text-holder--1">
                       <h2 class="thumb-entry-title">
                         <a href="single-post.html">4 credit card tips to make business travel easier</a>
                       </h2>
@@ -1395,7 +806,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">5 deadliest luxury vacation spots on Earth</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1404,7 +815,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">These 4 startups can send you to work and travel abroad</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1413,7 +824,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">9 mind-blowing travel destinations for adventure seekers</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1422,12 +833,12 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">These Small Business Ideas Are Great for Entrepreneurial Children</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                 </ul>
               </div>
-            </div>            
+            </div>
           </div> <!-- end travel -->
 
           <!-- Cryptocurrency -->
@@ -1440,7 +851,7 @@
                 <article class="entry thumb thumb--size-2">
                   <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/thumb/thumb_post_3.jpg');">
                     <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder thumb-text-holder--1">   
+                    <div class="thumb-text-holder thumb-text-holder--1">
                       <h2 class="thumb-entry-title">
                         <a href="single-post.html">UN’s WFP Building Up Blockchain-Based Payments System</a>
                       </h2>
@@ -1466,7 +877,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">Cryptocurrency Markets: Weekly Trading Overview (06-13 October)</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1475,7 +886,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">MyEtherWallet Opens the Ethereum Universe for You</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1484,7 +895,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">Put Your Money Where Your Marketing Is</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1493,12 +904,12 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">3 ways for startups to master the art of emailing</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                 </ul>
               </div>
-            </div>            
+            </div>
           </div> <!-- end cryptocurrency -->
 
           <!-- Investment -->
@@ -1511,7 +922,7 @@
                 <article class="entry thumb thumb--size-2">
                   <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/thumb/thumb_post_4.jpg');">
                     <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder thumb-text-holder--1">   
+                    <div class="thumb-text-holder thumb-text-holder--1">
                       <h2 class="thumb-entry-title">
                         <a href="single-post.html">14 easy, low-cost ways authors can promote their books</a>
                       </h2>
@@ -1537,7 +948,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">Financial Adviser: 4 ways to know how much dividends you should pay</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1546,7 +957,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">3 cash flow rules first-time business owners need to know</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1555,7 +966,7 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">Common credit mistakes new business owners make</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1564,15 +975,15 @@
                         <h3 class="post-list-small__entry-title">
                           <a href="single-post.html">Ask these 2 questions every time you make a purchase</a>
                         </h3>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                 </ul>
               </div>
-            </div>            
+            </div>
           </div> <!-- end investment -->
 
-        </div>                
+        </div>
       </section> <!-- end posts from categories -->
       <!-- Content Secondary -->
       <div class="row">
@@ -1608,7 +1019,7 @@
                       Jan 21, 2018
                     </li>
                   </ul>
-                </div>        
+                </div>
                 <div class="entry__excerpt">
                   <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
                 </div>
@@ -1636,7 +1047,7 @@
                       Jan 21, 2018
                     </li>
                   </ul>
-                </div>        
+                </div>
                 <div class="entry__excerpt">
                   <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
                 </div>
@@ -1664,7 +1075,7 @@
                       Jan 21, 2018
                     </li>
                   </ul>
-                </div>        
+                </div>
                 <div class="entry__excerpt">
                   <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
                 </div>
@@ -1692,7 +1103,7 @@
                       Jan 21, 2018
                     </li>
                   </ul>
-                </div>        
+                </div>
                 <div class="entry__excerpt">
                   <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
                 </div>
@@ -1720,7 +1131,7 @@
                       Jan 21, 2018
                     </li>
                   </ul>
-                </div>        
+                </div>
                 <div class="entry__excerpt">
                   <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
                 </div>
@@ -1748,7 +1159,7 @@
                       Jan 21, 2018
                     </li>
                   </ul>
-                </div>        
+                </div>
                 <div class="entry__excerpt">
                   <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
                 </div>
@@ -1776,7 +1187,7 @@
               <img src="img/content/placeholder_336.jpg" alt="">
             </a>
           </aside> <!-- end widget ad 300 -->
-          
+
           <!-- Widget Categories -->
           <aside class="widget widget_categories">
             <h4 class="widget-title">Categories</h4>
@@ -1804,7 +1215,7 @@
 
               <div class="entry__body">
                 <div class="entry__header">
-                  
+
                   <h2 class="entry__title">
                     <a href="single-post.html">UN’s WFP Building Up Blockchain-Based Payments System</a>
                   </h2>
@@ -1840,7 +1251,7 @@
 
               <div class="entry__body">
                 <div class="entry__header">
-                  
+
                   <h2 class="entry__title">
                     <a href="single-post.html">4 credit card tips to make business travel easier</a>
                   </h2>
@@ -1867,8 +1278,8 @@
             </article>
           </aside> <!-- end widget recommended (rating) -->
         </aside> <!-- end sidebar 1 -->
-      </div> <!-- content secondary -->      
-      
+      </div> <!-- content secondary -->
+
 
     </div> <!-- end main container -->
 
@@ -1884,7 +1295,9 @@
                   <img src="img/logo_default_white.png" srcset="img/logo_default_white.png 1x, img/logo_default_white@2x.png 2x" class="logo__img" alt="">
                 </a>
                 <p class="copyright">
-                  &copy; <script>document.querySelector(".copyright").innerHTML += new Date().getFullYear();</script> Deus  |  Made by <a href="https://deothemes.com">DeoThemes</a>
+                  &copy; <script>
+                    document.querySelector(".copyright").innerHTML += new Date().getFullYear();
+                  </script> Deus | Made by <a href="https://deothemes.com">DeoThemes</a>
                 </p>
                 <div class="socials socials--large socials--rounded mb-24">
                   <a href="#" class="social social-facebook" aria-label="facebook"><i class="ui-facebook"></i></a>
@@ -1908,7 +1321,7 @@
                   <li><a href="shortcodes.html">Contact</a></li>
                 </ul>
               </aside>
-            </div>  
+            </div>
 
             <div class="col-lg-4 col-md-6">
               <aside class="widget widget-popular-posts">
@@ -1936,7 +1349,7 @@
                             Jan 21, 2018
                           </li>
                         </ul>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                   <li class="post-list-small__item">
@@ -1961,11 +1374,11 @@
                             Jan 21, 2018
                           </li>
                         </ul>
-                      </div>                  
+                      </div>
                     </article>
                   </li>
                 </ul>
-              </aside>              
+              </aside>
             </div>
 
             <div class="col-lg-3 col-md-6">
@@ -1984,12 +1397,12 @@
                       <input type="submit" class="btn btn-lg btn-color" value="Sign Up">
                     </div>
                   </div>
-                </form>                
+                </form>
               </aside>
             </div>
 
           </div>
-        </div>    
+        </div>
       </div> <!-- end container -->
     </footer> <!-- end footer -->
 
@@ -1999,7 +1412,7 @@
 
   </main> <!-- end main-wrapper -->
 
-  
+
   <!-- jQuery Scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -2007,9 +1420,10 @@
   <script src="js/owl-carousel.min.js"></script>
   <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/twitterFetcher_min.js"></script>
-  <script src="js/jquery.newsTicker.min.js"></script>  
+  <script src="js/jquery.newsTicker.min.js"></script>
   <script src="js/modernizr.min.js"></script>
   <script src="js/scripts.js"></script>
 
 </body>
+
 </html>
