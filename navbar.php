@@ -21,9 +21,6 @@
                             <li>
                                 <a href="contact.php">Contact Us</a>
                             </li>
-                            <li>
-                                <a href="single-post.php">Single Post Page</a>
-                            </li>
                         </ul>
                         <!-- end menu -->
                     </nav>
