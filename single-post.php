@@ -92,11 +92,6 @@
                       <i class="ui-eye"></i>
                       <span>1356</span>
                     </li>
-                    <li class="entry__meta-comments">
-                      <a href="#">
-                        <i class="ui-chat-empty"></i>13
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div> <!-- end entry header -->
@@ -190,13 +185,6 @@
                     </div>
                   </div> <!-- end final review -->
 
-                  <!-- tags -->
-                  <div class="entry__tags">
-                    <i class="ui-tags"></i>
-                    <span class="entry__tags-label">Tags:</span>
-                    <a href="#" rel="tag">mobile</a><a href="#" rel="tag">gadgets</a><a href="#" rel="tag">satelite</a>
-                  </div> <!-- end tags -->
-
                 </div> <!-- end entry article -->
               </div> <!-- end entry article wrap -->
 
@@ -227,32 +215,12 @@
                 </div>
               </div> <!-- end newsletter wide -->
 
-              <!-- Prev / Next Post -->
-              <nav class="entry-navigation">
-                <div class="clearfix">
-                  <div class="entry-navigation--left">
-                    <i class="ui-arrow-left"></i>
-                    <span class="entry-navigation__label">Previous Post</span>
-                    <div class="entry-navigation__link">
-                      <a href="#" rel="next">How to design your first mobile app</a>
-                    </div>
-                  </div>
-                  <div class="entry-navigation--right">
-                    <span class="entry-navigation__label">Next Post</span>
-                    <i class="ui-arrow-right"></i>
-                    <div class="entry-navigation__link">
-                      <a href="#" rel="prev">Video Youtube format post. Made with WordPress</a>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-
               <!-- Author -->
               <div class="entry-author clearfix">
                 <img alt="" data-src="img/content/single/author.jpg" src="img/empty.png" class="avatar lazyload">
                 <div class="entry-author__info">
                   <h6 class="entry-author__name">
-                    <a href="#">John Carpet</a>
+                    <a href="#">Author Name</a>
                   </h6>
                   <p class="mb-0">But unfortunately for most of us our role as gardener has never been explained to us. And in misunderstanding our role, we have allowed seeds of all types, both good and bad, to enter our inner garden.</p>
                 </div>
@@ -330,7 +298,7 @@
             <!-- Comments -->
             <div class="entry-comments">
               <div class="title-wrap title-wrap--line">
-                <h3 class="section-title">3 comments</h3>
+                <h3 class="section-title">1 comments</h3>
               </div>
               <ul class="comment-list">
                 <li class="comment">
@@ -344,45 +312,11 @@
                         <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
                       </div>
                       <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
-                      <a href="#" class="comment-reply">Reply</a>
+                      <!-- <a href="#" class="comment-reply">Reply</a> -->
                     </div>
                   </div>
-
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="comment-body">
-                        <div class="comment-avatar">
-                          <img alt="" src="img/content/single/comment_2.jpg">
-                        </div>
-                        <div class="comment-text">
-                          <h6 class="comment-author">Alexander Samokhin</h6>
-                          <div class="comment-metadata">
-                            <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
-                          </div>
-                          <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
-                          <a href="#" class="comment-reply">Reply</a>
-                        </div>
-                      </div>
-                    </li> <!-- end reply comment -->
-                  </ul>
 
                 </li> <!-- end 1-2 comment -->
-
-                <li>
-                  <div class="comment-body">
-                    <div class="comment-avatar">
-                      <img alt="" src="img/content/single/comment_3.jpg">
-                    </div>
-                    <div class="comment-text">
-                      <h6 class="comment-author">Chris Root</h6>
-                      <div class="comment-metadata">
-                        <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
-                      </div>
-                      <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
-                      <a href="#" class="comment-reply">Reply</a>
-                    </div>
-                  </div>
-                </li> <!-- end 3 comment -->
 
               </ul>
             </div> <!-- end comments -->
@@ -390,7 +324,7 @@
             <!-- Comment Form -->
             <div id="respond" class="comment-respond">
               <div class="title-wrap">
-                <h5 class="comment-respond__title section-title">Leave a Reply</h5>
+                <h5 class="comment-respond__title section-title">Leave a Comment</h5>
               </div>
               <form id="form" class="comment-form" method="post" action="#">
                 <p class="comment-form-comment">
@@ -399,17 +333,9 @@
                 </p>
 
                 <div class="row row-20">
-                  <div class="col-lg-4">
+                  <div class="col-lg-12">
                     <label for="name">Name: *</label>
                     <input name="name" id="name" type="text">
-                  </div>
-                  <div class="col-lg-4">
-                    <label for="comment">Email: *</label>
-                    <input name="email" id="email" type="email">
-                  </div>
-                  <div class="col-lg-4">
-                    <label for="comment">Website:</label>
-                    <input name="website" id="website" type="text">
                   </div>
                 </div>
 
