@@ -1039,12 +1039,6 @@
         <!-- Sidebar 1 -->
         <aside class="col-lg-4 sidebar sidebar--1 sidebar--right">
 
-          <!-- Widget Ad 300 -->
-          <aside class="widget widget_media_image">
-            <a href="#">
-              <img src="img/content/placeholder_336.jpg" alt="">
-            </a>
-          </aside> <!-- end widget ad 300 -->
 
           <!-- Widget Categories -->
           <aside class="widget widget_categories">
