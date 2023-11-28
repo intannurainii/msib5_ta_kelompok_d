@@ -80,7 +80,7 @@
             <!-- Kategori -->
             <div class="container" style="margin-top:30px">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <?php
                         include '../koneksi.php';
                         $query = mysqli_query($conn, "SELECT * FROM kategori ORDER BY id_kategori ASC");
@@ -91,9 +91,9 @@
                         <table id="data-kategori" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th style="width:430px">Nama Kategori</th>
-                                    <th>Aksi</th>
+                                    <th style="width:5%">No</th>
+                                    <th>Nama Kategori</th>
+                                    <th style="width:14%">Aksi</th>
                                 </tr>
                             </thead>
 
