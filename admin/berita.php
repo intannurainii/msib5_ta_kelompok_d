@@ -90,7 +90,7 @@
 
                         <table id="data-berita" class="table table-striped table-bordered">
                             <thead>
-                                <tr style="text-align:center">
+                                <tr>
                                     <th>No</th>
                                     <th>Judul Berita</th>
                                     <th>Gambar</th>
@@ -98,7 +98,7 @@
                                     <th>Content</th>
                                     <th>Tanggal Publish</th>
                                     <th>Penulis</th>
-                                    <th style="width:135px">Aksi</th>
+                                    <th  style="width:14%">Aksi</th>
                                 </tr>
                             </thead>
 
