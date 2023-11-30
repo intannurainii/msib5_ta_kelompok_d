@@ -103,7 +103,7 @@ if ($data = mysqli_fetch_assoc($result)) {
     ?>
 
 <form action="proses_edit_berita.php?id_berita=<?php echo $id_berita ?>" method="post" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
-                <h3 style="padding-top:10px; padding-bottom:15px"><center>Edit Berita</center></h3>
+            <h3 style="padding-top:10px; padding-bottom:15px"><center>Edit Berita</center></h3>
             
             <label for="judul_berita">Judul Berita:</label>
             <input type="text" onkeyup="checkform()" name="judul_berita" class="form-control" value="<?php echo $judul_berita; ?>">
@@ -112,20 +112,21 @@ if ($data = mysqli_fetch_assoc($result)) {
             <img src="<?php echo $gambar_berita; ?>" alt="Gambar Berita" width="100" style="margin-bottom:15px">
 			<input type="file" name="fileToUpload" id="fileToUpload" class="form-control" value="<?php echo $gambar_berita ?>">
             
-            <label for="id_kategori">Kategori:</label>
-			<select name="id_kategori" name="id_kategori" class="form-control">
-            <?php
-            // Ambil data kategori dari database
-            $query_kategori = "SELECT * FROM kategori";
-            $result_kategori = mysqli_query($conn, $query_kategori);
+			<label for="id_kategori">Kategori:</label>
+			<select name="id_kategori" class="form-control">
+				<?php
+				// Ambil data kategori dari database
+				$query_kategori = "SELECT * FROM kategori";
+				$result_kategori = mysqli_query($conn, $query_kategori);
 
-            // Tampilkan data kategori sebagai opsi dropdown
-            while ($row_kategori = mysqli_fetch_assoc($result_kategori)) {
-                $selected = ($row_kategori['id_kategori'] == $nama_kategori) ? "selected" : "";
-                echo "<option value='{$row_kategori['id_kategori']}' $selected>{$row_kategori['nama_kategori']}</option>";
-            }
-            ?>
-        </select>            
+				// Tampilkan data kategori sebagai opsi dropdown
+				while ($row_kategori = mysqli_fetch_assoc($result_kategori)) {
+					$selected = ($row_kategori['nama_kategori'] == $nama_kategori) ? "selected" : "";
+					echo "<option value='{$row_kategori['id_kategori']}' $selected>{$row_kategori['nama_kategori']}</option>";
+				}
+				?>
+			</select>
+           
             <label for="isi_berita">Isi Berita:</label>
             <textarea id="isi_berita" type="text" onkeyup="checkform()" name="isi_berita" class="form-control"><?php echo $isi_berita; ?></textarea>
             
@@ -134,19 +135,19 @@ if ($data = mysqli_fetch_assoc($result)) {
             
             <label for="id_penulis">Penulis:</label>
 			<select id="id_penulis" name="id_penulis" class="form-control">
-            <?php
-            // Ambil data penulis dari database
-            $query_penulis = "SELECT * FROM penulis";
-            $result_penulis = mysqli_query($conn, $query_penulis);
+				<?php
+				// Ambil data penulis dari database
+				$query_penulis = "SELECT * FROM penulis";
+				$result_penulis = mysqli_query($conn, $query_penulis);
 
-            // Tampilkan data penulis sebagai opsi dropdown
-            while ($row_penulis = mysqli_fetch_assoc($result_penulis)) {
-                $selected = ($row_penulis['id_penulis'] == $nama_penulis) ? "selected" : "";
-                echo "<option value='{$row_penulis['id_penulis']}' $selected>{$row_penulis['nama_penulis']}</option>";
-            }
-            ?>
-        </select> 
-				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
+				// Tampilkan data penulis sebagai opsi dropdown
+				while ($row_penulis = mysqli_fetch_assoc($result_penulis)) {
+					$selected = ($row_penulis['nama_penulis'] == $nama_penulis) ? "selected" : "";
+					echo "<option value='{$row_penulis['id_penulis']}' $selected>{$row_penulis['nama_penulis']}</option>";
+				}
+				?>
+       		</select> 
+			<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
         </form>
         </main>
 	</section>
