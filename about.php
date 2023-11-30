@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Deus | About</title>
 
@@ -11,11 +10,14 @@
 
   <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700%7CSource+Sans+Pro:400,600,700' rel='stylesheet'>
-
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
   <!-- Css -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-icons.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="img/favicon.ico">
@@ -36,63 +38,186 @@
       <div></div>
     </div>
   </div>
-
+  
   <!-- Bg Overlay -->
   <div class="content-overlay"></div>
 
 
-
   <main class="main oh" id="main">
-    <!-- Navigation -->
-    <?php include "navbar.php" ?>
+        
+ <!-- Navigation -->
+ <?php include "navbar.php" ?>
     <!-- end navigation -->
+
+      
 
     <!-- Breadcrumbs -->
     <div class="container">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
-          <a href="index.html" class="breadcrumbs__url">Home</a>
+          <a href="index.php" class="breadcrumbs__url">Home</a>
         </li>
         <li class="breadcrumbs__item">
-          <a href="index.html" class="breadcrumbs__url">News</a>
+          <a href="about.php" class="breadcrumbs__url">About us</a>
         </li>
-        <li class="breadcrumbs__item breadcrumbs__item--current">
-          World
-        </li>
-      </ul>
+        </ul>
     </div>
 
-    <div class="main-container container" id="main-container">
-      <!-- post content -->
-      <div class="blog__content mb-72">
-        <h1 class="page-title">About</h1>
-        <img src="img/content/about/about_bg.jpg" class="page-featured-img">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="entry__article">
-              <p>iPrice Group report offers insights on daily e-commerce activity in the Philippines and Southeast. Statistically, you stand a better chance for success if you have some sort of strategic ask in almost everything that you do -- in-person, on the phone, over email, or on social media.</p>
-
-              <p>Think about it: If you make one additional ask per day and convert at around 10 percent. Then you have three people each month providing you with benefits that you'd have missed otherwise It's essential to make sure that your ask relates to some direct path to what you want, whether it is revenue, a business relationship or anything else of prime importance to you.</p>
-
-              <blockquote>
-                <p>“Dreams and dedication are powerful combination.”</p>
-              </blockquote>
-
-              <p>This strategy uses the Ben Franklin Effect: When people do you a favor, they are more likely to do another. When you meet someone you yourself might be able to assist, ask for their help and, at the same time (e.g. in the same conversation) offer yours. And make a point to be of service even if others might not be able to help you immediately.</p>
-
-              <p>The same goes for phone calls, emails or social media interactions. Being afraid to ask for what you want is a detriment to your success and prosperity. If you lack this skill, then you need to work on it! Asking for help is a form of radical humility, something that with practice will have amazing benefits for all involved.Use this study to your advantage! Don't just ask people for help - ask specifically for what you.</p>
-
-              <p>In order to attract what you want, you actually have to consciously and strategically think about what you want and focus in on it. Then, you need to take some sort of action using the same four strategies you use to ask for help in order to make it happen. You can't get what you want sitting around on your couch. You need to put yourself out there and stimulate interest in person, via email, by phone and through social media.</p>
-
+    <div class="main-container container" id="main-container">            
+    <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <br>
+                        <br>
+                        <h2><em>About Us</em></h2>
+                        <p>Selamat datang di Berita Online</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div> <!-- end post content -->
-    </div> <!-- end main container -->
+    </section>
 
-    <!-- Footer -->
-    <?php include "footer.php" ?>
-    <!-- end footer -->
+    <!-- ***** Our Classes Start ***** -->
+    <section class="section" id="our-classes">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <div class="row" id="tabs">
+              <div class="col-lg-4">
+                <ul>
+                  <li><a href='#tabs-1'><i class="fa fa-globe"></i> Pengertian</a></li>
+                  <li><a href='#tabs-2'><i class="fa fa-info-circle"></i> Tujuan</a></a></li>
+                  <li><a href='#tabs-3'><i class="fa fa-briefcase"></i> Berita Online </a></a></li>
+                </ul>
+              </div>
+              <div class="col-lg-8">
+                <section class='tabs-content'>
+                  <article id='tabs-1'>
+                    <img src="assets/images/about1.jpg" alt="">
+                    <h4>Pengertian</h4>
+
+                    <p>Laporan mengenai suatu peristiwa yang dikemas oleh media sebagi sarananya yang berisi mengenai sebuah peristiwa atau kejadian yang akan dipublikasikan berupa berita ( news )</p>
+                    <p>tahap penting bagi konvergensi media (media convergence). Berita online memiliki potensi untuk memanfaatkan berbagai fitur baru dari dunia pencampuran komunikasi media digital, di antaranya audio, video, animasi, dan peningkatan kontrol pengguna (user control). </p>
+                   
+                    <p>jenis berita yang disebarkkan secara online dalam bentuk teks, audio, video, dan live streaming.beritanya yang selalu diperbaharui secara berkelanjutan (continuous updates), memiliki interaktivitas, hypertext, dan multimedia.</p>
+                  </article>
+                  <article id='tabs-2'>
+                    <img src="assets/images/about2.jpg" alt="">
+                    <h4>Tujuan</h4>
+                    <p>digunakan sebagai sarana penyampaian informasi yang cepat, dan tidak terbatas ruang serta waktu. Misalnya masyarakat Indonesia bisa mengetahui peristiwa terkini yang sedang terjadi di Palestina. Begitu pula dengan warga negara lainnya yang bisa mengetahui informasi terkini tentang Indonesia.</p>
+                    <p>dengan berbagai fitur baru dari dunia pencampuran komunikasi media digital, di antaranya audio, video, animasi, dan peningkatan kontrol pengguna (user control). </p>
+                  </article>
+                  <article id='tabs-3'>
+                    <img src="assets/images/about3.jpg" alt="">
+                    <h4>Berita Online</h4>
+                    <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aut beatae commodi repudiandae distinctio, magnam blanditiis reiciendis vitae velit voluptatum natus, fugit quis eos dolores!</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic adipisci reiciendis quaerat qui earum aut, atque esse quisquam quis exercitationem sapiente, dolorum consequatur consequuntur voluptatibus ipsam, fuga magnam beatae optio nam. Recusandae ut aliquid, eligendi.</p>
+                  </article>
+                </section>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Our Classes End ***** -->
+    
+  <section class="section" id="trainers">
+      <div class="container">
+        <h1><i class="fa fa-group" style="font-size:48px;color:black"></i>Team</i></h1>
+          <br>
+          <br>
+          <div class="row">
+              <div class="col-md-3 col-sm-6">
+                  <div class="trainer-item">
+                      <div class="image-thumb">
+                          <img src="assets/images/1.jpg" alt="">
+                      </div>
+                      <div class="down-content">
+                          <span>Ketua</span>
+                          <h4>Intan Nur'aini</h4>
+                          <p>intanpermata2287@gmail.com
+                            Universitas Islam Sultan Agung
+                            Semarang</p>
+                          <ul class="social-icons">
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="trainer-item">
+                      <div class="image-thumb">
+                          <img src="assets/images/team-image-2-646x680.jpg" alt="">
+                      </div>
+                      <div class="down-content">
+                          <span>Anggota</span>
+                          <h4>I Komang</h4>
+                          <p>Vestibulum id est eu felis vulputate hendrerit. Suspendisse dapibus turpis in dui pulvinar imperdiet. Nunc consectetur.</p>
+                          <ul class="social-icons">
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                  <div class="trainer-item">
+                      <div class="image-thumb">
+                          <img src="assets/images/team-image-3-646x680.jpg" alt="">
+                      </div>
+                      <div class="down-content">
+                          <span>Anggota</span>
+                          <h4>Trisa Tiara</h4>
+                          <p>trisatiara123@gmail.com
+                            Politeknik Negeri Sriwijaya
+                            Palembang</p>
+                          <ul class="social-icons">
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                  <div class="trainer-item">
+                      <div class="image-thumb">
+                          <img src="assets/images/2.jpg" alt="">
+                      </div>
+                      <div class="down-content">
+                          <span>Anggota</span>
+                          <h4>Moch Rifki Adrianysah</h4>
+                          <p>mochrifki98620@gmail.com
+                            STMIK Mardira Indonesia
+                            Bandung</p>
+                          <ul class="social-icons">
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div> <!-- end main container -->
+  </section>
+    
+<
+   
 
     <div id="back-to-top">
       <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
@@ -100,7 +225,7 @@
 
   </main> <!-- end main-wrapper -->
 
-
+  
   <!-- jQuery Scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -108,10 +233,9 @@
   <script src="js/owl-carousel.min.js"></script>
   <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/twitterFetcher_min.js"></script>
-  <script src="js/jquery.newsTicker.min.js"></script>
+  <script src="js/jquery.newsTicker.min.js"></script>  
   <script src="js/modernizr.min.js"></script>
   <script src="js/scripts.js"></script>
 
 </body>
-
 </html>
