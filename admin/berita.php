@@ -98,7 +98,7 @@
                                     <th>Content</th>
                                     <th>Tanggal Publish</th>
                                     <th>Penulis</th>
-                                    <th  style="width:14%">Aksi</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
 
@@ -118,7 +118,7 @@
                                     <td><?php echo $data["isi_berita"] ?></td>
                                     <td><?php echo $data["tanggal_publish"] ?></td>
                                     <td><?php echo $data["nama_penulis"] ?></td>
-                                    <td> <a href="edit_berita.php?id_berita=<?php echo $data["id_berita"] ?>" class="btn btn-warning" style="padding:2px 12px;"> Edit </a>
+                                    <td> <a href="edit_berita.php?id_berita=<?php echo $data["id_berita"] ?>" class="btn btn-warning" style="padding:2px 12px; margin-bottom:10px"> Edit </a>
                                     <a href="proses_hapus.php?berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini <?php echo $judul_berita ?>?')" class="btn btn-danger" style="padding:2px"> Delete </a></td>
                                 </tr>
 
