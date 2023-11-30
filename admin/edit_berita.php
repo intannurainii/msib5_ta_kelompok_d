@@ -77,77 +77,78 @@
 
              <!-- Berita -->
 			 <?php
-// Include file koneksi database dan proses edit
-include '../koneksi.php';
+			// Include file koneksi database dan proses edit
+			include '../koneksi.php';
 
-// Ambil ID berita dari parameter URL
-$id_berita = $_GET['id_berita'];
+			// Ambil ID berita dari parameter URL
+			$id_berita = $_GET['id_berita'];
 
-// Query untuk mendapatkan data yang akan diedit
-$query = "SELECT * FROM berita AS b
-          JOIN kategori AS kat ON b.id_kategori = kat.id_kategori
-          JOIN penulis AS p ON b.id_penulis = p.id_penulis WHERE b.id_berita = '$id_berita'";
+			// Query untuk mendapatkan data yang akan diedit
+			$query = "SELECT * FROM berita AS b
+					JOIN kategori AS kat ON b.id_kategori = kat.id_kategori
+					JOIN penulis AS p ON b.id_penulis = p.id_penulis WHERE b.id_berita = '$id_berita'";
 
-$result = mysqli_query($conn, $query);
+			$result = mysqli_query($conn, $query);
 
-// Memeriksa apakah data ditemukan
-if ($data = mysqli_fetch_assoc($result)) {
-    // Ambil data dari hasil query
-    $judul_berita = $data['judul_berita'];
-    $gambar_berita = $data['gambar_berita'];
-    $nama_kategori = $data['nama_kategori'];
-    $isi_berita = $data['isi_berita'];
-    $tanggal_publish = $data['tanggal_publish'];
-    $nama_penulis = $data['nama_penulis'];
+			// Memeriksa apakah data ditemukan
+			if ($data = mysqli_fetch_assoc($result)) {
+				// Ambil data dari hasil query
+				$judul_berita = $data['judul_berita'];
+				$gambar_berita = $data['gambar_berita'];
+				$nama_kategori = $data['nama_kategori'];
+				$isi_berita = $data['isi_berita'];
+				$tanggal_publish = $data['tanggal_publish'];
+				$nama_penulis = $data['nama_penulis'];
 
-    ?>
+				?>
 
-<form action="proses_edit_berita.php?id_berita=<?php echo $id_berita ?>" method="post" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
-                <h3 style="padding-top:10px; padding-bottom:15px"><center>Edit Berita</center></h3>
-            
-            <label for="judul_berita">Judul Berita:</label>
-            <input type="text" onkeyup="checkform()" name="judul_berita" class="form-control" value="<?php echo $judul_berita; ?>">
-            
-            <label for="fileToUpload">Gambar:</label><br>
-            <img src="<?php echo $gambar_berita; ?>" alt="Gambar Berita" width="100" style="margin-bottom:15px">
-			<input type="file" name="fileToUpload" id="fileToUpload" class="form-control" value="<?php echo $gambar_berita ?>">
-            
-            <label for="id_kategori">Kategori:</label>
-			<select name="id_kategori" name="id_kategori" class="form-control">
-            <?php
-            // Ambil data kategori dari database
-            $query_kategori = "SELECT * FROM kategori";
-            $result_kategori = mysqli_query($conn, $query_kategori);
+			<form action="proses_edit_berita.php?id_berita=<?php echo $id_berita ?>" method="post" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
+				<h3 style="padding-top:10px; padding-bottom:15px"><center>Edit Berita</center></h3>
+				
+				<label for="judul_berita">Judul Berita:</label>
+				<input type="text" onkeyup="checkform()" name="judul_berita" class="form-control" value="<?php echo $judul_berita; ?>">
+				
+				<label for="fileToUpload">Gambar:</label><br>
+				<img src="<?php echo $gambar_berita; ?>" alt="Gambar Berita" width="100" style="margin-bottom:15px">
+				<input type="file" name="fileToUpload" id="fileToUpload" class="form-control" value="<?php echo $gambar_berita ?>">
+				
+				<label for="id_kategori">Kategori:</label>
+				<select name="id_kategori" class="form-control">
+					<?php
+					// Ambil data kategori dari database
+					$query_kategori = "SELECT * FROM kategori";
+					$result_kategori = mysqli_query($conn, $query_kategori);
 
-            // Tampilkan data kategori sebagai opsi dropdown
-            while ($row_kategori = mysqli_fetch_assoc($result_kategori)) {
-                $selected = ($row_kategori['id_kategori'] == $nama_kategori) ? "selected" : "";
-                echo "<option value='{$row_kategori['id_kategori']}' $selected>{$row_kategori['nama_kategori']}</option>";
-            }
-            ?>
-        </select>            
-            <label for="isi_berita">Isi Berita:</label>
-            <textarea id="isi_berita" type="text" onkeyup="checkform()" name="isi_berita" class="form-control"><?php echo $isi_berita; ?></textarea>
-            
-            <label for="tanggal_publish">Tanggal Publish:</label>
-            <input id="tanggal_publish" type="date" onkeyup="checkform()" name="tanggal_publish" class="form-control" value="<?php echo $tanggal_publish; ?>">
-            
-            <label for="id_penulis">Penulis:</label>
-			<select id="id_penulis" name="id_penulis" class="form-control">
-            <?php
-            // Ambil data penulis dari database
-            $query_penulis = "SELECT * FROM penulis";
-            $result_penulis = mysqli_query($conn, $query_penulis);
+					// Tampilkan data kategori sebagai opsi dropdown
+					while ($row_kategori = mysqli_fetch_assoc($result_kategori)) {
+						$selected = ($row_kategori['nama_kategori'] == $nama_kategori) ? "selected" : "";
+						echo "<option value='{$row_kategori['id_kategori']}' $selected>{$row_kategori['nama_kategori']}</option>";
+					}
+					?>
+				</select>
+			
+				<label for="isi_berita">Isi Berita:</label>
+				<textarea id="isi_berita" type="text" onkeyup="checkform()" name="isi_berita" class="form-control"><?php echo $isi_berita; ?></textarea>
+				
+				<label for="tanggal_publish">Tanggal Publish:</label>
+				<input id="tanggal_publish" type="date" onkeyup="checkform()" name="tanggal_publish" class="form-control" value="<?php echo $tanggal_publish; ?>">
+				
+				<label for="id_penulis">Penulis:</label>
+				<select id="id_penulis" name="id_penulis" class="form-control">
+					<?php
+					// Ambil data penulis dari database
+					$query_penulis = "SELECT * FROM penulis";
+					$result_penulis = mysqli_query($conn, $query_penulis);
 
-            // Tampilkan data penulis sebagai opsi dropdown
-            while ($row_penulis = mysqli_fetch_assoc($result_penulis)) {
-                $selected = ($row_penulis['id_penulis'] == $nama_penulis) ? "selected" : "";
-                echo "<option value='{$row_penulis['id_penulis']}' $selected>{$row_penulis['nama_penulis']}</option>";
-            }
-            ?>
-        </select> 
-				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
-        </form>
+					// Tampilkan data penulis sebagai opsi dropdown
+					while ($row_penulis = mysqli_fetch_assoc($result_penulis)) {
+						$selected = ($row_penulis['nama_penulis'] == $nama_penulis) ? "selected" : "";
+						echo "<option value='{$row_penulis['id_penulis']}' $selected>{$row_penulis['nama_penulis']}</option>";
+					}
+					?>
+				</select> 
+				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px" onclick="return confirm('Simpan perubahan data?')">    
+        	</form>
         </main>
 	</section>
 </body>
