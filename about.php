@@ -16,12 +16,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-icons.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <!-- PENYEBAB STYLING BERANTAKAN -->
-  <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"> -->
-  <!-- PENYEBAB STYLING BERANTAKAN -->
-  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
+  
   <!-- Favicons -->
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -116,11 +113,10 @@
                 <article id='tabs-3'>
                   <img src="assets/images/about3.jpg" alt="">
                   <h4>Berita Online</h4>
-                  <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
-
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aut beatae commodi repudiandae distinctio, magnam blanditiis reiciendis vitae velit voluptatum natus, fugit quis eos dolores!</p>
-
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic adipisci reiciendis quaerat qui earum aut, atque esse quisquam quis exercitationem sapiente, dolorum consequatur consequuntur voluptatibus ipsam, fuga magnam beatae optio nam. Recusandae ut aliquid, eligendi.</p>
+                  <p>Berikut Beberapa Kategori Berita Online :</p>
+                  <p>Berita olahraga merupakan salah satu berita yang sering dihadirkan oleh media untuk menarik jumlah pembaca. Salah satu berita olahraga yang paling diminati masyarakat adalah sepakbola.</p>
+                  <p>Berita Politik merupakan salah satu berita yang menyajikan berita politik Indonesia meliputi partai politik, tokoh, pemilu, pilpres hingga pilkada terbaru dan terkini.</p>
+                  <p>Berita Kesehatan merupakan salah satu berita yang menyajikan keadaan sehat baik secara fisik, mental, spiritual, maupun sosial yang memungkinkan setiap orang untuk hidup produktif secara sosial dan ekonomis.</p>
                 </article>
               </section>
             </div>
@@ -225,7 +221,7 @@
     <?php include "footer.php" ?>
     <!-- end footer -->
 
-    < <div id="back-to-top">
+    <div id="back-to-top">
       <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
       </div>
 
@@ -235,6 +231,7 @@
   <!-- jQuery Scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="assets/js/popper.js"></script>
   <script src="js/easing.min.js"></script>
   <script src="js/owl-carousel.min.js"></script>
   <script src="js/flickity.pkgd.min.js"></script>
@@ -242,6 +239,8 @@
   <script src="js/jquery.newsTicker.min.js"></script>
   <script src="js/modernizr.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="assets/js/accordions.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
