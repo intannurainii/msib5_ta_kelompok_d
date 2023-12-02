@@ -968,6 +968,9 @@
     }
   }
 
+  &__img-holder img {
+object-fit: cover!important;
+  }
   &__img-holder {
     width: 88px;
     float: left;
@@ -983,6 +986,7 @@
   &__img--rounded {
     border-radius: 50%;
     overflow: hidden;
+    object-fit: cover!important;
   }
 
   &__body {
@@ -1053,11 +1057,14 @@
     .post-list-small__img-holder {
       border-radius: 0;
       width: 78px;
+
     }
+
 
     .post-list-small__entry-title {
       margin: 0;
     }
+    
   }
 
   // Style 2
@@ -1070,6 +1077,7 @@
     .post-list-small__entry-title {
       font-size: 16px;
     }
+    
   }
 
   // Style 3

@@ -127,7 +127,7 @@
 
       <section class="section" id="trainers">
         <div class="container">
-          <h1><i class="fa fa-group" style="font-size:48px;color:black"></i>Team</i></h1>
+          <h1><i class="fa fa-group"></i>Team</i></h1>
           <br>
           <br>
           <div class="row">

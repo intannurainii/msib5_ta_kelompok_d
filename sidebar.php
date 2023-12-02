@@ -1,8 +1,8 @@
         <?php
-                $query_berita = "SELECT * FROM `kategori` 
+        $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
                      LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis 
-                     ORDER BY berita.tanggal_publish DESC ";
+                     ORDER BY views DESC ";
         $sql_berita = mysqli_query($conn, $query_berita);
         ?>
 
@@ -22,7 +22,7 @@
                             <div class="post-list-small__img-holder">
                                 <div class="thumb-container thumb-100">
                                     <a href="single-post.php?berita=<?php echo $id_berita ?>">
-                                        <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
+                                        <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" alt="" class="post-list-small__img--rounded lazyload">
                                     </a>
                                 </div>
                             </div>
@@ -74,30 +74,43 @@
                         <a class="social social-facebook" href="#" title="facebook" target="_blank" aria-label="facebook">
                             <i class="ui-facebook"></i>
                             <span class="social__text">Facebook</span>
-                        </a><!--
-                  --><a class="social social-twitter" href="#" title="twitter" target="_blank" aria-label="twitter">
-                            <i class="ui-twitter"></i>
-                            <span class="social__text">Twitter</span>
-                        </a><!--
-                  --><a class="social social-youtube" href="#" title="youtube" target="_blank" aria-label="youtube">
-                            <i class="ui-youtube"></i>
-                            <span class="social__text">Youtube</span>
                         </a>
                     </div>
                     <div class="col">
-                        <a class="social social-google-plus" href="#" title="google" target="_blank" aria-label="google">
-                            <i class="ui-google"></i>
-                            <span class="social__text">Google+</span>
-                        </a><!--
-                  --><a class="social social-instagram" href="#" title="instagram" target="_blank" aria-label="instagram">
+                        <a class="social social-instagram" href="#" title="instagram" target="_blank" aria-label="instagram">
                             <i class="ui-instagram"></i>
                             <span class="social__text">Instagram</span>
-                        </a><!--
-                  --><a class="social social-rss" href="#" title="rss" target="_blank" aria-label="rss">
-                            <i class="ui-rss"></i>
-                            <span class="social__text">Rss</span>
                         </a>
                     </div>
                 </div>
             </div>
         </aside> <!-- end widget socials -->
+        <!-- Sidebar 1 -->
+
+
+        <!-- Widget Categories -->
+        <aside class="widget widget_categories">
+            <h4 class="widget-title">Categories</h4>
+            <ul>
+                <!-- Kategori From Database -->
+                <?php
+                $query = "SELECT kategori.id_kategori, kategori.nama_kategori, COUNT(berita.id_berita) AS jumlah_berita
+              FROM kategori
+              LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori
+              GROUP BY kategori.id_kategori, kategori.nama_kategori;
+              ";
+                $sql = mysqli_query($conn, $query);
+                while ($result = mysqli_fetch_array($sql)) {
+                    $nama_kategori = $result['nama_kategori'];
+                    $jumlah_berita = $result['jumlah_berita'];
+                    $id_kategori = $result['id_kategori'];
+
+                ?>
+                    <li><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $nama_kategori ?> <span class="categories-count"><?php echo $jumlah_berita ?></span></a></li>
+
+                <?php
+                };
+                ?>
+                <!-- Kategori From Database -->
+            </ul>
+        </aside> <!-- end widget categories -->

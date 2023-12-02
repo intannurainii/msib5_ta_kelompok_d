@@ -4957,3 +4957,9 @@ dd {
 		font-size: 14px; }
 
 /*# sourceMappingURL=style.css.map */
+
+/* side bar */
+.post-list-small__img-holder img {
+    object-fit: cover!important;
+}
+/* side bar */

@@ -42,6 +42,10 @@
   <main class="main oh" id="main">
     <!-- Navigation -->
     <?php include "navbar.php" ?> <!-- end navigation -->
+    <?php
+
+    include "BgColorByCategory.php";
+    ?>
 
     <!-- Breadcrumbs -->
     <div class="container">
@@ -62,6 +66,7 @@
     // Baca parameter id_kategori dari URL
     include "koneksi.php";
     $id_berita = $_GET['berita'];
+    mysqli_query($conn, "UPDATE berita SET views = views + 1 WHERE id_berita = $id_berita");
 
 
     // Lakukan validasi atau keamanan jika diperlukan
@@ -83,6 +88,7 @@
     $isi_berita = $result_berita['isi_berita'];
     $foto_penulis = $result_berita['foto_profil'];
     $email_penulis = $result_berita['email_penulis'];
+    $views = $result_berita['views'];
     // Tampilkan judul kategori di luar loop
 
     $query_related =
@@ -107,7 +113,7 @@
             <article class="entry mb-0">
 
               <div class="single-post__entry-header entry__header">
-                <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--green"><?php echo $nama_kategori ?></a>
+                <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--<?php echo getBgColorByCategory($nama_kategori) ?>"><?php echo $nama_kategori ?></a>
                 <h1 class="single-post__entry-title">
                   <?php echo $judul_berita ?>
                 </h1>
@@ -126,7 +132,7 @@
                   <ul class="entry__meta">
                     <li class="entry__meta-views">
                       <i class="ui-eye"></i>
-                      <span>1356</span>
+                      <span><?php echo $views ?></span>
                     </li>
                   </ul>
                 </div>

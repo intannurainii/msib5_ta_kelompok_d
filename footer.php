@@ -38,56 +38,46 @@
                         <aside class="widget widget-popular-posts">
                             <h4 class="widget-title">Popular Posts</h4>
                             <ul class="post-list-small">
-                                <li class="post-list-small__item">
-                                    <article class="post-list-small__entry clearfix">
-                                        <div class="post-list-small__img-holder">
-                                            <div class="thumb-container thumb-100">
-                                                <a href="single-post.html">
-                                                    <img data-src="img/content/post_small/post_small_1.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                                                </a>
+                                <?php
+                                $query_berita = "SELECT * FROM `berita`
+                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis 
+                     ORDER BY views DESC limit 2";
+                                $sql_berita = mysqli_query($conn, $query_berita);
+                                while ($result_berita = mysqli_fetch_array($sql_berita)) {
+                                    $judul_berita = $result_berita['judul_berita'];
+                                    $gambar_berita = $result_berita['gambar_berita'];
+                                    $id_berita = $result_berita['id_berita'];
+                                    $nama_penulis = $result_berita['nama_penulis'];
+                                    $tanggal_publish = $result_berita['tanggal_publish'];
+                                ?>
+                                    <li class="post-list-small__item">
+                                        <article class="post-list-small__entry clearfix">
+                                            <div class="post-list-small__img-holder">
+                                                <div class="thumb-container thumb-100">
+                                                    <a href="single-post.html">
+                                                        <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" alt="" class="post-list-small__img--rounded lazyload">
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="post-list-small__body">
-                                            <h3 class="post-list-small__entry-title">
-                                                <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                                            </h3>
-                                            <ul class="entry__meta">
-                                                <li class="entry__meta-author">
-                                                    <span>by</span>
-                                                    <a href="#">DeoThemes</a>
-                                                </li>
-                                                <li class="entry__meta-date">
-                                                    Jan 21, 2018
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="post-list-small__item">
-                                    <article class="post-list-small__entry clearfix">
-                                        <div class="post-list-small__img-holder">
-                                            <div class="thumb-container thumb-100">
-                                                <a href="single-post.html">
-                                                    <img data-src="img/content/post_small/post_small_2.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                                                </a>
+                                            <div class="post-list-small__body">
+                                                <h3 class="post-list-small__entry-title">
+                                                    <a href="single-post.php?berita=<?php echo $id_berita ?>"><?php echo $judul_berita ?></a>
+                                                </h3>
+                                                <ul class="entry__meta">
+                                                    <li class="entry__meta-author">
+                                                        <span>by</span>
+                                                        <a href="#"><?php echo $nama_penulis ?></a>
+                                                    </li>
+                                                    <li class="entry__meta-date">
+                                                        <?php echo $tanggal_publish ?>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                        <div class="post-list-small__body">
-                                            <h3 class="post-list-small__entry-title">
-                                                <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                                            </h3>
-                                            <ul class="entry__meta">
-                                                <li class="entry__meta-author">
-                                                    <span>by</span>
-                                                    <a href="#">DeoThemes</a>
-                                                </li>
-                                                <li class="entry__meta-date">
-                                                    Jan 21, 2018
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
+                                        </article>
+                                    </li>
+                                <?php
+                                }
+                                ?>
                             </ul>
                         </aside>
                     </div>

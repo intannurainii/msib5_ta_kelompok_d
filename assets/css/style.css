@@ -148,7 +148,7 @@ body {
   display: inline-block;
   font-size: 15px;
   padding: 12px 20px;
-  background-color: #5319f1;
+  background-color: #2D95E3;
   color: #fff;
   text-align: center;
   font-weight: 400;
@@ -226,7 +226,7 @@ banner
 
 .main-banner .caption h2 em {
   font-style: normal;
-  color: #5319f1;
+  color: #2D95E3;
   font-weight: 900;
 }
 
@@ -270,7 +270,7 @@ features
   display: inline-block;
   font-size: 13px;
   text-transform: uppercase;
-  color: #5319f1;
+  color: #2D95E3;
   font-weight: 500;
 }
 
@@ -299,7 +299,7 @@ subscribe
 
 .cta-content h2 em {
   font-style: normal;
-  color: rgb(60, 19, 245);
+  color: white;
 }
 
 .cta-content p {
@@ -357,7 +357,7 @@ Our Classes
   font-size: 19px;
   letter-spacing: 0.5px;
   font-weight: 600;
-  background-color: #5319f1;
+  background-color: #2D95E3;
 }
 #tabs .main-rounded-button a:hover {
   background-color: #f9735b;
@@ -365,7 +365,7 @@ Our Classes
 #tabs ul li a .fa {
   font-size: 32px;
   height: 32px;
-  color: #5319f1;
+  color: #2D95E3;
   margin-right: 15px;
   display: inline-block;
 }
@@ -376,7 +376,7 @@ Our Classes
   border-bottom: none;
 }
 #tabs ul .ui-tabs-active a {
-  color: #5319f1;
+  color: #2D95E3;
 }
 #tabs ul .ui-tabs-active span {
   color: #1e1e1e;
@@ -540,6 +540,12 @@ trainers
   padding-bottom: 90px; 
 }
 
+#trainers h1{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
 #trainers .trainer-item {
   background-color: #fff;
   border-radius: 5px;
@@ -556,7 +562,7 @@ trainers
 #trainers .trainer-item span {
   font-size: 13px;
   font-weight: 500;
-  color: #5319f1;
+  color: #2D95E3;
   display: inline-block;
   margin-top: 25px;
   margin-bottom: 10px;
@@ -589,7 +595,7 @@ ul.social-icons li a {
 }
 
 ul.social-icons li a:hover {
-  color: #5319f1;
+  color: #2D95E3;
 }
 
 
@@ -770,16 +776,16 @@ responsive
 .dropdown-menu a.active,
 .dropdown-menu a:hover {
   background: transparent;
-  color: #5319f1!important;
+  color: #2D95E3!important;
 }
 
 .pagination-lg .page-link {
-  color: #5319f1;
+  color: #2D95E3;
 }
 
 .btn-primary {
-  border-color: #5319f1;
-  background-color: #5319f1;
+  border-color: #2D95E3;
+  background-color: #2D95E3;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, 
@@ -799,7 +805,7 @@ responsive
   height: 72px;
   border-radius: 5px;
   color: #fff;
-  background-color: #5319f1;
+  background-color: #2D95E3;
   font-size: 30px;
   margin: 0 auto 15px;
   display: flex;
@@ -808,10 +814,11 @@ responsive
 }
 
 a {
-  color: #5319f1;
+  color: #2D95E3;
 }
 
 a:focus,
 a:hover {
   color: #f9735b;
 }
+

@@ -48,6 +48,12 @@
 
     <!-- Navigation -->
     <?php include "navbar.php" ?>
+    <!-- function background kategori -->
+    <?php
+
+include "BgColorByCategory.php";
+    ?>
+    <!-- function background kategori -->
     <!-- end navigation -->
 
 
@@ -92,7 +98,7 @@
             <?php
             $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
-                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY berita.tanggal_publish DESC limit 3 offset 1";
+                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY views DESC limit 3 offset 1";
             $sql_berita = mysqli_query($conn, $query_berita);
             while ($result_berita = mysqli_fetch_array($sql_berita)) {
               $id_kategori = $result_berita['id_kategori'];
@@ -110,7 +116,7 @@
                   <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/berita/<?php echo $gambar_berita ?>)">
                     <a href="single-post.php?berita=<?php echo $id_berita ?>" class="thumb-url"></a>
                     <img src="img/content/hero/hero_post_1.jpg" alt="" class="entry__img d-none">
-                    <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet"><?php echo $nama_kategori ?></a>
+                    <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--<?php echo getBgColorByCategory($nama_kategori) ?>"><?php echo $nama_kategori ?></a>
                   </div>
 
                   <div class="entry__body post-list__body card__body">
@@ -133,14 +139,13 @@
             };
             ?>
           </div> <!-- end col -->
-
           <div class="col-lg-6">
 
             <!-- Large post -->
             <?php
             $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
-                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY berita.tanggal_publish DESC  limit 1";
+                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY views DESC  limit 1";
             $sql_berita = mysqli_query($conn, $query_berita);
             $result_berita = mysqli_fetch_array($sql_berita);
             $id_kategori = $result_berita['id_kategori'];
@@ -159,7 +164,7 @@
                   <a href="single-post.php?berita=<?php echo $id_berita ?>">
                     <img src="img/berita/<?php echo $gambar_berita ?>" alt="" class="entry__img">
                   </a>
-                  <a href="categories.php?id_kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green"><?php echo $nama_kategori ?></a>
+                  <a href="categories.php?id_kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--<?php echo getBgColorByCategory($nama_kategori) ?>"><?php echo $nama_kategori ?></a>
                 </div>
 
                 <div class="entry__body card__body">
@@ -249,7 +254,7 @@
                               <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
                             </div>
                           </a>
-                          <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet"><?php echo $nama_kategori ?></a>
+                          <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--<?php echo getBgColorByCategory($nama_kategori) ?>"><?php echo $nama_kategori ?></a>
                         </div>
 
                         <div class="entry__body card__body">
@@ -312,7 +317,7 @@
                                 <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
                               </div>
                             </a>
-                            <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange"><?php echo $nama_kategori ?></a>
+                            <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--<?php echo getBgColorByCategory($nama_kategori) ?>"><?php echo $nama_kategori ?></a>
                           </div>
                           <div class="entry__body card__body">
                             <div class="entry__header">
@@ -351,166 +356,7 @@
 
         <!-- Sidebar -->
         <aside class="col-lg-4 sidebar sidebar--right">
-
-          <!-- Widget Popular Posts -->
-          <aside class="widget widget-popular-posts">
-            <h4 class="widget-title">Popular Posts</h4>
-            <ul class="post-list-small">
-              <li class="post-list-small__item">
-                <article class="post-list-small__entry clearfix">
-                  <div class="post-list-small__img-holder">
-                    <div class="thumb-container thumb-100">
-                      <a href="single-post.html">
-                        <img data-src="img/content/post_small/post_small_1.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="post-list-small__body">
-                    <h3 class="post-list-small__entry-title">
-                      <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                    </h3>
-                    <ul class="entry__meta">
-                      <li class="entry__meta-author">
-                        <span>by</span>
-                        <a href="#">DeoThemes</a>
-                      </li>
-                      <li class="entry__meta-date">
-                        Jan 21, 2018
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-              </li>
-              <li class="post-list-small__item">
-                <article class="post-list-small__entry clearfix">
-                  <div class="post-list-small__img-holder">
-                    <div class="thumb-container thumb-100">
-                      <a href="single-post.html">
-                        <img data-src="img/content/post_small/post_small_2.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="post-list-small__body">
-                    <h3 class="post-list-small__entry-title">
-                      <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                    </h3>
-                    <ul class="entry__meta">
-                      <li class="entry__meta-author">
-                        <span>by</span>
-                        <a href="#">DeoThemes</a>
-                      </li>
-                      <li class="entry__meta-date">
-                        Jan 21, 2018
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-              </li>
-              <li class="post-list-small__item">
-                <article class="post-list-small__entry clearfix">
-                  <div class="post-list-small__img-holder">
-                    <div class="thumb-container thumb-100">
-                      <a href="single-post.html">
-                        <img data-src="img/content/post_small/post_small_3.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="post-list-small__body">
-                    <h3 class="post-list-small__entry-title">
-                      <a href="single-post.html">June in Africa: Taxi wars, smarter cities and increased investments</a>
-                    </h3>
-                    <ul class="entry__meta">
-                      <li class="entry__meta-author">
-                        <span>by</span>
-                        <a href="#">DeoThemes</a>
-                      </li>
-                      <li class="entry__meta-date">
-                        Jan 21, 2018
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-              </li>
-              <li class="post-list-small__item">
-                <article class="post-list-small__entry clearfix">
-                  <div class="post-list-small__img-holder">
-                    <div class="thumb-container thumb-100">
-                      <a href="single-post.html">
-                        <img data-src="img/content/post_small/post_small_4.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                      </a>
-                    </div>
-                  </div>
-                  <div class="post-list-small__body">
-                    <h3 class="post-list-small__entry-title">
-                      <a href="single-post.html">PUBG Desert Map Finally Revealed, Here Are All The Details</a>
-                    </h3>
-                    <ul class="entry__meta">
-                      <li class="entry__meta-author">
-                        <span>by</span>
-                        <a href="#">DeoThemes</a>
-                      </li>
-                      <li class="entry__meta-date">
-                        Jan 21, 2018
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-              </li>
-            </ul>
-          </aside> <!-- end widget popular posts -->
-
-
-
-          <!-- Widget Socials -->
-          <aside class="widget widget-socials">
-            <h4 class="widget-title">Let's hang out on social</h4>
-            <div class="socials socials--wide socials--large">
-              <div class="row row-16">
-                <div class="col">
-                  <a class="social social-facebook" href="#" title="facebook" target="_blank" aria-label="facebook">
-                    <i class="ui-facebook"></i>
-                    <span class="social__text">Facebook</span>
-                  </a>
-                </div>
-                <div class="col">
-                  <a class="social social-instagram" href="#" title="instagram" target="_blank" aria-label="instagram">
-                    <i class="ui-instagram"></i>
-                    <span class="social__text">Instagram</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </aside> <!-- end widget socials -->
-          <!-- Sidebar 1 -->
-
-
-          <!-- Widget Categories -->
-          <aside class="widget widget_categories">
-            <h4 class="widget-title">Categories</h4>
-            <ul>
-              <!-- Kategori From Database -->
-              <?php
-              $query = "SELECT kategori.id_kategori, kategori.nama_kategori, COUNT(berita.id_berita) AS jumlah_berita
-              FROM kategori
-              LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori
-              GROUP BY kategori.id_kategori, kategori.nama_kategori;
-              ";
-              $sql = mysqli_query($conn, $query);
-              while ($result = mysqli_fetch_array($sql)) {
-                $nama_kategori = $result['nama_kategori'];
-                $jumlah_berita = $result['jumlah_berita'];
-                $id_kategori = $result['id_kategori'];
-
-              ?>
-                <li><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $nama_kategori ?> <span class="categories-count"><?php echo $jumlah_berita ?></span></a></li>
-
-              <?php
-              };
-              ?>
-              <!-- Kategori From Database -->
-            </ul>
-          </aside> <!-- end widget categories -->
-
+          <?php include "sidebar.php" ?>
         </aside> <!-- end sidebar -->
 
       </div> <!-- end content -->
@@ -526,7 +372,7 @@
         <!-- Slider -->
         <div id="owl-posts" class="owl-carousel owl-theme owl-carousel--arrows-outside">
           <?php
-          $query_berita = "SELECT * FROM `berita` ORDER BY berita.tanggal_publish DESC";
+          $query_berita = "SELECT * FROM `berita` WHERE `editors_picks` = 1 ORDER BY berita.tanggal_publish DESC";
           $sql_berita = mysqli_query($conn, $query_berita);
           while ($result_berita = mysqli_fetch_array($sql_berita)) {
             $judul_berita = $result_berita['judul_berita'];
@@ -547,17 +393,6 @@
           <?php
           }
           ?>
-          <article class="entry thumb thumb--size-1">
-            <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">
-              <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">
-                <h2 class="thumb-entry-title">
-                  <a href="single-post.php?berita=<?php echo $id_berita ?>">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
-                </h2>
-              </div>
-              <a href="single-post.php?berita=<?php echo $id_berita ?>" class="thumb-url"></a>
-            </div>
-          </article>
         </div> <!-- end slider -->
 
       </section> <!-- end carousel posts -->

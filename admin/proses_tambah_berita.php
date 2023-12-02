@@ -7,6 +7,7 @@ $isi_berita = $_POST["isi_berita"];
 $tanggal_publish = $_POST["tanggal_publish"];
 $penulis = $_POST["penulis"]; // Ganti dengan nama kolom yang sesuai di database
 $gambar_berita = $_FILES['fileToUpload']['name'];
+$editors_picks = $_POST["editors_picks"];
 
 // Handle upload gambar
 $target_dir = "../img/berita/"; 
@@ -17,7 +18,7 @@ if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     echo "Sorry, there was an error uploading your file.<br>";
 }
 
-$result = mysqli_query($conn, "INSERT INTO `berita` (`judul_berita`, `id_kategori`, `isi_berita`, `tanggal_publish`, `id_penulis`, `gambar_berita`) VALUES ('$judul_berita', '$kategori', '$isi_berita', '$tanggal_publish', '$penulis', '$gambar_berita');");
+$result = mysqli_query($conn, "INSERT INTO `berita` (`judul_berita`, `id_kategori`, `isi_berita`, `tanggal_publish`, `id_penulis`, `gambar_berita`, `editors_picks`) VALUES ('$judul_berita', '$kategori', '$isi_berita', '$tanggal_publish', '$penulis', '$gambar_berita', '$editors_picks');");
 
 header("Location:berita.php");
 

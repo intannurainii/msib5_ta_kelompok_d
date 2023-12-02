@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-icons.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="img/favicon.ico" />
@@ -59,8 +61,21 @@
 
     <div class="main-container container" id="main-container">
       <!-- post content -->
+      <section class="section section-bg" id="call-to-action" style="background-image: url(img/content/about/about_bg.jpg)">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <div class="cta-content">
+                <br>
+                <br>
+                <h2><em>Contact Us</em></h2>
+                <p>Drop Us a Message</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div class="blog__content mb-72">
-        <img src="img/content/about/about_bg.jpg" class="page-featured-img" />
         <div class="row align-items-center">
           <div class="col">
             <h1 class="page-title">Drop Us a Message</h1>
