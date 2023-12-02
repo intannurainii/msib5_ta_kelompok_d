@@ -60,9 +60,18 @@
         </span>
         <div class="newsticker">
           <ul class="newsticker__list">
-            <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url">A-HA theme is multi-purpose solution for any kind of business</a></li>
-            <li class="newsticker__item"><a href="single-post-1.html" class="newsticker__item-url">Satelite cost tens of millions or even hundreds of millions of dollars to build</a></li>
-            <li class="newsticker__item"><a href="single-post-3.html" class="newsticker__item-url">8 Hidden Costs of Starting and Running a Business</a></li>
+            <?php
+            $query = "SELECT * FROM `berita` ORDER BY berita.tanggal_publish DESC";
+            $sql = mysqli_query($conn, $query);
+            while ($result = mysqli_fetch_array($sql)) {
+              $judul_berita = $result['judul_berita'];
+
+            ?>
+              <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url"><?php echo $judul_berita ?></a></li>
+
+            <?php
+            };
+            ?>
           </ul>
         </div>
         <div class="newsticker-buttons">
@@ -78,110 +87,87 @@
         <div class="row row-8">
 
           <div class="col-lg-6">
-
             <!-- Small post -->
-            <div class="featured-posts-grid__item featured-posts-grid__item--sm">
-              <article class="entry card post-list featured-posts-grid__entry">
-                <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/hero/hero_post_1.jpg)">
-                  <a href="single-post.html" class="thumb-url"></a>
-                  <img src="img/content/hero/hero_post_1.jpg" alt="" class="entry__img d-none">
-                  <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">World</a>
-                </div>
+            <?php
+      $query_berita = "SELECT * FROM `kategori` 
+                     LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
+                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY berita.tanggal_publish DESC limit 3 offset 1";
+      $sql_berita = mysqli_query($conn, $query_berita);
+      while ($result_berita = mysqli_fetch_array($sql_berita)) {
+        $judul_berita = $result_berita['judul_berita'];
+        $nama_kategori = $result_berita['nama_kategori'];
+        $nama_penulis = $result_berita['nama_penulis'];
+        $tanggal_publish = $result_berita['tanggal_publish'];
+        $gambar_berita = $result_berita['gambar_berita'];
+        $isi_berita = $result_berita['isi_berita'];
 
-                <div class="entry__body post-list__body card__body">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">3 Founders With Booming Businesses Share Stories About Their Difficult Early</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </div> <!-- end post -->
+            ?>
+              <div class="featured-posts-grid__item featured-posts-grid__item--sm">
+                <article class="entry card post-list featured-posts-grid__entry">
+                  <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/berita/<?php echo $gambar_berita ?>)">
+                    <a href="single-post.html" class="thumb-url"></a>
+                    <img src="img/content/hero/hero_post_1.jpg" alt="" class="entry__img d-none">
+                    <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet"><?php echo $nama_kategori ?></a>
+                  </div>
 
-            <!-- Small post -->
-            <div class="featured-posts-grid__item featured-posts-grid__item--sm">
-              <article class="entry card post-list featured-posts-grid__entry">
-                <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/hero/hero_post_2.jpg)">
-                  <a href="single-post.html" class="thumb-url"></a>
-                  <img src="img/content/hero/hero_post_2.jpg" alt="" class="entry__img d-none">
-                  <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">Fashion</a>
-                </div>
-
-                <div class="entry__body post-list__body card__body">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">3 Things You Can Do to Get Your Customers Talking About Your Business</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </div> <!-- end post -->
-
-            <!-- Small post -->
-            <div class="featured-posts-grid__item featured-posts-grid__item--sm">
-              <article class="entry card post-list featured-posts-grid__entry">
-                <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/hero/hero_post_3.jpg)">
-                  <a href="single-post.html" class="thumb-url"></a>
-                  <img src="img/content/hero/hero_post_3.jpg" alt="" class="entry__img d-none">
-                  <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--blue">Business</a>
-                </div>
-
-                <div class="entry__body post-list__body card__body">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">These Are the 20 Best Places to Work in 2018</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </div> <!-- end post -->
-
+                  <div class="entry__body post-list__body card__body">
+                    <h2 class="entry__title">
+                      <a href="single-post.html"><?php echo $judul_berita ?></a>
+                    </h2>
+                    <ul class="entry__meta">
+                      <li class="entry__meta-author">
+                        <span>by</span>
+                        <a href="#"><?php echo $nama_penulis ?></a>
+                      </li>
+                      <li class="entry__meta-date">
+                        <?php echo $tanggal_publish ?>
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+              </div> <!-- end post -->
+            <?php
+            };
+            ?>
           </div> <!-- end col -->
 
           <div class="col-lg-6">
 
             <!-- Large post -->
+                        <?php
+      $query_berita = "SELECT * FROM `kategori` 
+                     LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
+                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY berita.tanggal_publish DESC  limit 1";
+      $sql_berita = mysqli_query($conn, $query_berita);
+      $result_berita = mysqli_fetch_array($sql_berita);
+        $judul_berita = $result_berita['judul_berita'];
+        $nama_kategori = $result_berita['nama_kategori'];
+        $nama_penulis = $result_berita['nama_penulis'];
+        $tanggal_publish = $result_berita['tanggal_publish'];
+        $gambar_berita = $result_berita['gambar_berita'];
+        $isi_berita = $result_berita['isi_berita'];
+
+            ?>
             <div class="featured-posts-grid__item featured-posts-grid__item--lg">
               <article class="entry card featured-posts-grid__entry">
                 <div class="entry__img-holder card__img-holder">
                   <a href="single-post.html">
-                    <img src="img/content/hero/hero_post_4.jpg" alt="" class="entry__img">
+                    <img src="img/berita/<?php echo $gambar_berita ?>" alt="" class="entry__img">
                   </a>
-                  <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green">Lifestyle</a>
+                  <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green"><?php echo $nama_kategori ?></a>
                 </div>
 
                 <div class="entry__body card__body">
                   <h2 class="entry__title">
-                    <a href="single-post.html">What Days and Hours are PH Online Shoppers Most Likely to Buy?</a>
+                    <a href="single-post.html"><?php echo $judul_berita ?></a>
                   </h2>
                   <ul class="entry__meta">
                     <li class="entry__meta-author">
                       <span>by</span>
-                      <a href="#">DeoThemes</a>
+                      <a href="#"><?php echo $nama_penulis ?></a>
                     </li>
                     <li class="entry__meta-date">
-                      Jan 21, 2018
+                      <?php echo $tanggal_publish ?>
                     </li>
                   </ul>
                 </div>
@@ -235,39 +221,55 @@
 
               <div class="tabs__content-pane tabs__content-pane--active" id="tab-all">
                 <div class="row card-row">
-                  <div class="col-md-6">
-                    <article class="entry card">
-                      <div class="entry__img-holder card__img-holder">
-                        <a href="single-post.php">
-                          <div class="thumb-container thumb-70">
-                            <img data-src="img/content/grid/grid_post_1.jpg" src="img/empty.png" class="entry__img lazyload" alt="" />
+                  <?php
+                  $query_berita = "SELECT * FROM `kategori` 
+                     LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
+                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY berita.tanggal_publish DESC limit 6";
+                  $sql_berita = mysqli_query($conn, $query_berita);
+                  while ($result_berita = mysqli_fetch_array($sql_berita)) {
+                    $judul_berita = $result_berita['judul_berita'];
+                    $nama_kategori = $result_berita['nama_kategori'];
+                    $nama_penulis = $result_berita['nama_penulis'];
+                    $tanggal_publish = $result_berita['tanggal_publish'];
+                    $gambar_berita = $result_berita['gambar_berita'];
+                    $isi_berita = $result_berita['isi_berita'];
+                  ?>
+                    <div class="col-md-6">
+                      <article class="entry card">
+                        <div class="entry__img-holder card__img-holder">
+                          <a href="single-post.php">
+                            <div class="thumb-container thumb-70">
+                              <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
+                            </div>
+                          </a>
+                          <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet"><?php echo $nama_kategori ?></a>
+                        </div>
+
+                        <div class="entry__body card__body">
+                          <div class="entry__header">
+
+                            <h2 class="entry__title">
+                              <a href="single-post.php"><?php echo $judul_berita ?></a>
+                            </h2>
+                            <ul class="entry__meta">
+                              <li class="entry__meta-author">
+                                <span>by</span>
+                                <a href="#"><?php echo $nama_penulis ?></a>
+                              </li>
+                              <li class="entry__meta-date">
+                                <?php echo $tanggal_publish ?>
+                              </li>
+                            </ul>
                           </div>
-                        </a>
-                        <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">world</a>
-                      </div>
-
-                      <div class="entry__body card__body">
-                        <div class="entry__header">
-
-                          <h2 class="entry__title">
-                            <a href="single-post.php">Follow These Smartphone Habits os</a>
-                          </h2>
-                          <ul class="entry__meta">
-                            <li class="entry__meta-author">
-                              <span>by</span>
-                              <a href="#">DeoThemes</a>
-                            </li>
-                            <li class="entry__meta-date">
-                              Jan 21, 2018
-                            </li>
-                          </ul>
+                          <div class="entry__excerpt">
+                            <p><?php echo $isi_berita ?></p>
+                          </div>
                         </div>
-                        <div class="entry__excerpt">
-                          <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
+                      </article>
+                    </div>
+                  <?php
+                  }
+                  ?>
                 </div>
               </div> <!-- end pane 1 -->
               <!-- Kategori From Database -->
@@ -283,7 +285,7 @@
                     $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
                      LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis 
-                     WHERE kategori.nama_kategori = '$nama_kategori_group'";
+                     WHERE kategori.nama_kategori = '$nama_kategori_group' ORDER BY berita.tanggal_publish DESC limit 6";
                     $sql_berita = mysqli_query($conn, $query_berita);
                     while ($result_berita = mysqli_fetch_array($sql_berita)) {
                       $judul_berita = $result_berita['judul_berita'];
@@ -459,33 +461,45 @@
                   <a class="social social-facebook" href="#" title="facebook" target="_blank" aria-label="facebook">
                     <i class="ui-facebook"></i>
                     <span class="social__text">Facebook</span>
-                  </a><!--
-                  --><a class="social social-twitter" href="#" title="twitter" target="_blank" aria-label="twitter">
-                    <i class="ui-twitter"></i>
-                    <span class="social__text">Twitter</span>
-                  </a><!--
-                  --><a class="social social-youtube" href="#" title="youtube" target="_blank" aria-label="youtube">
-                    <i class="ui-youtube"></i>
-                    <span class="social__text">Youtube</span>
                   </a>
                 </div>
                 <div class="col">
-                  <a class="social social-google-plus" href="#" title="google" target="_blank" aria-label="google">
-                    <i class="ui-google"></i>
-                    <span class="social__text">Google+</span>
-                  </a><!--
-                  --><a class="social social-instagram" href="#" title="instagram" target="_blank" aria-label="instagram">
+                  <a class="social social-instagram" href="#" title="instagram" target="_blank" aria-label="instagram">
                     <i class="ui-instagram"></i>
                     <span class="social__text">Instagram</span>
-                  </a><!--
-                  --><a class="social social-rss" href="#" title="rss" target="_blank" aria-label="rss">
-                    <i class="ui-rss"></i>
-                    <span class="social__text">Rss</span>
                   </a>
                 </div>
               </div>
             </div>
           </aside> <!-- end widget socials -->
+          <!-- Sidebar 1 -->
+
+
+          <!-- Widget Categories -->
+          <aside class="widget widget_categories">
+            <h4 class="widget-title">Categories</h4>
+            <ul>
+              <!-- Kategori From Database -->
+              <?php
+              $query = "SELECT kategori.id_kategori, kategori.nama_kategori, COUNT(berita.id_berita) AS jumlah_berita
+              FROM kategori
+              LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori
+              GROUP BY kategori.id_kategori, kategori.nama_kategori;
+              ";
+              $sql = mysqli_query($conn, $query);
+              while ($result = mysqli_fetch_array($sql)) {
+                $nama_kategori = $result['nama_kategori'];
+                $jumlah_berita = $result['jumlah_berita'];
+
+              ?>
+                <li><a href="categories.html"><?php echo $nama_kategori ?> <span class="categories-count"><?php echo $jumlah_berita ?></span></a></li>
+
+              <?php
+              };
+              ?>
+              <!-- Kategori From Database -->
+            </ul>
+          </aside> <!-- end widget categories -->
 
         </aside> <!-- end sidebar -->
 
@@ -502,7 +516,7 @@
         <!-- Slider -->
         <div id="owl-posts" class="owl-carousel owl-theme owl-carousel--arrows-outside">
           <?php
-          $query_berita = "SELECT * FROM `berita`";
+          $query_berita = "SELECT * FROM `berita` ORDER BY berita.tanggal_publish DESC";
           $sql_berita = mysqli_query($conn, $query_berita);
           while ($result_berita = mysqli_fetch_array($sql_berita)) {
             $judul_berita = $result_berita['judul_berita'];
@@ -537,519 +551,97 @@
 
       </section> <!-- end carousel posts -->
 
-
       <!-- Posts from categories -->
       <section class="section mb-0">
         <div class="row">
 
           <!-- Technology -->
-          <div class="col-md-6">
-            <div class="title-wrap title-wrap--line">
-              <h3 class="section-title">technology</h3>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <article class="entry thumb thumb--size-2">
-                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/thumb/thumb_post_1.jpg');">
-                    <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder thumb-text-holder--1">
-                      <h2 class="thumb-entry-title">
-                        <a href="single-post.html">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
-                      </h2>
-                      <ul class="entry__meta">
-                        <li class="entry__meta-author">
-                          <span>by</span>
-                          <a href="#">DeoThemes</a>
-                        </li>
-                        <li class="entry__meta-date">
-                          Jan 21, 2018
-                        </li>
-                      </ul>
-                    </div>
-                    <a href="single-post.html" class="thumb-url"></a>
-                  </div>
-                </article>
+          <?php
+          $query = "SELECT * FROM `kategori`";
+          $sql = mysqli_query($conn, $query);
+          while ($result = mysqli_fetch_array($sql)) {
+            $nama_kategori_group = $result['nama_kategori'];
+          ?>
+            <div class="col-md-6">
+              <div class="title-wrap title-wrap--line">
+                <h3 class="section-title"><?php echo $nama_kategori_group ?></h3>
               </div>
-              <div class="col-lg-6">
-                <ul class="post-list-small post-list-small--dividers post-list-small--arrows mb-24">
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Need a Website for Your Business? Google Can Help</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Here Are Ways You Can Earn From the Sharing Economy</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">19 Crazy Facts You Probably Didn't Know About Google</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">What Household Chores Would Filipinos Love to Assign to Robots?</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> <!-- end technology -->
 
-          <!-- Travel -->
-          <div class="col-md-6">
-            <div class="title-wrap title-wrap--line">
-              <h3 class="section-title">travel</h3>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <article class="entry thumb thumb--size-2">
-                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/thumb/thumb_post_2.jpg');">
-                    <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder thumb-text-holder--1">
-                      <h2 class="thumb-entry-title">
-                        <a href="single-post.html">4 credit card tips to make business travel easier</a>
-                      </h2>
-                      <ul class="entry__meta">
-                        <li class="entry__meta-author">
-                          <span>by</span>
-                          <a href="#">DeoThemes</a>
-                        </li>
-                        <li class="entry__meta-date">
-                          Jan 21, 2018
-                        </li>
-                      </ul>
+              <?php
+              $query_berita = "SELECT * FROM `kategori` 
+                     LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
+                     LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis 
+                     WHERE kategori.nama_kategori = '$nama_kategori_group' ORDER BY berita.tanggal_publish DESC";
+              $sql_berita = mysqli_query($conn, $query_berita);
+              $result_berita = mysqli_fetch_array($sql_berita);
+              $judul_berita = $result_berita['judul_berita'];
+              $nama_penulis = $result_berita['nama_penulis'];
+              $tanggal_publish = $result_berita['tanggal_publish'];
+              $gambar_berita = $result_berita['gambar_berita'];
+              ?>
+              <div class="row">
+                <div class="col-lg-6">
+                  <article class="entry thumb thumb--size-2">
+                    <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/berita/<?php echo $gambar_berita ?>');">
+                      <div class="bottom-gradient"></div>
+                      <div class="thumb-text-holder thumb-text-holder--1">
+                        <h2 class="thumb-entry-title">
+                          <a href="single-post.html"><?php echo $judul_berita ?></a>
+                        </h2>
+                        <ul class="entry__meta">
+                          <li class="entry__meta-author">
+                            <span>by</span>
+                            <a href="#"><?php echo $nama_penulis ?></a>
+                          </li>
+                          <li class="entry__meta-date">
+                            <?php echo $tanggal_publish ?>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="single-post.html" class="thumb-url"></a>
                     </div>
-                    <a href="single-post.html" class="thumb-url"></a>
-                  </div>
-                </article>
+                  </article>
+                </div>
+                <div class="col-lg-6">
+                  <ul class="post-list-small post-list-small--dividers post-list-small--arrows mb-24">
+                    <?php
+                    $query_berita = "SELECT * FROM `kategori` 
+                     LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
+                     WHERE kategori.nama_kategori = '$nama_kategori_group' ORDER BY berita.tanggal_publish DESC limit 5 offset 1";
+                    $sql_berita = mysqli_query($conn, $query_berita);
+                    while ($result_berita = mysqli_fetch_array($sql_berita)) {
+                      $judul_berita = $result_berita['judul_berita'];
+                    ?>
+                      <li class="post-list-small__item">
+                        <article class="post-list-small__entry">
+                          <div class="post-list-small__body">
+                            <h3 class="post-list-small__entry-title">
+                              <a href="single-post.html"><?php echo $judul_berita ?></a>
+                            </h3>
+                          </div>
+                        </article>
+                      </li>
+                    <?php }
+                    ?>
+                  </ul>
+                </div>
               </div>
-              <div class="col-lg-6">
-                <ul class="post-list-small post-list-small--dividers post-list-small--arrows mb-24">
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">5 deadliest luxury vacation spots on Earth</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">These 4 startups can send you to work and travel abroad</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">9 mind-blowing travel destinations for adventure seekers</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">These Small Business Ideas Are Great for Entrepreneurial Children</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> <!-- end travel -->
-
-          <!-- Cryptocurrency -->
-          <div class="col-md-6">
-            <div class="title-wrap title-wrap--line">
-              <h3 class="section-title">Cryptocurrency</h3>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <article class="entry thumb thumb--size-2">
-                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/thumb/thumb_post_3.jpg');">
-                    <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder thumb-text-holder--1">
-                      <h2 class="thumb-entry-title">
-                        <a href="single-post.html">UN’s WFP Building Up Blockchain-Based Payments System</a>
-                      </h2>
-                      <ul class="entry__meta">
-                        <li class="entry__meta-author">
-                          <span>by</span>
-                          <a href="#">DeoThemes</a>
-                        </li>
-                        <li class="entry__meta-date">
-                          Jan 21, 2018
-                        </li>
-                      </ul>
-                    </div>
-                    <a href="single-post.html" class="thumb-url"></a>
-                  </div>
-                </article>
-              </div>
-              <div class="col-lg-6">
-                <ul class="post-list-small post-list-small--dividers post-list-small--arrows mb-24">
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Cryptocurrency Markets: Weekly Trading Overview (06-13 October)</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">MyEtherWallet Opens the Ethereum Universe for You</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Put Your Money Where Your Marketing Is</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">3 ways for startups to master the art of emailing</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> <!-- end cryptocurrency -->
-
-          <!-- Investment -->
-          <div class="col-md-6">
-            <div class="title-wrap title-wrap--line">
-              <h3 class="section-title">Investment</h3>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <article class="entry thumb thumb--size-2">
-                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/thumb/thumb_post_4.jpg');">
-                    <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder thumb-text-holder--1">
-                      <h2 class="thumb-entry-title">
-                        <a href="single-post.html">14 easy, low-cost ways authors can promote their books</a>
-                      </h2>
-                      <ul class="entry__meta">
-                        <li class="entry__meta-author">
-                          <span>by</span>
-                          <a href="#">DeoThemes</a>
-                        </li>
-                        <li class="entry__meta-date">
-                          Jan 21, 2018
-                        </li>
-                      </ul>
-                    </div>
-                    <a href="single-post.html" class="thumb-url"></a>
-                  </div>
-                </article>
-              </div>
-              <div class="col-lg-6">
-                <ul class="post-list-small post-list-small--dividers post-list-small--arrows mb-24">
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Financial Adviser: 4 ways to know how much dividends you should pay</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">3 cash flow rules first-time business owners need to know</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Common credit mistakes new business owners make</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                  <li class="post-list-small__item">
-                    <article class="post-list-small__entry">
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          <a href="single-post.html">Ask these 2 questions every time you make a purchase</a>
-                        </h3>
-                      </div>
-                    </article>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> <!-- end investment -->
+            </div> <!-- end technology -->
+          <?php
+          }
+          ?>
 
         </div>
       </section> <!-- end posts from categories -->
-      <!-- Content Secondary -->
-      <div class="row">
-
-        <!-- Posts -->
-        <div class="col-lg-8 blog__content mb-72">
-
-          <!-- Worldwide News -->
-          <section class="section">
-            <div class="title-wrap title-wrap--line">
-              <h3 class="section-title">Worldwide</h3>
-              <a href="#" class="all-posts-url">View All</a>
-            </div>
-
-            <article class="entry card post-list">
-              <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/list/list_post_1.jpg)">
-                <a href="single-post.html" class="thumb-url"></a>
-                <img src="img/content/list/list_post_1.jpg" alt="" class="entry__img d-none">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--blue">Business</a>
-              </div>
-
-              <div class="entry__body post-list__body card__body">
-                <div class="entry__header">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">These Are the 20 Best Places to Work in 2018</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-                <div class="entry__excerpt">
-                  <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry card post-list">
-              <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/list/list_post_2.jpg)">
-                <a href="single-post.html" class="thumb-url"></a>
-                <img src="img/content/list/list_post_2.jpg" alt="" class="entry__img d-none">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--purple">Fashion</a>
-              </div>
-
-              <div class="entry__body post-list__body card__body">
-                <div class="entry__header">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">This Co-Working Space is a One-Stop Shop</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-                <div class="entry__excerpt">
-                  <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry card post-list">
-              <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/list/list_post_3.jpg)">
-                <a href="single-post.html" class="thumb-url"></a>
-                <img src="img/content/list/list_post_3.jpg" alt="" class="entry__img d-none">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange">Mining</a>
-              </div>
-
-              <div class="entry__body post-list__body card__body">
-                <div class="entry__header">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">This 6-Year-Old Kid Reportedly Earned US$11 Million on YouTube</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-                <div class="entry__excerpt">
-                  <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry card post-list">
-              <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/list/list_post_4.jpg)">
-                <a href="single-post.html" class="thumb-url"></a>
-                <img src="img/content/list/list_post_4.jpg" alt="" class="entry__img d-none">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet">World</a>
-              </div>
-
-              <div class="entry__body post-list__body card__body">
-                <div class="entry__header">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">Rating Agency Breaks with Financial Community </a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-                <div class="entry__excerpt">
-                  <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry card post-list">
-              <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/list/list_post_5.jpg)">
-                <a href="single-post.html" class="thumb-url"></a>
-                <img src="img/content/list/list_post_5.jpg" alt="" class="entry__img d-none">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--red">Investment</a>
-              </div>
-
-              <div class="entry__body post-list__body card__body">
-                <div class="entry__header">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">Decentralized Exchanges (DEX) – What Are They?</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-                <div class="entry__excerpt">
-                  <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="entry card post-list">
-              <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/content/list/list_post_6.jpg)">
-                <a href="single-post.html" class="thumb-url"></a>
-                <img src="img/content/list/list_post_6.jpg" alt="" class="entry__img d-none">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--cyan">Technology</a>
-              </div>
-
-              <div class="entry__body post-list__body card__body">
-                <div class="entry__header">
-                  <h2 class="entry__title">
-                    <a href="single-post.html">Decentralized Exchanges (DEX) – What Are They?</a>
-                  </h2>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-                <div class="entry__excerpt">
-                  <p>iPrice Group report offers insights on daily e-commerce activity in the ...</p>
-                </div>
-              </div>
-            </article>
-          </section> <!-- end worldwide news -->
-
-
-        </div> <!-- end posts -->
-
-        <!-- Sidebar 1 -->
-        <aside class="col-lg-4 sidebar sidebar--1 sidebar--right">
-
-
-          <!-- Widget Categories -->
-          <aside class="widget widget_categories">
-            <h4 class="widget-title">Categories</h4>
-            <ul>
-              <!-- Kategori From Database -->
-              <?php
-              $query = "SELECT kategori.id_kategori, kategori.nama_kategori, COUNT(berita.id_berita) AS jumlah_berita
-              FROM kategori
-              LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori
-              GROUP BY kategori.id_kategori, kategori.nama_kategori;
-              ";
-              $sql = mysqli_query($conn, $query);
-              while ($result = mysqli_fetch_array($sql)) {
-                $nama_kategori = $result['nama_kategori'];
-                $jumlah_berita = $result['jumlah_berita'];
-
-              ?>
-                <li><a href="categories.html"><?php echo $nama_kategori ?> <span class="categories-count"><?php echo $jumlah_berita ?></span></a></li>
-
-              <?php
-              };
-              ?>
-              <!-- Kategori From Database -->
-            </ul>
-          </aside> <!-- end widget categories -->
-        </aside> <!-- end sidebar 1 -->
-      </div> <!-- content secondary -->
+      <!-- Posts from categories -->
 
 
     </div> <!-- end main container -->
 
     <!-- Footer -->
-    <?php include "footer.php" ?>
+    <div class="pt-5">
+      <?php include "footer.php" ?>
+    </div>
     <!-- end footer -->
 
     <div id="back-to-top">
