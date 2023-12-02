@@ -197,270 +197,107 @@
               <div class="entry-author clearfix">
                 <img alt="" data-src="img/berita/<?php echo $foto_penulis ?>" src="img/berita/<?php echo $foto_penulis ?>" class="avatar lazyload" width="80px" height="80px">
                 <div class=" entry-author__info">
-                <h6 class="entry-author__name">
-                  <a href="#"><?php echo $nama_penulis ?></a>
-                </h6>
-                <p class="mb-0"><?php echo $email_penulis ?></p>
+                  <h6 class="entry-author__name">
+                    <a href="#"><?php echo $nama_penulis ?></a>
+                  </h6>
+                  <p class="mb-0"><?php echo $email_penulis ?></p>
+                </div>
               </div>
-          </div>
 
-          <!-- Related Posts -->
-          <section class="section related-posts mt-40 mb-0">
-            <div class="title-wrap title-wrap--line title-wrap--pr">
-              <h3 class="section-title">Related Articles</h3>
-            </div>
+              <!-- Related Posts -->
+              <section class="section related-posts mt-40 mb-0">
+                <div class="title-wrap title-wrap--line title-wrap--pr">
+                  <h3 class="section-title">Related Articles</h3>
+                </div>
 
-            <!-- Slider -->
-            <div id="owl-posts-3-items" class="owl-carousel owl-theme owl-carousel--arrows-outside">
-              <?php
-              while ($result_related = mysqli_fetch_array($sql_related)) {
-                $judul_berita_related = $result_related['judul_berita'];
-                $gambar_berita_related = $result_related['gambar_berita'];
-                $id_berita_related = $result_related['id_berita'];
-              ?>
-                <article class="entry thumb thumb--size-1">
-                  <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/berita/<?php echo $gambar_berita_related ?>');">
-                    <div class="bottom-gradient"></div>
-                    <div class="thumb-text-holder">
-                      <h2 class="thumb-entry-title">
-                        <a href="single-post.php?berita=<?php echo $id_berita_related ?>"><?php echo $judul_berita_related ?></a>
-                      </h2>
+                <!-- Slider -->
+                <div id="owl-posts-3-items" class="owl-carousel owl-theme owl-carousel--arrows-outside">
+                  <?php
+                  while ($result_related = mysqli_fetch_array($sql_related)) {
+                    $judul_berita_related = $result_related['judul_berita'];
+                    $gambar_berita_related = $result_related['gambar_berita'];
+                    $id_berita_related = $result_related['id_berita'];
+                  ?>
+                    <article class="entry thumb thumb--size-1">
+                      <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/berita/<?php echo $gambar_berita_related ?>');">
+                        <div class="bottom-gradient"></div>
+                        <div class="thumb-text-holder">
+                          <h2 class="thumb-entry-title">
+                            <a href="single-post.php?berita=<?php echo $id_berita_related ?>"><?php echo $judul_berita_related ?></a>
+                          </h2>
+                        </div>
+                        <a href="single-post.php?berita=<?php echo $id_berita_related ?>" class="thumb-url"></a>
+                      </div>
+                    </article>
+                  <?php
+                  }
+                  ?>
+                </div> <!-- end slider -->
+
+              </section> <!-- end related posts -->
+
+            </article> <!-- end standard post -->
+
+            <!-- Comments -->
+            <div class="entry-comments">
+              <div class="title-wrap title-wrap--line">
+                <h3 class="section-title">1 comments</h3>
+              </div>
+              <ul class="comment-list">
+                <li class="comment">
+                  <div class="comment-body">
+                    <div class="comment-avatar">
+                      <img alt="" src="img/content/single/comment_1.jpg">
                     </div>
-                    <a href="single-post.php?berita=<?php echo $id_berita_related ?>" class="thumb-url"></a>
-                  </div>
-                </article>
-              <?php
-              }
-              ?>
-            </div> <!-- end slider -->
-
-          </section> <!-- end related posts -->
-
-          </article> <!-- end standard post -->
-
-          <!-- Comments -->
-          <div class="entry-comments">
-            <div class="title-wrap title-wrap--line">
-              <h3 class="section-title">1 comments</h3>
-            </div>
-            <ul class="comment-list">
-              <li class="comment">
-                <div class="comment-body">
-                  <div class="comment-avatar">
-                    <img alt="" src="img/content/single/comment_1.jpg">
-                  </div>
-                  <div class="comment-text">
-                    <h6 class="comment-author">Joeby Ragpa</h6>
-                    <div class="comment-metadata">
-                      <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
+                    <div class="comment-text">
+                      <h6 class="comment-author">Joeby Ragpa</h6>
+                      <div class="comment-metadata">
+                        <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
+                      </div>
+                      <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
+                      <!-- <a href="#" class="comment-reply">Reply</a> -->
                     </div>
-                    <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
-                    <!-- <a href="#" class="comment-reply">Reply</a> -->
+                  </div>
+
+                </li> <!-- end 1-2 comment -->
+
+              </ul>
+            </div> <!-- end comments -->
+
+            <!-- Comment Form -->
+            <div id="respond" class="comment-respond">
+              <div class="title-wrap">
+                <h5 class="comment-respond__title section-title">Leave a Comment</h5>
+              </div>
+              <form id="form" class="comment-form" method="post" action="#">
+                <p class="comment-form-comment">
+                  <label for="comment">Comment</label>
+                  <textarea id="comment" name="comment" rows="5" required="required"></textarea>
+                </p>
+
+                <div class="row row-20">
+                  <div class="col-lg-12">
+                    <label for="name">Name: *</label>
+                    <input name="name" id="name" type="text">
                   </div>
                 </div>
 
-              </li> <!-- end 1-2 comment -->
+                <p class="comment-form-submit">
+                  <input type="submit" class="btn btn-lg btn-color btn-button" value="Post Comment" id="submit-message">
+                </p>
 
-            </ul>
-          </div> <!-- end comments -->
+              </form>
+            </div> <!-- end comment form -->
 
-          <!-- Comment Form -->
-          <div id="respond" class="comment-respond">
-            <div class="title-wrap">
-              <h5 class="comment-respond__title section-title">Leave a Comment</h5>
-            </div>
-            <form id="form" class="comment-form" method="post" action="#">
-              <p class="comment-form-comment">
-                <label for="comment">Comment</label>
-                <textarea id="comment" name="comment" rows="5" required="required"></textarea>
-              </p>
+          </div> <!-- end content box -->
+        </div> <!-- end post content -->
 
-              <div class="row row-20">
-                <div class="col-lg-12">
-                  <label for="name">Name: *</label>
-                  <input name="name" id="name" type="text">
-                </div>
-              </div>
+        <!-- Sidebar -->
+        <aside class="col-lg-4 sidebar sidebar--right">
+          <?php include "sidebar.php" ?>
+        </aside> <!-- end sidebar -->
 
-              <p class="comment-form-submit">
-                <input type="submit" class="btn btn-lg btn-color btn-button" value="Post Comment" id="submit-message">
-              </p>
-
-            </form>
-          </div> <!-- end comment form -->
-
-        </div> <!-- end content box -->
-      </div> <!-- end post content -->
-
-      <!-- Sidebar -->
-      <aside class="col-lg-4 sidebar sidebar--right">
-
-        <!-- Widget Popular Posts -->
-        <aside class="widget widget-popular-posts">
-          <h4 class="widget-title">Popular Posts</h4>
-          <ul class="post-list-small">
-            <li class="post-list-small__item">
-              <article class="post-list-small__entry clearfix">
-                <div class="post-list-small__img-holder">
-                  <div class="thumb-container thumb-100">
-                    <a href="single-post.html">
-                      <img data-src="img/content/post_small/post_small_1.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                    </a>
-                  </div>
-                </div>
-                <div class="post-list-small__body">
-                  <h3 class="post-list-small__entry-title">
-                    <a href="single-post.html">Follow These Smartphone Habits of Successful Entrepreneurs</a>
-                  </h3>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li class="post-list-small__item">
-              <article class="post-list-small__entry clearfix">
-                <div class="post-list-small__img-holder">
-                  <div class="thumb-container thumb-100">
-                    <a href="single-post.html">
-                      <img data-src="img/content/post_small/post_small_2.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                    </a>
-                  </div>
-                </div>
-                <div class="post-list-small__body">
-                  <h3 class="post-list-small__entry-title">
-                    <a href="single-post.html">Lose These 12 Bad Habits If You're Serious About Becoming a Millionaire</a>
-                  </h3>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li class="post-list-small__item">
-              <article class="post-list-small__entry clearfix">
-                <div class="post-list-small__img-holder">
-                  <div class="thumb-container thumb-100">
-                    <a href="single-post.html">
-                      <img data-src="img/content/post_small/post_small_3.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                    </a>
-                  </div>
-                </div>
-                <div class="post-list-small__body">
-                  <h3 class="post-list-small__entry-title">
-                    <a href="single-post.html">June in Africa: Taxi wars, smarter cities and increased investments</a>
-                  </h3>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li class="post-list-small__item">
-              <article class="post-list-small__entry clearfix">
-                <div class="post-list-small__img-holder">
-                  <div class="thumb-container thumb-100">
-                    <a href="single-post.html">
-                      <img data-src="img/content/post_small/post_small_4.jpg" src="img/empty.png" alt="" class="post-list-small__img--rounded lazyload">
-                    </a>
-                  </div>
-                </div>
-                <div class="post-list-small__body">
-                  <h3 class="post-list-small__entry-title">
-                    <a href="single-post.html">PUBG Desert Map Finally Revealed, Here Are All The Details</a>
-                  </h3>
-                  <ul class="entry__meta">
-                    <li class="entry__meta-author">
-                      <span>by</span>
-                      <a href="#">DeoThemes</a>
-                    </li>
-                    <li class="entry__meta-date">
-                      Jan 21, 2018
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </aside> <!-- end widget popular posts -->
-
-        <!-- Widget Newsletter -->
-        <aside class="widget widget_mc4wp_form_widget">
-          <h4 class="widget-title">Newsletter</h4>
-          <p class="newsletter__text">
-            <i class="ui-email newsletter__icon"></i>
-            Subscribe for our daily news
-          </p>
-          <form class="mc4wp-form" method="post">
-            <div class="mc4wp-form-fields">
-              <div class="form-group">
-                <input type="email" name="EMAIL" placeholder="Your email" required="">
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-lg btn-color" value="Sign Up">
-              </div>
-            </div>
-          </form>
-        </aside> <!-- end widget newsletter -->
-
-        <!-- Widget Socials -->
-        <aside class="widget widget-socials">
-          <h4 class="widget-title">Let's hang out on social</h4>
-          <div class="socials socials--wide socials--large">
-            <div class="row row-16">
-              <div class="col">
-                <a class="social social-facebook" href="#" title="facebook" target="_blank" aria-label="facebook">
-                  <i class="ui-facebook"></i>
-                  <span class="social__text">Facebook</span>
-                </a><!--
-                  --><a class="social social-twitter" href="#" title="twitter" target="_blank" aria-label="twitter">
-                  <i class="ui-twitter"></i>
-                  <span class="social__text">Twitter</span>
-                </a><!--
-                  --><a class="social social-youtube" href="#" title="youtube" target="_blank" aria-label="youtube">
-                  <i class="ui-youtube"></i>
-                  <span class="social__text">Youtube</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="social social-google-plus" href="#" title="google" target="_blank" aria-label="google">
-                  <i class="ui-google"></i>
-                  <span class="social__text">Google+</span>
-                </a><!--
-                  --><a class="social social-instagram" href="#" title="instagram" target="_blank" aria-label="instagram">
-                  <i class="ui-instagram"></i>
-                  <span class="social__text">Instagram</span>
-                </a><!--
-                  --><a class="social social-rss" href="#" title="rss" target="_blank" aria-label="rss">
-                  <i class="ui-rss"></i>
-                  <span class="social__text">Rss</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </aside> <!-- end widget socials -->
-
-      </aside> <!-- end sidebar -->
-
-    </div> <!-- end content -->
+      </div> <!-- end content -->
     </div> <!-- end main container -->
 
     <!-- Footer -->
