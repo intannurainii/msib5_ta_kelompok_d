@@ -16,7 +16,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-icons.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <!-- PENYEBAB STYLING BERANTAKAN -->
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"> -->
+  <!-- PENYEBAB STYLING BERANTAKAN -->
   <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
