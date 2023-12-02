@@ -67,7 +67,7 @@
               $judul_berita = $result['judul_berita'];
 
             ?>
-              <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url"><?php echo $judul_berita ?></a></li>
+              <li class="newsticker__item"><a href="single-post.php?berita=<?php echo $id_berita ?>" class="newsticker__item-url"><?php echo $judul_berita ?></a></li>
 
             <?php
             };
@@ -89,30 +89,32 @@
           <div class="col-lg-6">
             <!-- Small post -->
             <?php
-      $query_berita = "SELECT * FROM `kategori` 
+            $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
                      LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY berita.tanggal_publish DESC limit 3 offset 1";
-      $sql_berita = mysqli_query($conn, $query_berita);
-      while ($result_berita = mysqli_fetch_array($sql_berita)) {
-        $judul_berita = $result_berita['judul_berita'];
-        $nama_kategori = $result_berita['nama_kategori'];
-        $nama_penulis = $result_berita['nama_penulis'];
-        $tanggal_publish = $result_berita['tanggal_publish'];
-        $gambar_berita = $result_berita['gambar_berita'];
-        $isi_berita = $result_berita['isi_berita'];
+            $sql_berita = mysqli_query($conn, $query_berita);
+            while ($result_berita = mysqli_fetch_array($sql_berita)) {
+              $id_kategori = $result_berita['id_kategori'];
+              $id_berita = $result_berita['id_berita'];
+              $judul_berita = $result_berita['judul_berita'];
+              $nama_kategori = $result_berita['nama_kategori'];
+              $nama_penulis = $result_berita['nama_penulis'];
+              $tanggal_publish = $result_berita['tanggal_publish'];
+              $gambar_berita = $result_berita['gambar_berita'];
+              $isi_berita = $result_berita['isi_berita'];
 
             ?>
               <div class="featured-posts-grid__item featured-posts-grid__item--sm">
                 <article class="entry card post-list featured-posts-grid__entry">
                   <div class="entry__img-holder post-list__img-holder card__img-holder" style="background-image: url(img/berita/<?php echo $gambar_berita ?>)">
-                    <a href="single-post.html" class="thumb-url"></a>
+                    <a href="single-post.php?berita=<?php echo $id_berita ?>" class="thumb-url"></a>
                     <img src="img/content/hero/hero_post_1.jpg" alt="" class="entry__img d-none">
-                    <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet"><?php echo $nama_kategori ?></a>
+                    <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet"><?php echo $nama_kategori ?></a>
                   </div>
 
                   <div class="entry__body post-list__body card__body">
                     <h2 class="entry__title">
-                      <a href="single-post.html"><?php echo $judul_berita ?></a>
+                      <a href="single-post.php?berita=<?php echo $id_berita ?>"><?php echo $judul_berita ?></a>
                     </h2>
                     <ul class="entry__meta">
                       <li class="entry__meta-author">
@@ -134,32 +136,34 @@
           <div class="col-lg-6">
 
             <!-- Large post -->
-                        <?php
-      $query_berita = "SELECT * FROM `kategori` 
+            <?php
+            $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
                      LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis ORDER BY berita.tanggal_publish DESC  limit 1";
-      $sql_berita = mysqli_query($conn, $query_berita);
-      $result_berita = mysqli_fetch_array($sql_berita);
-        $judul_berita = $result_berita['judul_berita'];
-        $nama_kategori = $result_berita['nama_kategori'];
-        $nama_penulis = $result_berita['nama_penulis'];
-        $tanggal_publish = $result_berita['tanggal_publish'];
-        $gambar_berita = $result_berita['gambar_berita'];
-        $isi_berita = $result_berita['isi_berita'];
+            $sql_berita = mysqli_query($conn, $query_berita);
+            $result_berita = mysqli_fetch_array($sql_berita);
+            $id_kategori = $result_berita['id_kategori'];
+            $judul_berita = $result_berita['judul_berita'];
+            $nama_kategori = $result_berita['nama_kategori'];
+            $nama_penulis = $result_berita['nama_penulis'];
+            $tanggal_publish = $result_berita['tanggal_publish'];
+            $gambar_berita = $result_berita['gambar_berita'];
+            $isi_berita = $result_berita['isi_berita'];
+            $id_berita = $result_berita['id_berita'];
 
             ?>
             <div class="featured-posts-grid__item featured-posts-grid__item--lg">
               <article class="entry card featured-posts-grid__entry">
                 <div class="entry__img-holder card__img-holder">
-                  <a href="single-post.html">
+                  <a href="single-post.php?berita=<?php echo $id_berita ?>">
                     <img src="img/berita/<?php echo $gambar_berita ?>" alt="" class="entry__img">
                   </a>
-                  <a href="categories.html" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green"><?php echo $nama_kategori ?></a>
+                  <a href="categories.php?id_kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--green"><?php echo $nama_kategori ?></a>
                 </div>
 
                 <div class="entry__body card__body">
                   <h2 class="entry__title">
-                    <a href="single-post.html"><?php echo $judul_berita ?></a>
+                    <a href="single-post.php?berita=<?php echo $id_berita ?>"><?php echo $judul_berita ?></a>
                   </h2>
                   <ul class="entry__meta">
                     <li class="entry__meta-author">
@@ -233,23 +237,25 @@
                     $tanggal_publish = $result_berita['tanggal_publish'];
                     $gambar_berita = $result_berita['gambar_berita'];
                     $isi_berita = $result_berita['isi_berita'];
+                    $id_berita = $result_berita['id_berita'];
+                    $id_kategori = $result_berita['id_kategori']
                   ?>
                     <div class="col-md-6">
                       <article class="entry card">
                         <div class="entry__img-holder card__img-holder">
-                          <a href="single-post.php">
+                          <a href="single-post.php?berita=<?php echo $id_berita ?>">
                             <div class="thumb-container thumb-70">
                               <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
                             </div>
                           </a>
-                          <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet"><?php echo $nama_kategori ?></a>
+                          <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--violet"><?php echo $nama_kategori ?></a>
                         </div>
 
                         <div class="entry__body card__body">
                           <div class="entry__header">
 
                             <h2 class="entry__title">
-                              <a href="single-post.php"><?php echo $judul_berita ?></a>
+                              <a href="single-post.php?berita=<?php echo $id_berita ?>"><?php echo $judul_berita ?></a>
                             </h2>
                             <ul class="entry__meta">
                               <li class="entry__meta-author">
@@ -294,21 +300,23 @@
                       $tanggal_publish = $result_berita['tanggal_publish'];
                       $gambar_berita = $result_berita['gambar_berita'];
                       $isi_berita = $result_berita['isi_berita'];
+                      $id_berita = $result_berita['id_berita'];
+                      $id_kategori = $result_berita['id_kategori']
                     ?>
                       <div class="col-md-6">
                         <article class="entry card">
                           <div class="entry__img-holder card__img-holder">
-                            <a href="single-post.php">
+                            <a href="single-post.php?berita=<?php echo $id_berita ?>">
                               <div class="thumb-container thumb-70">
                                 <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
                               </div>
                             </a>
-                            <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange"><?php echo $nama_kategori ?></a>
+                            <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange"><?php echo $nama_kategori ?></a>
                           </div>
                           <div class="entry__body card__body">
                             <div class="entry__header">
                               <h2 class="entry__title">
-                                <a href="single-post.php"><?php echo $judul_berita ?></a>
+                                <a href="single-post.php?berita=<?php echo $id_berita ?>"><?php echo $judul_berita ?></a>
                               </h2>
                               <ul class="entry__meta">
                                 <li class="entry__meta-author">
@@ -521,16 +529,17 @@
           while ($result_berita = mysqli_fetch_array($sql_berita)) {
             $judul_berita = $result_berita['judul_berita'];
             $gambar_berita = $result_berita['gambar_berita'];
+            $id_berita = $result_berita['id_berita']
           ?>
             <article class="entry thumb thumb--size-1">
               <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/berita/<?php echo $gambar_berita ?>');">
                 <div class="bottom-gradient"></div>
                 <div class="thumb-text-holder">
                   <h2 class="thumb-entry-title">
-                    <a href="single-post.html"><?php echo $judul_berita ?></a>
+                    <a href="single-post.php?berita=<?php echo $id_berita ?>"><?php echo $judul_berita ?></a>
                   </h2>
                 </div>
-                <a href="single-post.html" class="thumb-url"></a>
+                <a href="single-post.php?berita=<?php echo $id_berita ?>" class="thumb-url"></a>
               </div>
             </article>
           <?php
@@ -541,10 +550,10 @@
               <div class="bottom-gradient"></div>
               <div class="thumb-text-holder">
                 <h2 class="thumb-entry-title">
-                  <a href="single-post.html">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
+                  <a href="single-post.php?berita=<?php echo $id_berita ?>">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
                 </h2>
               </div>
-              <a href="single-post.html" class="thumb-url"></a>
+              <a href="single-post.php?berita=<?php echo $id_berita ?>" class="thumb-url"></a>
             </div>
           </article>
         </div> <!-- end slider -->
@@ -578,6 +587,7 @@
               $nama_penulis = $result_berita['nama_penulis'];
               $tanggal_publish = $result_berita['tanggal_publish'];
               $gambar_berita = $result_berita['gambar_berita'];
+              $id_berita = $result_berita['id_berita'];
               ?>
               <div class="row">
                 <div class="col-lg-6">
@@ -586,7 +596,7 @@
                       <div class="bottom-gradient"></div>
                       <div class="thumb-text-holder thumb-text-holder--1">
                         <h2 class="thumb-entry-title">
-                          <a href="single-post.html"><?php echo $judul_berita ?></a>
+                          <a href="single-post.php?berita=<?php echo $id_berita ?>"><?php echo $judul_berita ?></a>
                         </h2>
                         <ul class="entry__meta">
                           <li class="entry__meta-author">
@@ -598,7 +608,7 @@
                           </li>
                         </ul>
                       </div>
-                      <a href="single-post.html" class="thumb-url"></a>
+                      <a href="single-post.php?berita=<?php echo $id_berita ?>" class="thumb-url"></a>
                     </div>
                   </article>
                 </div>
@@ -611,12 +621,13 @@
                     $sql_berita = mysqli_query($conn, $query_berita);
                     while ($result_berita = mysqli_fetch_array($sql_berita)) {
                       $judul_berita = $result_berita['judul_berita'];
+                      $id_berita = $result_berita['id_berita'];
                     ?>
                       <li class="post-list-small__item">
                         <article class="post-list-small__entry">
                           <div class="post-list-small__body">
                             <h3 class="post-list-small__entry-title">
-                              <a href="single-post.html"><?php echo $judul_berita ?></a>
+                              <a href="single-post.php?berita=<?php echo $id_berita ?>"><?php echo $judul_berita ?></a>
                             </h3>
                           </div>
                         </article>
