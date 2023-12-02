@@ -65,6 +65,7 @@
             $sql = mysqli_query($conn, $query);
             while ($result = mysqli_fetch_array($sql)) {
               $judul_berita = $result['judul_berita'];
+              $id_berita = $result['id_berita'];
 
             ?>
               <li class="newsticker__item"><a href="single-post.php?berita=<?php echo $id_berita ?>" class="newsticker__item-url"><?php echo $judul_berita ?></a></li>
@@ -498,9 +499,10 @@
               while ($result = mysqli_fetch_array($sql)) {
                 $nama_kategori = $result['nama_kategori'];
                 $jumlah_berita = $result['jumlah_berita'];
+                $id_kategori = $result['id_kategori'];
 
               ?>
-                <li><a href="categories.html"><?php echo $nama_kategori ?> <span class="categories-count"><?php echo $jumlah_berita ?></span></a></li>
+                <li><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $nama_kategori ?> <span class="categories-count"><?php echo $jumlah_berita ?></span></a></li>
 
               <?php
               };
