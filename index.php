@@ -278,27 +278,27 @@
                 $nama_kategori_group = $result['nama_kategori'];
               ?>
                 <div class="tabs__content-pane" id="tab-<?php echo $nama_kategori_group ?>">
-                <div class="row card-row">
-                  <?php
-                  $query_berita = "SELECT * FROM `kategori` 
+                  <div class="row card-row">
+                    <?php
+                    $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
                      LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis 
                      WHERE kategori.nama_kategori = '$nama_kategori_group'";
-                  $sql_berita = mysqli_query($conn, $query_berita);
-                  while ($result_berita = mysqli_fetch_array($sql_berita)) {
-                    $judul_berita = $result_berita['judul_berita'];
-                    $nama_kategori = $result_berita['nama_kategori'];
-                    $nama_penulis = $result_berita['nama_penulis'];
-                    $tanggal_publish = $result_berita['tanggal_publish'];
-                    $gambar_berita = $result_berita['gambar_berita'];
-                    $isi_berita = $result_berita['isi_berita'];
-                  ?>
+                    $sql_berita = mysqli_query($conn, $query_berita);
+                    while ($result_berita = mysqli_fetch_array($sql_berita)) {
+                      $judul_berita = $result_berita['judul_berita'];
+                      $nama_kategori = $result_berita['nama_kategori'];
+                      $nama_penulis = $result_berita['nama_penulis'];
+                      $tanggal_publish = $result_berita['tanggal_publish'];
+                      $gambar_berita = $result_berita['gambar_berita'];
+                      $isi_berita = $result_berita['isi_berita'];
+                    ?>
                       <div class="col-md-6">
                         <article class="entry card">
                           <div class="entry__img-holder card__img-holder">
                             <a href="single-post.php">
                               <div class="thumb-container thumb-70">
-                                <img data-src="<?php echo $gambar_berita ?>" src="<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
+                                <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
                               </div>
                             </a>
                             <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--orange"><?php echo $nama_kategori ?></a>
@@ -324,12 +324,12 @@
                           </div>
                         </article>
                       </div>
-                      <?php
-                  }
-                  ?>
+                    <?php
+                    }
+                    ?>
                   </div>
                 </div>
-                 <!-- end pane for current category -->
+                <!-- end pane for current category -->
               <?php
               }
               ?>
@@ -501,50 +501,27 @@
 
         <!-- Slider -->
         <div id="owl-posts" class="owl-carousel owl-theme owl-carousel--arrows-outside">
-          <article class="entry thumb thumb--size-1">
-            <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_1.jpg');">
-              <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">
-                <h2 class="thumb-entry-title">
-                  <a href="single-post.html">9 Things to Consider Before Accepting a New Job</a>
-                </h2>
+          <?php
+          $query_berita = "SELECT * FROM `berita`";
+          $sql_berita = mysqli_query($conn, $query_berita);
+          while ($result_berita = mysqli_fetch_array($sql_berita)) {
+            $judul_berita = $result_berita['judul_berita'];
+            $gambar_berita = $result_berita['gambar_berita'];
+          ?>
+            <article class="entry thumb thumb--size-1">
+              <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/berita/<?php echo $gambar_berita ?>');">
+                <div class="bottom-gradient"></div>
+                <div class="thumb-text-holder">
+                  <h2 class="thumb-entry-title">
+                    <a href="single-post.html"><?php echo $judul_berita ?></a>
+                  </h2>
+                </div>
+                <a href="single-post.html" class="thumb-url"></a>
               </div>
-              <a href="single-post.html" class="thumb-url"></a>
-            </div>
-          </article>
-          <article class="entry thumb thumb--size-1">
-            <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">
-              <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">
-                <h2 class="thumb-entry-title">
-                  <a href="single-post.html">Gov’t Toughens Rules to Ensure 3rd Telco Player Doesn’t Slack Off</a>
-                </h2>
-              </div>
-              <a href="single-post.html" class="thumb-url"></a>
-            </div>
-          </article>
-          <article class="entry thumb thumb--size-1">
-            <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_3.jpg');">
-              <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">
-                <h2 class="thumb-entry-title">
-                  <a href="single-post.html">(Infographic) Is Work-Life Balance Even Possible?</a>
-                </h2>
-              </div>
-              <a href="single-post.html" class="thumb-url"></a>
-            </div>
-          </article>
-          <article class="entry thumb thumb--size-1">
-            <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_4.jpg');">
-              <div class="bottom-gradient"></div>
-              <div class="thumb-text-holder">
-                <h2 class="thumb-entry-title">
-                  <a href="single-post.html">Is Uber Considering To Sell its Southeast Asia Business to Grab?</a>
-                </h2>
-              </div>
-              <a href="single-post.html" class="thumb-url"></a>
-            </div>
-          </article>
+            </article>
+          <?php
+          }
+          ?>
           <article class="entry thumb thumb--size-1">
             <div class="entry__img-holder thumb__img-holder" style="background-image: url('img/content/carousel/carousel_post_2.jpg');">
               <div class="bottom-gradient"></div>
@@ -1044,12 +1021,25 @@
           <aside class="widget widget_categories">
             <h4 class="widget-title">Categories</h4>
             <ul>
-              <li><a href="categories.html">World <span class="categories-count">5</span></a></li>
-              <li><a href="categories.html">Lifestyle <span class="categories-count">7</span></a></li>
-              <li><a href="categories.html">Business <span class="categories-count">5</span></a></li>
-              <li><a href="categories.html">Fashion <span class="categories-count">8</span></a></li>
-              <li><a href="categories.html">Investment <span class="categories-count">10</span></a></li>
-              <li><a href="categories.html">Technology <span class="categories-count">6</span></a></li>
+              <!-- Kategori From Database -->
+              <?php
+              $query = "SELECT kategori.id_kategori, kategori.nama_kategori, COUNT(berita.id_berita) AS jumlah_berita
+              FROM kategori
+              LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori
+              GROUP BY kategori.id_kategori, kategori.nama_kategori;
+              ";
+              $sql = mysqli_query($conn, $query);
+              while ($result = mysqli_fetch_array($sql)) {
+                $nama_kategori = $result['nama_kategori'];
+                $jumlah_berita = $result['jumlah_berita'];
+
+              ?>
+                <li><a href="categories.html"><?php echo $nama_kategori ?> <span class="categories-count"><?php echo $jumlah_berita ?></span></a></li>
+
+              <?php
+              };
+              ?>
+              <!-- Kategori From Database -->
             </ul>
           </aside> <!-- end widget categories -->
         </aside> <!-- end sidebar 1 -->
@@ -1059,7 +1049,7 @@
     </div> <!-- end main container -->
 
     <!-- Footer -->
-<?php include "footer.php" ?>
+    <?php include "footer.php" ?>
     <!-- end footer -->
 
     <div id="back-to-top">

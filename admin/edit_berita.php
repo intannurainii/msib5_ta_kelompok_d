@@ -109,7 +109,7 @@
 				<input type="text" onkeyup="checkform()" name="judul_berita" class="form-control" value="<?php echo $judul_berita; ?>">
 				
 				<label for="fileToUpload">Gambar:</label><br>
-				<img src="<?php echo $gambar_berita; ?>" alt="Gambar Berita" width="100" style="margin-bottom:15px">
+				<img src="../img/berita/<?php echo $gambar_berita; ?>" alt="Gambar Berita" width="100" style="margin-bottom:15px">
 				<input type="file" name="fileToUpload" id="fileToUpload" class="form-control" value="<?php echo $gambar_berita ?>">
 				
 				<label for="id_kategori">Kategori:</label>

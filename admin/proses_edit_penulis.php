@@ -5,6 +5,7 @@ include '../koneksi.php';
 $nama_penulis = $_POST["nama_penulis"];
 $email_penulis = $_POST["email_penulis"];
 $foto_profil = $_POST["foto_profil"];
+$gambar_berita = $_FILES['fileToUpload']['name'];
 
 // Upload Proses
 if($_FILES["fileToUpload"]["size"]!=0){ 
@@ -15,7 +16,7 @@ if($_FILES["fileToUpload"]["size"]!=0){
     } else {
         echo "Sorry, there was an error uploading your file.<br>";
     }
-    $result = mysqli_query($conn, "UPDATE `penulis` set `nama_penulis` = '$nama_penulis', `email_penulis` = '$email_penulis', `foto_profil` = '$target_file' where `id_penulis` = '$_GET[id_penulis]'");
+    $result = mysqli_query($conn, "UPDATE `penulis` set `nama_penulis` = '$nama_penulis', `email_penulis` = '$email_penulis', `foto_profil` = '$gambar_berita' where `id_penulis` = '$_GET[id_penulis]'");
 }
 
 $result = mysqli_query($conn, "UPDATE `penulis` set `nama_penulis` = '$nama_penulis', `email_penulis` = '$email_penulis' where `id_penulis` = '$_GET[id_penulis]'");
