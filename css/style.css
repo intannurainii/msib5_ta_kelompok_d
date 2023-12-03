@@ -1826,6 +1826,7 @@ display: -webkit-box;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0); }
 	.thumb-container img {
+		object-fit: cover;
 		position: absolute;
 		top: 0;
 		bottom: 0;
