@@ -255,10 +255,7 @@
                       <img alt="" src="img/content/single/comment_1.jpg">
                     </div>
                     <div class="comment-text">
-                      <h6 class="comment-author">Joeby Ragpa</h6>
-                      <div class="comment-metadata">
-                        <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
-                      </div>
+                      <h6 class="comment-author"><p>jo</p></h6>
                       <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
                       <!-- <a href="#" class="comment-reply">Reply</a> -->
                     </div>

@@ -72,11 +72,11 @@
             <div class="socials socials--wide socials--large">
                 <div class="row row-16">
                     <div class="col">
-                        <a class="social social-facebook" href="#" title="facebook" target="_blank" aria-label="facebook">
+                        <a class="social social-facebook" href="https://www.facebook.com/detikcom/" title="facebook" target="_blank" aria-label="facebook">
                             <i class="ui-facebook"></i>
                             <span class="social__text">Facebook</span>
                         </a>
-                        <a class="social social-instagram" href="#" title="instagram" target="_blank" aria-label="instagram">
+                        <a class="social social-instagram" href="https://www.instagram.com/detikcom" title="instagram" target="_blank" aria-label="instagram">
                             <i class="ui-instagram"></i>
                             <span class="social__text">Instagram</span>
                         </a>
@@ -84,11 +84,11 @@
 
                     </div>
                     <div class="col">
-                        <a class="social social-youtube" href="#" title="youtube" target="_blank" aria-label="youtube">
+                        <a class="social social-youtube" href="https://www.youtube.com/@detikcom" title="youtube" target="_blank" aria-label="youtube">
                             <i class="ui-youtube"></i>
                             <span class="social__text">Youtube</span>
                         </a>
-                        <a class="social social-twitter" href="#" title="twitter" target="_blank" aria-label="twitter">
+                        <a class="social social-twitter" href="https://twitter.com/detikcom" title="twitter" target="_blank" aria-label="twitter">
                             <i class="ui-twitter"></i>
                             <span class="social__text">Twitter</span>
                         </a>
