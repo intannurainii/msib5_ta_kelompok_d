@@ -76,12 +76,23 @@
                             <i class="ui-facebook"></i>
                             <span class="social__text">Facebook</span>
                         </a>
-                    </div>
-                    <div class="col">
                         <a class="social social-instagram" href="#" title="instagram" target="_blank" aria-label="instagram">
                             <i class="ui-instagram"></i>
                             <span class="social__text">Instagram</span>
                         </a>
+
+
+                    </div>
+                    <div class="col">
+                        <a class="social social-youtube" href="#" title="youtube" target="_blank" aria-label="youtube">
+                            <i class="ui-youtube"></i>
+                            <span class="social__text">Youtube</span>
+                        </a>
+                        <a class="social social-twitter" href="#" title="twitter" target="_blank" aria-label="twitter">
+                            <i class="ui-twitter"></i>
+                            <span class="social__text">Twitter</span>
+                        </a>
+
                     </div>
                 </div>
             </div>

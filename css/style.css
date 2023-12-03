@@ -2854,6 +2854,10 @@ display: -webkit-box;
 		margin: 0 6px; }
 	.breadcrumbs__url {
 		color: #83858F; }
+		.breadcrumbs__url:hover{
+
+			color: #2D95E3!important;
+		}
 
 /*-------------------------------------------------------*/
 /* Single Post
