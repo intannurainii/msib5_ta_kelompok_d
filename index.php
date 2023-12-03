@@ -459,7 +459,7 @@
                     <?php
                     $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
-                     WHERE kategori.nama_kategori = '$nama_kategori_group' ORDER BY berita.tanggal_publish DESC limit 5 offset 1";
+                     WHERE kategori.nama_kategori = '$nama_kategori_group' ORDER BY berita.tanggal_publish DESC limit 3 offset 1";
                     $sql_berita = mysqli_query($conn, $query_berita);
                     while ($result_berita = mysqli_fetch_array($sql_berita)) {
                       $judul_berita = $result_berita['judul_berita'];

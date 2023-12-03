@@ -101,7 +101,7 @@
               do {
                 $judul_berita = $result_kategori['judul_berita'];
                 $nama_penulis = $result_kategori['nama_penulis'];
-                $id_penulis = $result_berita['id_penulis'];
+                $id_penulis = $result_kategori['id_penulis'];
                 $tanggal_publish = $result_kategori['tanggal_publish'];
                 $gambar_berita = $result_kategori['gambar_berita'];
                 $isi_berita = $result_kategori['isi_berita'];

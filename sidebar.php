@@ -2,7 +2,7 @@
         $query_berita = "SELECT * FROM `kategori` 
                      LEFT JOIN berita ON kategori.id_kategori = berita.id_kategori 
                      LEFT JOIN penulis ON berita.id_penulis = penulis.id_penulis 
-                     ORDER BY views DESC ";
+                     ORDER BY views DESC limit 5";
         $sql_berita = mysqli_query($conn, $query_berita);
         ?>
 
