@@ -185,13 +185,13 @@
                       </p>
                     </div>
                     <div class="newsletter-wide__form">
-                      <form class="mc4wp-form" method="post">
+                      <form class="mc4wp-form" method="post" action="proses-input.php">
                         <div class="mc4wp-form-fields">
                           <div class="form-group">
-                            <input type="email" name="EMAIL" placeholder="Your email" required="">
+                            <input type="email" name="email" placeholder="Your email" required="">
                           </div>
                           <div class="form-group">
-                            <input type="submit" class="btn btn-lg btn-color" value="Sign Up">
+                            <input type="submit" id="newsletter" name="newsletter" class="btn btn-lg btn-color" value="Sign Up">
                           </div>
                         </div>
                       </form>
