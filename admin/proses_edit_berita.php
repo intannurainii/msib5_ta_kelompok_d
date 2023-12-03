@@ -19,7 +19,7 @@ if ($_FILES["fileToUpload"]["size"] != 0) {
     } else {
         echo "Sorry, there was an error uploading your file.<br>";
     }
-    $result = mysqli_query($conn, "UPDATE `berita` SET `judul_berita` = '$judul_berita', `id_kategori` = '$nama_kategori', `isi_berita` = '$isi_berita', `id_penulis` = '$nama_penulis', `gambar_berita` = '$gambar_berita', 'editors_picks' = `$editors_picks` WHERE `id_berita` = '$id_berita'");
+    $result = mysqli_query($conn, "UPDATE `berita` SET `judul_berita` = '$judul_berita', `id_kategori` = '$nama_kategori', `isi_berita` = '$isi_berita', `id_penulis` = '$nama_penulis', `gambar_berita` = '$gambar_berita', `editors_picks` = '$editors_picks' WHERE `id_berita` = '$id_berita'");
 } else {
     $result = mysqli_query($conn, "UPDATE `berita` SET `judul_berita` = '$judul_berita', `id_kategori` = '$nama_kategori', `isi_berita` = '$isi_berita', `id_penulis` = '$nama_penulis', `editors_picks` = '$editors_picks' WHERE `id_berita` = '$id_berita'");
 }
