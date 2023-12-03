@@ -83,6 +83,7 @@
     $nama_kategori = $result_berita['nama_kategori'];
     $judul_berita = $result_berita['judul_berita'];
     $nama_penulis = $result_berita['nama_penulis'];
+    $id_penulis = $result_berita['id_penulis'];
     $tanggal_publish = $result_berita['tanggal_publish'];
     $gambar_berita = $result_berita['gambar_berita'];
     $isi_berita = $result_berita['isi_berita'];
@@ -122,7 +123,7 @@
                   <ul class="entry__meta">
                     <li class="entry__meta-author">
                       <span>by</span>
-                      <a href="#"><?php echo $nama_penulis ?></a>
+                      <a href="authors.php?penulis=<?php echo $id_penulis ?>"><?php echo $nama_penulis ?></a>
                     </li>
                     <li class="entry__meta-date">
                       <?php echo $tanggal_publish ?>
@@ -204,7 +205,7 @@
                 <img alt="" data-src="img/berita/<?php echo $foto_penulis ?>" src="img/berita/<?php echo $foto_penulis ?>" class="avatar lazyload" width="80px" height="80px">
                 <div class=" entry-author__info">
                   <h6 class="entry-author__name">
-                    <a href="#"><?php echo $nama_penulis ?></a>
+                    <a href="authors.php?penulis=<?php echo $id_penulis ?>"><?php echo $nama_penulis ?></a>
                   </h6>
                   <p class="mb-0"><?php echo $email_penulis ?></p>
                 </div>

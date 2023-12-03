@@ -95,7 +95,7 @@
 
           <!-- Posts -->
           <div class="col-lg-8 blog__content mb-72">
-            <h1 class="page-title">Post by <?php echo $nama_penulis?></h1>
+            <h1 class="page-title">Post by <?php echo $nama_penulis ?></h1>
             <div class="row card-row">
               <?php
               // Mulai loop dari awal untuk membaca semua hasil
@@ -127,7 +127,7 @@
                         <ul class="entry__meta">
                           <li class="entry__meta-author">
                             <span>by</span>
-                            <a href="#"><?php echo $nama_penulis ?></a>
+                            <a href="authors.php?penulis=<?php echo $id_penulis ?>"><?php echo $nama_penulis ?></a>
                           </li>
                           <li class="entry__meta-date">
                             <?php echo $tanggal_publish ?>

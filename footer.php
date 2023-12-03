@@ -48,6 +48,7 @@
                                     $gambar_berita = $result_berita['gambar_berita'];
                                     $id_berita = $result_berita['id_berita'];
                                     $nama_penulis = $result_berita['nama_penulis'];
+                                    $id_penulis = $result_berita['id_penulis'];
                                     $tanggal_publish = $result_berita['tanggal_publish'];
                                 ?>
                                     <li class="post-list-small__item">
@@ -66,7 +67,7 @@
                                                 <ul class="entry__meta">
                                                     <li class="entry__meta-author">
                                                         <span>by</span>
-                                                        <a href="#"><?php echo $nama_penulis ?></a>
+                                                        <a href="authors.php?penulis=<?php echo $id_penulis ?>"><?php echo $nama_penulis ?></a>
                                                     </li>
                                                     <li class="entry__meta-date">
                                                         <?php echo $tanggal_publish ?>
