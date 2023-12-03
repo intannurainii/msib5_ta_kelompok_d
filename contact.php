@@ -102,7 +102,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-12">
                 <!-- Contact Form -->
-                <form id="contact-form" class="contact-form mt-4 mb-30" method="post" action="#">
+                <form id="contact-form" class="contact-form mt-4 mb-30" method="post" action="proses-input.php">
                   <div class="contact-name">
                     <label for="name">Name
                       <abbr title="required" class="required">*</abbr></label>
@@ -122,9 +122,8 @@
                       <abbr title="required" class="required">*</abbr></label>
                     <textarea id="message" name="message" rows="" required="required"></textarea>
                   </div>
-
-                  <input type="submit" class="btn btn-lg btn-color btn-button" value="Send Message" id="submit-message" />
-                  <div id="msg" class="message"></div>
+                  <input type="submit" id="contact" name="contact" class="btn btn-lg btn-color" value="Send Message">
+                  <!-- <div id="msg" class="message"></div> -->
                 </form>
               </div>
             </div>
