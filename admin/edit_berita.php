@@ -99,7 +99,6 @@
 				$gambar_berita = $data['gambar_berita'];
 				$nama_kategori = $data['nama_kategori'];
 				$isi_berita = $data['isi_berita'];
-				$tanggal_publish = $data['tanggal_publish'];
 				$nama_penulis = $data['nama_penulis'];
 				$editors_picks = $data['editors_picks'];
 
@@ -134,9 +133,6 @@
 
 					<label for="isi_berita">Isi Berita:</label>
 					<textarea id="isi_berita" type="text" onkeyup="checkform()" name="isi_berita" class="form-control"><?php echo $isi_berita; ?></textarea>
-
-					<label for="tanggal_publish">Tanggal Publish:</label>
-					<input id="tanggal_publish" type="date" onkeyup="checkform()" name="tanggal_publish" class="form-control" value="<?php echo $tanggal_publish; ?>">
 
 					<label for="id_penulis">Penulis:</label>
 					<select id="id_penulis" name="id_penulis" class="form-control">

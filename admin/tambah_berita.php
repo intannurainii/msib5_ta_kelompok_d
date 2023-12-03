@@ -90,7 +90,8 @@
 			$result_penulis = mysqli_query($conn, $query_penulis);
 			?>
 
-			<form action="proses_tambah_berita.php" method="post" name="form" enctype="multipart/form-data" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
+<!-- Modifikasi atribut onsubmit pada formulir -->
+<form action="proses_tambah_berita.php" method="post" name="form" enctype="multipart/form-data" onsubmit="setTanggalPublikasi()" style="box-shadow: 0 0 7px gray; padding: 20px; border: 1px solid grey; border-radius: 10px">
 				<h3 style="padding-top:10px; padding-bottom:15px">
 					<center>Tambah Berita</center>
 				</h3>
@@ -117,9 +118,6 @@
 				<label class="form-label">Content</label>
 				<textarea id="isi_berita" onkeyup="checkform()" name="isi_berita" class="form-control"></textarea>
 
-				<label class="form-label">Tanggal Publish</label>
-				<input id="tanggal_publish" type="date" onkeyup="checkform()" name="tanggal_publish" class="form-control">
-
 				<label class="form-label">Penulis</label>
 				<select id="penulis" name="penulis" class="form-control">
 					<?php
@@ -138,6 +136,20 @@
 
 				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:50px; margin-left:32%">
 			</form>
+			<!-- Tambahkan skrip JavaScript -->
+<script>
+    function setTanggalPublikasi() {
+        var tanggalSekarang = new Date();
+        var tanggalFormatted = tanggalSekarang.toISOString().slice(0, 10); // Format YYYY-MM-DD
+        // Membuat elemen input tanggal secara dinamis dan menyisipkan ke dalam form
+        var inputTanggal = document.createElement("input");
+        inputTanggal.type = "hidden";
+        inputTanggal.name = "tanggal_publish";
+        inputTanggal.value = tanggalFormatted;
+        document.forms["form"].appendChild(inputTanggal);
+    }
+</script>
+
 		</main>
 	</section>
 </body>

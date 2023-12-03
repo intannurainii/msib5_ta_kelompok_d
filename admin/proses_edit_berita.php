@@ -6,7 +6,6 @@ $id_berita = $_GET['id_berita'];
 $judul_berita = $_POST["judul_berita"];
 $nama_kategori = $_POST["id_kategori"];
 $isi_berita = $_POST["isi_berita"];
-$tanggal_publish = $_POST["tanggal_publish"];
 $nama_penulis = $_POST["id_penulis"];
 $gambar_berita = $_FILES['fileToUpload']['name'];
 $editors_picks = $_POST["editors_picks"];
@@ -20,9 +19,9 @@ if ($_FILES["fileToUpload"]["size"] != 0) {
     } else {
         echo "Sorry, there was an error uploading your file.<br>";
     }
-    $result = mysqli_query($conn, "UPDATE `berita` SET `judul_berita` = '$judul_berita', `id_kategori` = '$nama_kategori', `isi_berita` = '$isi_berita', `tanggal_publish` = '$tanggal_publish', `id_penulis` = '$nama_penulis', `gambar_berita` = '$gambar_berita', 'editors_picks' = `$editors_picks` WHERE `id_berita` = '$id_berita'");
+    $result = mysqli_query($conn, "UPDATE `berita` SET `judul_berita` = '$judul_berita', `id_kategori` = '$nama_kategori', `isi_berita` = '$isi_berita', `id_penulis` = '$nama_penulis', `gambar_berita` = '$gambar_berita', 'editors_picks' = `$editors_picks` WHERE `id_berita` = '$id_berita'");
 } else {
-    $result = mysqli_query($conn, "UPDATE `berita` SET `judul_berita` = '$judul_berita', `id_kategori` = '$nama_kategori', `isi_berita` = '$isi_berita', `tanggal_publish` = '$tanggal_publish', `id_penulis` = '$nama_penulis', `editors_picks` = '$editors_picks' WHERE `id_berita` = '$id_berita'");
+    $result = mysqli_query($conn, "UPDATE `berita` SET `judul_berita` = '$judul_berita', `id_kategori` = '$nama_kategori', `isi_berita` = '$isi_berita', `id_penulis` = '$nama_penulis', `editors_picks` = '$editors_picks' WHERE `id_berita` = '$id_berita'");
 }
 
 if ($result) {
