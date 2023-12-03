@@ -50,22 +50,6 @@
 
     include "BgColorByCategory.php";
     ?>
-
-    <!-- Breadcrumbs -->
-    <div class="container">
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="index.html" class="breadcrumbs__url">Home</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="index.html" class="breadcrumbs__url">News</a>
-        </li>
-        <li class="breadcrumbs__item breadcrumbs__item--current">
-          World
-        </li>
-      </ul>
-    </div>
-
     <?php
     // Baca parameter id_kategori dari URL
     include "koneksi.php";
@@ -87,6 +71,18 @@
     if ($result_kategori = mysqli_fetch_array($sql_berita_kategori)) {
       $nama_kategori = $result_kategori['nama_kategori'];
     ?>
+
+      <!-- Breadcrumbs -->
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__url">Home</a>
+          </li>
+          <li class="breadcrumbs__item breadcrumbs__item--current">
+            <?php echo $nama_kategori ?>
+          </li>
+        </ul>
+      </div>
       <div class="main-container container" id="main-container">
 
         <!-- Content -->

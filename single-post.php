@@ -46,22 +46,6 @@
 
     include "BgColorByCategory.php";
     ?>
-
-    <!-- Breadcrumbs -->
-    <div class="container">
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="index.html" class="breadcrumbs__url">Home</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="index.html" class="breadcrumbs__url">News</a>
-        </li>
-        <li class="breadcrumbs__item breadcrumbs__item--current">
-          World
-        </li>
-      </ul>
-    </div>
-
     <?php
     // Baca parameter id_kategori dari URL
     include "koneksi.php";
@@ -101,6 +85,20 @@
 
     ?>
 
+    <!-- Breadcrumbs -->
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="index.php" class="breadcrumbs__url">Home</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--current">
+          <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="breadcrumbs__url"><?php echo $nama_kategori ?></a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--current">
+          <?php echo $judul_berita ?>
+        </li>
+      </ul>
+    </div>
     <div class="main-container container" id="main-container">
 
       <!-- Content -->
