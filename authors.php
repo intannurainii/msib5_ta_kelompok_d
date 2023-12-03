@@ -112,7 +112,7 @@
                           <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" class="entry__img lazyload" alt="" />
                         </div>
                       </a>
-                      <a href="#" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--<?php echo getBgColorByCategory($nama_kategori) ?>"><?php echo $nama_kategori ?></a>
+                      <a href="categories.php?kategori=<?php echo $id_kategori ?>" class="entry__meta-category entry__meta-category--label entry__meta-category--align-in-corner entry__meta-category--<?php echo getBgColorByCategory($nama_kategori) ?>"><?php echo $nama_kategori ?></a>
                     </div>
 
                     <div class="entry__body card__body">

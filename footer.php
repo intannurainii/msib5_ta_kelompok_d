@@ -5,7 +5,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <aside class="widget widget-logo">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="img/logo_default_white.png" srcset="img/logo_default_white.png 1x, img/logo_default_white@2x.png 2x" class="logo__img" alt="">
                             </a>
                             <p class="copyright">
@@ -55,7 +55,7 @@
                                         <article class="post-list-small__entry clearfix">
                                             <div class="post-list-small__img-holder">
                                                 <div class="thumb-container thumb-100">
-                                                    <a href="single-post.html">
+                                                    <a href="single-post.php?berita=<?php echo $id_berita ?>">
                                                         <img data-src="img/berita/<?php echo $gambar_berita ?>" src="img/berita/<?php echo $gambar_berita ?>" alt="" class="post-list-small__img--rounded lazyload">
                                                     </a>
                                                 </div>
