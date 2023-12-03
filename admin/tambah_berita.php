@@ -115,7 +115,7 @@
 				</select>
 
 				<label class="form-label">Content</label>
-				<input id="isi_berita" type="text" onkeyup="checkform()" name="isi_berita" class="form-control">
+				<textarea id="isi_berita" onkeyup="checkform()" name="isi_berita" class="form-control"></textarea>
 
 				<label class="form-label">Tanggal Publish</label>
 				<input id="tanggal_publish" type="date" onkeyup="checkform()" name="tanggal_publish" class="form-control">
