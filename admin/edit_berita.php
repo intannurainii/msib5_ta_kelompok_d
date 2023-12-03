@@ -152,9 +152,11 @@
 						}
 						?>
 					</select>
+
 					<label class="form-label">Editors Picks</label>
 					<input type="checkbox" id="editors_picks" name="editors_picks" value="1" <?php echo ($editors_picks == true) ? 'checked' : ''; ?>>
-					<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px" onclick="return confirm('Simpan perubahan data?')">
+
+					<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:50px; margin-left:32%" onclick="return confirm('Simpan perubahan data?')">
 				</form>
 		</main>
 	</section>

@@ -132,10 +132,11 @@
 					}
 					?>
 				</select>
+
 				<label class="form-label">Editors Picks</label>
 				<input type="checkbox" id="editors_picks" name="editors_picks" value="1">
 
-				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">
+				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:50px; margin-left:32%">
 			</form>
 		</main>
 	</section>
