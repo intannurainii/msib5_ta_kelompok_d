@@ -245,18 +245,20 @@
 
             <!-- Comments -->
             <div class="entry-comments">
+            <?php 
+		$result = mysqli_query($conn, "SELECT * FROM komen");
+		while ($row = mysqli_fetch_assoc($result)) {
+			?>
+              
               <div class="title-wrap title-wrap--line">
                 <h3 class="section-title">1 comments</h3>
               </div>
               <ul class="comment-list">
                 <li class="comment">
                   <div class="comment-body">
-                    <div class="comment-avatar">
-                      <img alt="" src="img/content/single/comment_1.jpg">
-                    </div>
                     <div class="comment-text">
-                      <h6 class="comment-author"><p>jo</p></h6>
-                      <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
+                      <h6 class="comment-author"> <p><?= $row['nama']; ?></p></h6>
+                      <p><?php echo $row['isi_komen']; ?></p>
                       <!-- <a href="#" class="comment-reply">Reply</a> -->
                     </div>
                   </div>
@@ -264,32 +266,35 @@
                 </li> <!-- end 1-2 comment -->
 
               </ul>
+              <?php 
+		}
+		?>
             </div> <!-- end comments -->
-
-            <!-- Comment Form -->
-            <div id="respond" class="comment-respond">
+        <!-- Comment Form -->
+        <div id="respond" class="comment-respond">
               <div class="title-wrap">
                 <h5 class="comment-respond__title section-title">Leave a Comment</h5>
               </div>
-              <form id="form" class="comment-form" method="post" action="#">
-                <p class="comment-form-comment">
-                  <label for="comment">Comment</label>
-                  <textarea id="comment" name="comment" rows="5" required="required"></textarea>
-                </p>
-
-                <div class="row row-20">
+              <form id="form" class="comment-form" method="post" action="proses_komentar.php">
+              <div class="row row-20">
                   <div class="col-lg-12">
                     <label for="name">Name: *</label>
-                    <input name="name" id="name" type="text">
+                    <input name="nama"  type="text">
                   </div>
                 </div>
-
-                <p class="comment-form-submit">
-                  <input type="submit" class="btn btn-lg btn-color btn-button" value="Post Comment" id="submit-message">
+                <p class="comment-form-comment">
+                  <label for="comment">Comment</label>
+                  <textarea  name="isi_komen" rows="5" required="required"></textarea>
                 </p>
 
+              
+                <p class="comment-form-submit">
+                  <input type="submit" name="submit" class="btn btn-lg btn-color btn-button" value="Post Comment" id="submit-message">
+                </p>
               </form>
-            </div> <!-- end comment form -->
+            </div> 
+			<!-- end comment form -->
+           
 
           </div> <!-- end content box -->
         </div> <!-- end post content -->
