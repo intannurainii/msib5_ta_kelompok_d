@@ -34,7 +34,7 @@
 		}else if($_GET['pesan'] == "logout"){
 			echo "
 		<script>
-		alert('Anda telah berhasil logout');
+		alert('Anda Berhasil Logout');
 		window.location = 'index.php';
 		</script>
 		";
