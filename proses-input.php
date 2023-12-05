@@ -27,4 +27,14 @@ $result = mysqli_query($conn, "INSERT INTO `contact` (`name_contact`, `email_con
     header("Location:contact.php");
 exit;
 }
+if (isset($_POST['submit'])) {
+
+    $name = $_POST["nama"];
+    $isi = $_POST["isi_komen"];
+
+    $result = mysqli_query($conn, "INSERT INTO `komen` (`nama`, `isi_komen`) VALUES ('$nama','$isi');");
+
+    header("Location:single-post.php");
+exit;
+}
 

@@ -244,56 +244,73 @@
             </article> <!-- end standard post -->
 
             <!-- Comments -->
+            <?php
+        include "koneksi.php";
+        
+        $query=mysqli_query($conn, "SELECT * FROM komen Where id_berita = $id_berita ");
+        while($result=mysqli_fetch_array($query)){
+           
+        ?>
             <div class="entry-comments">
-            <?php 
-		$result = mysqli_query($conn, "SELECT * FROM komen");
-		while ($row = mysqli_fetch_assoc($result)) {
-			?>
-              
               <div class="title-wrap title-wrap--line">
-                <h3 class="section-title">1 comments</h3>
+              <?php
+                        include 'koneksi.php';
+                        $data_komen = mysqli_query($conn, "SELECT * FROM komen where id_berita=$id_berita");
+						$jumlah_komen = mysqli_num_rows($data_komen);
+                        ?>
+                <h3 class="section-title"><?php echo $jumlah_komen; ?> comments</h3>
               </div>
               <ul class="comment-list">
-                <li class="comment">
+                <li class="comment">  
                   <div class="comment-body">
+                    <div class="comment-avatar">
+                      <img alt="" src="img/content/single/comment_1.jpg">
+                    </div>
                     <div class="comment-text">
-                      <h6 class="comment-author"> <p><?= $row['nama']; ?></p></h6>
-                      <p><?php echo $row['isi_komen']; ?></p>
-                      <!-- <a href="#" class="comment-reply">Reply</a> -->
+                      <h6 class="comment-author"><p><?= $result['nama']; ?></p></h6>
+                      <div class="comment-metadata">
+                        <a href="#" class="comment-date">Dec 02, 2023 at 12:48 pm</a>
+                      </div>                      
+                      <p><?php echo $result['isi_komen']; ?></p>
                     </div>
                   </div>
-
-                </li> <!-- end 1-2 comment -->
-
-              </ul>
+                </li> 
+              </ul>  
               <?php 
 		}
-		?>
+		?>       
             </div> <!-- end comments -->
-        <!-- Comment Form -->
-        <div id="respond" class="comment-respond">
+
+            <!-- Comment Form -->
+            <div id="respond" class="comment-respond">
               <div class="title-wrap">
-                <h5 class="comment-respond__title section-title">Leave a Comment</h5>
+                <h5 class="comment-respond__title section-title">Leave a Reply</h5>
               </div>
-              <form id="form" class="comment-form" method="post" action="proses_komentar.php">
-              <div class="row row-20">
-                  <div class="col-lg-12">
-                    <label for="name">Name: *</label>
-                    <input name="nama"  type="text">
-                  </div>
-                </div>
+              <form id="form" class="comment-form" method="post" action="proses-input">
                 <p class="comment-form-comment">
                   <label for="comment">Comment</label>
-                  <textarea  name="isi_komen" rows="5" required="required"></textarea>
+                  <textarea id="comment" name="isi_komen" rows="5" required="required"></textarea>
                 </p>
 
-              
+                <div class="row row-20">
+                  <div class="col-lg-4">
+                    <label for="name">Name: *</label>
+                    <input name="nama" id="name" type="text">
+                  </div>
+                  <div class="col-lg-4">
+                    
+                  </div>
+                  <div class="col-lg-4">
+                   
+                  </div>
+                </div>
+
                 <p class="comment-form-submit">
                   <input type="submit" name="submit" class="btn btn-lg btn-color btn-button" value="Post Comment" id="submit-message">
                 </p>
+                
               </form>
-            </div> 
-			<!-- end comment form -->
+            </div> <!-- end comment form -->
            
 
           </div> <!-- end content box -->
