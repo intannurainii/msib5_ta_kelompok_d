@@ -175,14 +175,15 @@
             <div class="col-md-3 col-sm-6">
               <div class="trainer-item">
                 <div class="image-thumb">
-                  <img src="assets/images/team-image-3-646x680.jpg" alt="">
+                  <img src="assets/images/trisa.jpg" alt="">
                 </div>
                 <div class="down-content">
                   <span>Anggota</span>
                   <h4>Trisa Tiara</h4>
                   <p>trisatiara123@gmail.com
-                    Politeknik Negeri Sriwijaya
-                    Palembang</p>
+                    <br>Politeknik Negeri Sriwijaya
+                    <br>Palembang
+                  </p>
                   <ul class="social-icons">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -202,8 +203,9 @@
                   <span>Anggota</span>
                   <h4>Moch Rifki Adrianysah</h4>
                   <p>mochrifki98620@gmail.com
-                    STMIK Mardira Indonesia
-                    Bandung</p>
+                    <br>STMIK Mardira Indonesia
+                    <br>Bandung
+                  </p>
                   <ul class="social-icons">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
