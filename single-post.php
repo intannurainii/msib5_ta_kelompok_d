@@ -244,41 +244,40 @@
             </article> <!-- end standard post -->
 
             <!-- Comments -->
-            <?php
-        include "koneksi.php";
-        
-        $query=mysqli_query($conn, "SELECT * FROM komen Where id_berita = $id_berita ");
-        while($result=mysqli_fetch_array($query)){
-           
-        ?>
             <div class="entry-comments">
               <div class="title-wrap title-wrap--line">
-              <?php
-                        include 'koneksi.php';
-                        $data_komen = mysqli_query($conn, "SELECT * FROM komen where id_berita=$id_berita");
-						$jumlah_komen = mysqli_num_rows($data_komen);
-                        ?>
+                <?php
+                include 'koneksi.php';
+                $query = mysqli_query($conn, "SELECT * FROM komen Where id_berita = $id_berita ");
+                $data_komen = mysqli_query($conn, "SELECT * FROM komen where id_berita=$id_berita");
+                $jumlah_komen = mysqli_num_rows($data_komen);
+                ?>
                 <h3 class="section-title"><?php echo $jumlah_komen; ?> comments</h3>
               </div>
-              <ul class="comment-list">
-                <li class="comment">  
-                  <div class="comment-body">
-                    <div class="comment-avatar">
-                      <img alt="" src="img/content/single/comment_1.jpg">
+              <?php
+              while ($result = mysqli_fetch_array($query)) {
+              ?>
+                <ul class="comment-list">
+                  <li class="comment">
+                    <div class="comment-body">
+                      <div class="comment-avatar">
+                        <img alt="" src="img/content/single/comment_1.jpg">
+                      </div>
+                      <div class="comment-text">
+                        <h6 class="comment-author">
+                          <p><?= $result['nama']; ?></p>
+                        </h6>
+                        <div class="comment-metadata">
+                          <a href="#" class="comment-date">Dec 02, 2023 at 12:48 pm</a>
+                        </div>
+                        <p><?php echo $result['isi_komen']; ?></p>
+                      </div>
                     </div>
-                    <div class="comment-text">
-                      <h6 class="comment-author"><p><?= $result['nama']; ?></p></h6>
-                      <div class="comment-metadata">
-                        <a href="#" class="comment-date">Dec 02, 2023 at 12:48 pm</a>
-                      </div>                      
-                      <p><?php echo $result['isi_komen']; ?></p>
-                    </div>
-                  </div>
-                </li> 
-              </ul>  
-              <?php 
-		}
-		?>       
+                  </li>
+                </ul>
+              <?php
+              }
+              ?>
             </div> <!-- end comments -->
 
             <!-- Comment Form -->
@@ -286,32 +285,29 @@
               <div class="title-wrap">
                 <h5 class="comment-respond__title section-title">Leave a Reply</h5>
               </div>
-              <form id="form" class="comment-form" method="post" action="proses-input">
+              <form id="form" class="comment-form" method="post" action="proses-input.php">
                 <p class="comment-form-comment">
                   <label for="comment">Comment</label>
                   <textarea id="comment" name="isi_komen" rows="5" required="required"></textarea>
                 </p>
 
                 <div class="row row-20">
+                  <input name="id_berita" type="hidden" value="<?php echo $id_berita ?>">
                   <div class="col-lg-4">
                     <label for="name">Name: *</label>
                     <input name="nama" id="name" type="text">
                   </div>
                   <div class="col-lg-4">
-                    
-                  </div>
-                  <div class="col-lg-4">
-                   
                   </div>
                 </div>
 
                 <p class="comment-form-submit">
-                  <input type="submit" name="submit" class="btn btn-lg btn-color btn-button" value="Post Comment" id="submit-message">
+                  <input type="submit" id="komen" name="komen" class="btn btn-lg btn-color" value="Post a Comment">
                 </p>
-                
+
               </form>
             </div> <!-- end comment form -->
-           
+
 
           </div> <!-- end content box -->
         </div> <!-- end post content -->

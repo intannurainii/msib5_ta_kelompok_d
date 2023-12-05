@@ -5,12 +5,6 @@ if (isset($_POST['newsletter'])) {
 $email = $_POST["email"];
 
 $result = mysqli_query($conn, "INSERT INTO `newsletter` (`email_newsletter`) VALUES ('$email');");
-    if ($result) {
-        // Menyimpan pesan sukses ke session
-        $_SESSION['success_message'] = 'Newsletter subscription successful!';
-    } else {
-        $_SESSION['success_message'] = 'Failed to subscribe to newsletter. Please try again.';
-    }
 
 echo "<script>window.history.go(-1);</script>";
 exit;
@@ -27,14 +21,17 @@ $result = mysqli_query($conn, "INSERT INTO `contact` (`name_contact`, `email_con
     header("Location:contact.php");
 exit;
 }
-if (isset($_POST['submit'])) {
 
-    $name = $_POST["nama"];
+if (isset($_POST['komen'])) {
+    
+
+    $id_berita = $_POST["id_berita"];
+    $nama = $_POST["nama"];
     $isi = $_POST["isi_komen"];
 
-    $result = mysqli_query($conn, "INSERT INTO `komen` (`nama`, `isi_komen`) VALUES ('$nama','$isi');");
+    $result = mysqli_query($conn, "INSERT INTO `komen` (`id_berita`, `nama`, `isi_komen`) VALUES ('$id_berita','$nama','$isi');");
 
-    header("Location:single-post.php");
+    echo "<script>window.history.go(-1);</script>";
 exit;
 }
 
