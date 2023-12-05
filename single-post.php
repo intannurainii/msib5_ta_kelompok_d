@@ -261,14 +261,14 @@
                   <li class="comment">
                     <div class="comment-body">
                       <div class="comment-avatar">
-                        <img alt="" src="img/content/single/comment_1.jpg">
+                        <img alt="" src="img/content/single/komen1.jpg"height="42" width="42">
                       </div>
                       <div class="comment-text">
                         <h6 class="comment-author">
                           <p><?= $result['nama']; ?></p>
                         </h6>
                         <div class="comment-metadata">
-                          <a href="#" class="comment-date">Dec 02, 2023 at 12:48 pm</a>
+                          <a href="#" class="comment-date"><?= $result['tgl']; ?></a>
                         </div>
                         <p><?php echo $result['isi_komen']; ?></p>
                       </div>
