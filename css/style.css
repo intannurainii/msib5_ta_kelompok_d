@@ -212,7 +212,7 @@ ul {
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Montserrat", sans-serif;
 	margin-top: 0;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	color: #171821;
 	font-weight: 600;
 	line-height: 1.3;
@@ -263,7 +263,7 @@ p {
 	color: #54555E;
 	font-weight: normal;
 	line-height: 26px;
-	margin: 0 0 10px; }
+	margin: 0 0 0 0;}
 
 address {
 	font-style: normal;
@@ -3082,14 +3082,14 @@ figcaption {
 	padding-top: 0; }
 
 .comment-body {
+	display: flex;
+	align-items: center;
 	margin-bottom: 24px;
 	padding-top: 24px;
 	border-top: 1px solid #E3E4E8; }
 
 .comment-text {
 	overflow: hidden; }
-	.comment-text p {
-		margin-bottom: 10px; }
 
 .comment-avatar {
 	float: left;
@@ -3102,7 +3102,6 @@ figcaption {
 	font-family: "Montserrat", sans-serif;
 	font-size: 15px;
 	display: inline-block;
-	margin-bottom: 5px;
 	margin-right: 8px; }
 
 .comment-metadata {
@@ -3110,7 +3109,6 @@ figcaption {
 
 .comment-date, .comment-edit-link {
 	display: inline-block;
-	margin-bottom: 10px;
 	font-size: 12px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -3118,7 +3116,6 @@ figcaption {
 
 .comment-edit-link {
 	margin-left: 5px;
-	margin-bottom: 0;
 	color: #2D95E3; }
 
 .comment-reply {
