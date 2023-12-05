@@ -311,3 +311,15 @@ body {
 		grid-template-columns: 1fr;
 	}
 }
+
+#isi_berita_admin{
+
+	display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+	line-height: 26px;
+}
+td{
+	font-size: 12px!important;
+}

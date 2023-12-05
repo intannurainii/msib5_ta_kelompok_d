@@ -115,7 +115,7 @@
                                     <td><?php echo $data["judul_berita"] ?></td>
                                     <td><img src="../img/berita/<?php echo $data["gambar_berita"] ?>" width="100px"></td>
                                     <td><?php echo $data["nama_kategori"] ?></td>
-                                    <td><?php echo $data["isi_berita"] ?></td>
+                                    <td id="isi_berita_admin"><?php echo $data["isi_berita"] ?></td>
                                     <td><?php echo $data["tanggal_publish"] ?></td>
                                     <td><?php echo $data["nama_penulis"] ?></td>
                                     <td> <a href="edit_berita.php?id_berita=<?php echo $data["id_berita"] ?>" class="btn btn-warning" style="padding:2px 12px; margin-bottom:10px"> Edit </a>
