@@ -13,46 +13,7 @@
 
 <body>
 	<!-- Sidebar -->
-	<section id="sidebar">
-		<a href="#" class="nav-link" id="brand">
-			<i class='bx bxs-smile'></i>
-			<span class="text">Admin</span>
-		</a>
-		<ul class="side-menu top">
-			<li>
-				<a href="index.php" class="nav-link">
-					<i class='bx bxs-home'></i>
-					<span class="text">Dashboard</span>
-				</a>
-			</li>
-			<li id="active">
-				<a href="berita.php" class="nav-link">
-					<i class='bx bxs-news'></i>
-					<span class="text">Berita</span>
-				</a>
-			</li>
-			<li>
-				<a href="kategori.php" class="nav-link">
-					<i class='bx bxs-category'></i>
-					<span class="text">Kategori</span>
-				</a>
-			</li>
-			<li>
-				<a href="penulis.php" class="nav-link">
-					<i class='bx bxs-user'></i>
-					<span class="text">Penulis</span>
-				</a>
-			</li>
-		</ul>
-		<ul class="side-menu">
-			<li>
-				<a href="#" class="nav-link" id="logout">
-					<i class='bx bxs-log-out-circle'></i>
-					<span class="text">Logout</span>
-				</a>
-			</li>
-		</ul>
-	</section>
+	<?php include "sidebar.php" ?>
 
 	<!-- Content -->
 	<section id="content">
