@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V1</title>
+	<title>Login Admin Berita</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -32,9 +32,19 @@
 		</script>
 		";
 		}else if($_GET['pesan'] == "logout"){
-			echo "Anda telah berhasil logout";
+			echo "
+		<script>
+		alert('Anda telah berhasil logout');
+		window.location = 'index.php';
+		</script>
+		";
 		}else if($_GET['pesan'] == "belum_login"){
-			echo "Anda harus login untuk mengakses halaman admin";
+			echo "
+		<script>
+		alert('Anda harus login untuk mengakses halaman admin');
+		window.location = 'index.php';
+		</script>
+		";
 		}
 	}
 	?>
