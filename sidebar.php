@@ -54,17 +54,52 @@
                 <i class="ui-email newsletter__icon"></i>
                 Subscribe for our daily news
             </p>
-            <form class="mc4wp-form" method="post" action="proses-input.php">
+
+            <form class="mc4wp-form" method="post" id="newsletterForm-sidebar">
                 <div class="mc4wp-form-fields">
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Your email" required="">
+                        <input type="email" name="email" id="email-sidebar" placeholder="Your email" required="">
                     </div>
                     <div class="form-group">
-                        <input type="submit" id="newsletter" name="newsletter" class="btn btn-lg btn-color" value="Sign Up">
+                        <input type="submit" name="newsletter" class="btn btn-lg btn-color" value="Sign Up">
                     </div>
                 </div>
             </form>
-        </aside> <!-- end widget newsletter -->
+            <div id="notification-sidebar"></div>
+        </aside>
+        <!-- end widget newsletter -->
+
+        <!-- ajax -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('#newsletterForm-sidebar').submit(function(e) {
+                    e.preventDefault(); // Prevent the form from submitting in the traditional way
+
+                    var email = $('#email-sidebar').val();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'proses-input.php', // Change this to the actual processing file
+                        data: {
+                            email: email
+                        },
+                        success: function(response) {
+                            $('#notification-sidebar').html(response).fadeIn();
+
+                            // Munculkan notifikasi selama 5 detik, lalu hilangkan
+                            setTimeout(function() {
+                                $('#notification-sidebar').fadeOut();
+                            }, 3000);
+
+                            $('#email-sidebar').val('');
+                        }
+                    });
+                });
+            });
+        </script>
+        <!-- ajax -->
 
         <!-- Widget Socials -->
         <aside class="widget widget-socials">

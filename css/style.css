@@ -4968,4 +4968,8 @@ dd {
 .post-list-small__img-holder img {
     object-fit: cover!important;
 }
+
+.active a{
+	color: #2D95E3!important;
+}
 /* side bar */

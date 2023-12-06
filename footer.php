@@ -90,18 +90,48 @@
                                 <i class="ui-email newsletter__icon"></i>
                                 Subscribe for our daily news
                             </p>
-                            <form class="mc4wp-form" method="post" action="proses-input.php">
+                            <form class="mc4wp-form" method="post" id="newsletterForm-footer">
                                 <div class="mc4wp-form-fields">
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="Your email" required="">
+                                        <input type="email" id="email-footer" name="email" placeholder="Your email" required="">
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" id="newsletter" name="newsletter" class="btn btn-lg btn-color" value="Sign Up">
                                     </div>
                                 </div>
                             </form>
+                            <div id="notification-footer"></div>
                         </aside>
                     </div>
+                    <!-- ajax -->
+                    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+                    <script>
+                        $(document).ready(function() {
+                            $('#newsletterForm-footer').submit(function(e) {
+                                e.preventDefault(); // Prevent the form from submitting in the traditional way
+
+                                var email = $('#email-footer').val();
+
+                                $.ajax({
+                                    type: 'POST',
+                                    url: 'proses-input.php', // Change this to the actual processing file
+                                    data: {
+                                        email: email
+                                    },
+                                    success: function(response) {
+                                        $('#notification-footer').html(response).fadeIn();
+                                        // Munculkan notifikasi selama 5 detik, lalu hilangkan
+                                        setTimeout(function() {
+                                            $('#notification-footer').fadeOut();
+                                        }, 3000);
+                                        $('#email-footer').val('');
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                    <!-- ajax -->
 
                 </div>
             </div>

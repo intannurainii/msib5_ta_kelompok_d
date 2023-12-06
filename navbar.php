@@ -11,10 +11,10 @@
                     <!-- Nav-wrap -->
                     <nav class="flex-child nav__wrap d-none d-lg-block">
                         <ul class="nav__menu">
-                            <li>
+                            <li <?php echo ($currentPage == 'index') ? 'class="active"' : ''; ?>>
                                 <a href="index.php">Home</a>
                             </li>
-                            <li class="nav__dropdown">
+                            <li class="nav__dropdown" <?php echo ($currentPage == 'categories') ? 'class="active"' : ''; ?>>
                                 <a href="#">Categories</a>
                                 <ul class="nav__dropdown-menu">
                                     <?php
@@ -22,22 +22,22 @@
                                     $query = "SELECT * FROM kategori";
                                     $sql = mysqli_query($conn, $query);
                                     while ($result = mysqli_fetch_array($sql)) {
-                                        $nama_kategori = $result['nama_kategori'];
+                                        $menu_kategori = $result['nama_kategori'];
                                         $id_kategori = $result['id_kategori'];
 
                                     ?>
-                                        <li><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $nama_kategori ?></a></li>
+                                        <li <?php echo ($currentPage == $result['nama_kategori']) ? 'class="active"' : ''; ?>><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $menu_kategori ?></a></li>
 
                                     <?php
                                     };
                                     ?>
                                 </ul>
                             </li>
-                            <li>
+                            <li <?php echo ($currentPage == 'about') ? 'class="active"' : ''; ?>>
                                 <a href="about.php">About</a>
                             </li>
 
-                            <li>
+                            <li <?php echo ($currentPage == 'contact') ? 'class="active"' : ''; ?>>
                                 <a href="contact.php">Contact Us</a>
                             </li>
                         </ul>

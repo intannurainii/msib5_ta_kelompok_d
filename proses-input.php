@@ -1,14 +1,27 @@
 <?php
 include 'koneksi.php';
 
-if (isset($_POST['newsletter'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $email = $_POST["email"];
 
-$result = mysqli_query($conn, "INSERT INTO `newsletter` (`email_newsletter`) VALUES ('$email');");
 
-echo "<script>window.history.go(-1);</script>";
-exit;
+$checkQuery = mysqli_query($conn, "SELECT * FROM `newsletter` WHERE `email_newsletter` = '$email'");
+$existingData = mysqli_fetch_assoc($checkQuery);
+if ($existingData) {
+    echo '<div class="alert alert-danger" role="alert">Email sudah terdaftar.</div>';
 }
+else{
+        $result = mysqli_query($conn, "INSERT INTO `newsletter` (`email_newsletter`) VALUES ('$email');");
+
+        if ($result) {
+            echo '<div class="alert alert-success" role="alert">Data Berhasil Dikirim</div>';
+        } else {
+            echo '<div class="alert alert-danger" role="alert">Gagal mengirim data</div>';
+        }
+    }
+
+}
+
 if (isset($_POST['contact'])) {
 
     $name = $_POST["name"];

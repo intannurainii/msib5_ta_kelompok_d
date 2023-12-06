@@ -1,4 +1,6 @@
-<?php include "koneksi.php" ?>
+<?php
+$currentPage = basename($_SERVER['SCRIPT_FILENAME'], '.php');
+include "koneksi.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
