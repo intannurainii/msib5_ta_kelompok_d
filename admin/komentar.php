@@ -56,7 +56,7 @@
 									<th>Nama</th>
                                     <th>Komentar</th>
 									<th>Tanggal Komen</th>
-									<th style="width:105px">Aksi</th>
+									<th>Aksi</th>
 								</tr>
 							</thead>
 

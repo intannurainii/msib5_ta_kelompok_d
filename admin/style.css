@@ -29,6 +29,8 @@ li {
 	--light-yellow: #FFF2C6;
 	--orange: #FD7238;
 	--light-orange: #FFE0D3;
+	--green: #347C2C;
+	--light-green: #C1FEC1;
 }
 
 html {
@@ -232,6 +234,9 @@ body {
 	align-items: center;
 	grid-gap: 24px;
 }
+#content main .box-info a {
+	text-decoration: none;
+}
 #content main .box-info li .bx {
 	width: 80px;
 	height: 80px;
@@ -252,6 +257,10 @@ body {
 #content main .box-info li:nth-child(3) .bx {
 	background: var(--light-orange);
 	color: var(--orange);
+}
+#content main .box-info li:nth-child(4) .bx {
+	background: var(--light-green);
+	color: var(--green);
 }
 #content main .box-info li .text h3 {
 	font-size: 24px;
