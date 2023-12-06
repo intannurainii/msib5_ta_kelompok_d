@@ -67,7 +67,8 @@
 				<img src="../img/berita/<?php echo $foto_profil ?>" alt="" width="100" style="margin-bottom:15px">
 				<input type="file" name="fileToUpload" id="fileToUpload" class="form-control" value="<?php echo $foto_profil ?>">
 
-				<input class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px" onclick="return confirm('Simpan perubahan data?')">
+				<input class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:380px" onclick="return confirm('Simpan perubahan data?')">
+				<button class="btn btn-secondary" style="margin-top:20px; margin-left:3px" onclick="window.location.href='penulis.php'">Cancel</button>
 			</form>
 		</main>
 	</section>

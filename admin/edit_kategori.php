@@ -54,7 +54,8 @@
                 <label class="form-label">Nama Kategori</label>
                 <input type="text" name="nama_kategori" class="form-control" value="<?php echo $nama_kategori ?>">
                     
-                <input class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px" onclick="return confirm('Simpan perubahan data?')">
+                <input class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:380px" onclick="return confirm('Simpan perubahan data?')">
+                <button class="btn btn-secondary" style="margin-top:20px; margin-left:3px" onclick="window.location.href='kategori.php'">Cancel</button>
             </form>
         </main>
 	</section>

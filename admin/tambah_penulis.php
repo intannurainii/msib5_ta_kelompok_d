@@ -53,7 +53,8 @@
                 <label class="form-label">Foto Profil</label>
                 <input id="fileToUpload" type="file" onkeyup="checkform()" name="fileToUpload" class="form-control">
                 
-                <input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:450px">    
+                <input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:380px">    
+                <button class="btn btn-secondary" style="margin-top:20px; margin-left:3px" onclick="window.location.href='penulis.php'">Cancel</button>
             </form>
         </main>
 	</section>
