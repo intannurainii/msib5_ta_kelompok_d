@@ -246,22 +246,6 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-#content main .box-info li:nth-child(1) .bx {
-	background: var(--light-blue);
-	color: var(--blue);
-}
-#content main .box-info li:nth-child(2) .bx {
-	background: var(--light-yellow);
-	color: var(--yellow);
-}
-#content main .box-info li:nth-child(3) .bx {
-	background: var(--light-orange);
-	color: var(--orange);
-}
-#content main .box-info li:nth-child(4) .bx {
-	background: var(--light-green);
-	color: var(--green);
-}
 #content main .box-info li .text h3 {
 	font-size: 24px;
 	font-weight: 600;

@@ -44,60 +44,67 @@
 			</div>
 
 			<ul class="box-info">
-				<li>
-					<i class='bx bxs-news'></i>
-					<span class="text">
-						<?php
-                        include '../koneksi.php';
-                        $data_berita = mysqli_query($conn, "SELECT * FROM berita");
-						$jumlah_berita = mysqli_num_rows($data_berita);
-                        ?>
+				<a href="berita.php">
+					<li>
+						<i class='bx bxs-news' style="background:#CFE8FF; color:#3C91E6"></i>
+						<span class="text">
+							<?php
+							include '../koneksi.php';
+							$data_berita = mysqli_query($conn, "SELECT * FROM berita");
+							$jumlah_berita = mysqli_num_rows($data_berita);
+							?>
 
-						<h3><?php echo $jumlah_berita; ?></h3>
-						<p>Berita</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-category'></i>
-					<span class="text">
-						<?php
-                        include '../koneksi.php';
-                        $data_kategori = mysqli_query($conn, "SELECT * FROM kategori");
-						$jumlah_kategori = mysqli_num_rows($data_kategori);
-                        ?>
-						
-						<h3><?php echo $jumlah_kategori; ?></h3>
-						<p>Kategori</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-user'></i>
-					<span class="text">
-						<?php
-                        include '../koneksi.php';
-                        $data_penulis = mysqli_query($conn, "SELECT * FROM penulis");
-						$jumlah_penulis = mysqli_num_rows($data_penulis);
-                        ?>
-						
-						<h3><?php echo $jumlah_penulis; ?></h3>
-						<p>Penulis</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-comment-dots'></i>
-					<span class="text">
-						<?php
-                        include '../koneksi.php';
-                        $data_komen = mysqli_query($conn, "SELECT * FROM komen");
-						$jumlah_komen = mysqli_num_rows($data_komen);
-                        ?>
-						
-						<h3><?php echo $jumlah_komen; ?></h3>
-						<p>Komentar</p>
-					</span>
-				</li>
+							<h3><?php echo $jumlah_berita; ?></h3>
+							<p>Berita</p>
+						</span>
+					</li>
+				</a>
+				<a href="kategori.php">
+					<li>
+						<i class='bx bxs-category' style="background:#FFF2C6; color:#FFCE26"></i>
+						<span class="text">
+							<?php
+							include '../koneksi.php';
+							$data_kategori = mysqli_query($conn, "SELECT * FROM kategori");
+							$jumlah_kategori = mysqli_num_rows($data_kategori);
+							?>
+							
+							<h3><?php echo $jumlah_kategori; ?></h3>
+							<p>Kategori</p>
+						</span>
+					</li>
+				</a><br>
+				<a href="penulis.php">
+					<li>
+						<i class='bx bxs-user' style="background:#FFE0D3; color:#FD7238"></i>
+						<span class="text">
+							<?php
+							include '../koneksi.php';
+							$data_penulis = mysqli_query($conn, "SELECT * FROM penulis");
+							$jumlah_penulis = mysqli_num_rows($data_penulis);
+							?>
+							
+							<h3><?php echo $jumlah_penulis; ?></h3>
+							<p>Penulis</p>
+						</span>
+					</li>
+				</a>
+				<a href="komentar.php">
+					<li>
+						<i class='bx bxs-comment-dots' style="background:#C1FEC1; color:#347C2C"></i>
+						<span class="text">
+							<?php
+							include '../koneksi.php';
+							$data_komen = mysqli_query($conn, "SELECT * FROM komen");
+							$jumlah_komen = mysqli_num_rows($data_komen);
+							?>
+							
+							<h3><?php echo $jumlah_komen; ?></h3>
+							<p>Komentar</p>
+						</span>
+					</li>
+				</a>
 			</ul>
-
 		</main>
 	</section>
 </body>
