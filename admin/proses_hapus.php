@@ -41,5 +41,15 @@ if(isset($_GET['kategori'])){
         echo $query;
     }
 }
+if(isset($_GET['komen'])){
+    $id_komen = $_GET['komen'];
+    $query = "delete from komen where kategori.id_komen = $id_komen";
+    $sql = mysqli_query($conn, $query);
+    if ($sql) {
+        header("location: komentar.php");
+    } else {
+        echo $query;
+    }
+}
 
 ?>

@@ -83,6 +83,19 @@
 						<p>Penulis</p>
 					</span>
 				</li>
+				<li>
+					<i class='bx bxs-user'></i>
+					<span class="text">
+						<?php
+                        include '../koneksi.php';
+                        $data_komen = mysqli_query($conn, "SELECT * FROM komen");
+						$jumlah_komen = mysqli_num_rows($data_komen);
+                        ?>
+						
+						<h3><?php echo $jumlah_komen; ?></h3>
+						<p>Komentar</p>
+					</span>
+				</li>
 			</ul>
 
 		</main>

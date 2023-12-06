@@ -41,6 +41,12 @@
 					<span class="text">Penulis</span>
 				</a>
 			</li>
+			<li>
+				<a href="komentar.php" class="nav-link">
+					<i class='bx bxs-user'></i>
+					<span class="text">Komentar</span>
+				</a>
+			</li>
 		</ul>
 		<ul class="side-menu">
 			<li>
