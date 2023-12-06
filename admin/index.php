@@ -84,7 +84,7 @@
 					</span>
 				</li>
 				<li>
-					<i class='bx bxs-user'></i>
+					<i class='bx bxs-comment-dots'></i>
 					<span class="text">
 						<?php
                         include '../koneksi.php';

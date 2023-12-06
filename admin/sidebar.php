@@ -43,7 +43,7 @@
 			</li>
 			<li>
 				<a href="komentar.php" class="nav-link">
-					<i class='bx bxs-user'></i>
+					<i class='bx bxs-comment-dots'></i>
 					<span class="text">Komentar</span>
 				</a>
 			</li>
