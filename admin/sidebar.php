@@ -17,31 +17,31 @@
 			<span class="text">Admin</span>
 		</a>
 		<ul class="side-menu top">
-			<li>
+			<li class="<?php if($page=='index'){echo 'active';} ?>">
 				<a href="index.php" class="nav-link">
 					<i class='bx bxs-home' ></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
+			<li class="<?php if($page=='berita'){echo 'active';} ?>">
 				<a href="berita.php" class="nav-link">
 					<i class='bx bxs-news'></i>
 					<span class="text">Berita</span>
 				</a>
 			</li>
-			<li>
+			<li class="<?php if($page=='kategori'){echo 'active';} ?>">
 				<a href="kategori.php" class="nav-link">
 					<i class='bx bxs-category'></i>
 					<span class="text">Kategori</span>
 				</a>
 			</li>
-			<li>
+			<li class="<?php if($page=='penulis'){echo 'active';} ?>">
 				<a href="penulis.php" class="nav-link">
 					<i class='bx bxs-user'></i>
 					<span class="text">Penulis</span>
 				</a>
 			</li>
-			<li>
+			<li class="<?php if($page=='komentar'){echo 'active';} ?>">
 				<a href="komentar.php" class="nav-link">
 					<i class='bx bxs-comment-dots'></i>
 					<span class="text">Komentar</span>

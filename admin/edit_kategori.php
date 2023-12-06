@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Sidebar -->
-	<?php include "sidebar.php" ?>
+	<?php $page = 'kategori'; include "sidebar.php" ?>
 	
 	<!-- Content -->
 	<section id="content">

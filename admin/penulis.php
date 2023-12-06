@@ -15,7 +15,7 @@
 
 <body>
 	<!-- Sidebar -->
-	<?php include "sidebar.php" ?>
+	<?php $page = 'penulis'; include "sidebar.php" ?>
 
 	<!-- Content -->
 	<section id="content">

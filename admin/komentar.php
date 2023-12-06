@@ -15,7 +15,7 @@
 
 <body>
 	<!-- Sidebar -->
-	<?php include "sidebar.php" ?>
+	<?php $page = 'komentar'; include "sidebar.php" ?>
 
 	<!-- Content -->
 	<section id="content">

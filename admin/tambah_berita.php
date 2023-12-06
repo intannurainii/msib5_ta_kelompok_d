@@ -13,7 +13,7 @@
 
 <body>
 	<!-- Sidebar -->
-	<?php include "sidebar.php" ?>
+	<?php $page = 'berita'; include "sidebar.php" ?>
 
 	<!-- Content -->
 	<section id="content">
