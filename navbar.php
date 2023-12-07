@@ -28,10 +28,10 @@ $currentPage = basename($_SERVER['SCRIPT_FILENAME'], '.php');
                                 while ($result = mysqli_fetch_array($sql)) {
                                     $menu_kategori = $result['nama_kategori'];
                                     $id_kategori = $result['id_kategori'];
-                                ?>
-                                    <li <?php echo ($currentCategories == $menu_kategori) ? 'class="active"' : ''; ?>
-                                    ><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $menu_kategori ?></a></li>
-                                    
+                                    ?>
+                                    <?php echo ($currentPage !== 'categories') ? ($currentCategories = "") : ''; ?>
+                                    <li <?php echo ($currentCategories == $menu_kategori) ? 'class="active"' : ''; ?>><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $menu_kategori ?></a></li>
+
                                 <?php
                                 };
                                 ?>
