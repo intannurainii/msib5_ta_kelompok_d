@@ -41,7 +41,7 @@
 			</div>
 
 			<!-- Penulis -->
-			<div class="container" style="margin-top:30px">
+			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<?php

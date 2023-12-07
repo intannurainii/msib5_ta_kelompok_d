@@ -293,3 +293,13 @@ body {
 td{
 	font-size: 12px!important;
 }
+
+/* Datatable */
+.dataTables_filter {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.dataTables_length {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
