@@ -4975,4 +4975,10 @@ li.active>a{
 #back-to-top{
 	background-color: #2D95E3;
 }
+.post-list-small__entry-title a {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 /* side bar */
