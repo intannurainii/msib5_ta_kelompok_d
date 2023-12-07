@@ -8,7 +8,7 @@ $currentPage = basename($_SERVER['SCRIPT_FILENAME'], '.php');
             <div class="flex-parent">
 
                 <!-- Logo -->
-                <a href="index.html" class="logo">
+                <a href="index.php" class="logo">
                     <img class="logo__img" src="img/logo_default.png" srcset="img/logo_default.png 1x, img/logo_default@2x.png 2x" alt="logo" />
                 </a>
 
