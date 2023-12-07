@@ -282,43 +282,43 @@ $currentPage = 'single-post';
 
             <!-- Comments -->
             <div id="tampil">
-            <div class="entry-comments">
-              <div class="title-wrap title-wrap--line">
+              <div class="entry-comments">
+                <div class="title-wrap title-wrap--line">
+                  <?php
+                  include 'koneksi.php';
+                  $sql = "SELECT * FROM komen Where id_berita = $id_berita ";
+                  $hasil = mysqli_query($conn, $sql);
+                  $jumlah_komen = mysqli_num_rows($hasil);
+
+                  ?>
+                  <h3 class="section-title"><?php echo $jumlah_komen; ?> comments</h3>
+                </div>
                 <?php
-                include 'koneksi.php';
-                $sql = "SELECT * FROM komen Where id_berita = $id_berita ";
-                $hasil=mysqli_query($conn,$sql);
-                $jumlah_komen = mysqli_num_rows($hasil);
-               
+                while ($result = mysqli_fetch_array($hasil)) {
+
                 ?>
-                <h3 class="section-title"><?php echo $jumlah_komen; ?> comments</h3>
-              </div>
-              <?php
-              while ($result = mysqli_fetch_array($query)) {
-                
-              ?>
-                <ul class="comment-list">
-                  <li class="comment">
-                    <div class="comment-body">
-                      <div class="comment-avatar">
-                        <img alt="" src="img/content/single/komen1.jpg" height="42" width="42">
-                      </div>
-                      <div class="comment-text">
-                        <h6 class="comment-author">
-                          <p><?= $result['nama']; ?></p>
-                        </h6>
-                        <div class="comment-metadata">
-                          <a href="#" class="comment-date"><?= $result['tgl']; ?></a>
+                  <ul class="comment-list">
+                    <li class="comment">
+                      <div class="comment-body">
+                        <div class="comment-avatar">
+                          <img alt="" src="img/content/single/komen1.jpg" height="42" width="42">
                         </div>
-                        <p><?php echo $result['isi_komen']; ?></p>
+                        <div class="comment-text">
+                          <h6 class="comment-author">
+                            <p><?= $result['nama']; ?></p>
+                          </h6>
+                          <div class="comment-metadata">
+                            <a href="#" class="comment-date"><?= $result['tgl']; ?></a>
+                          </div>
+                          <p><?php echo $result['isi_komen']; ?></p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
-              <?php
-              }
-              ?>
-            </div> <!-- end comments -->
+                    </li>
+                  </ul>
+                <?php
+                }
+                ?>
+              </div> <!-- end comments -->
             </div>
 
             <!-- Comment Form -->
@@ -326,17 +326,17 @@ $currentPage = 'single-post';
               <div class="title-wrap">
                 <h5 class="comment-respond__title section-title">Leave a Reply</h5>
               </div>
-              <form id="form" class="comment-form" method="post">
+              <form id="formComment" class="comment-form" method="post">
                 <p class="comment-form-comment">
                   <label for="comment">Comment</label>
                   <textarea id="comment" name="isi_komen" rows="5" required="required"></textarea>
                 </p>
 
                 <div class="row row-20">
-                  <input name="id_berita" type="hidden" value="<?php echo $id_berita ?>">
-                  <div class="col-lg-4">
+                  <input name="id_berita" id="id_berita_comment" type="hidden" value="<?php echo $id_berita ?>">
+                  <div class="col-lg-12">
                     <label for="name">Name: *</label>
-                    <input name="nama" id="name" type="text">
+                    <input name="nama" id="name-comment" type="text">
                   </div>
                   <div class="col-lg-4">
                   </div>
@@ -347,27 +347,47 @@ $currentPage = 'single-post';
                 </p>
 
               </form>
+              <div id="notification-comment"></div>
             </div> <!-- end comment form -->
-            <script type="text/javascript">
-        $(document).ready(function(){
+            <!-- ajax -->
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-         $('tampil').load("single-post.php");
+            <script>
+              $(document).ready(function() {
+                $('#formComment').submit(function(e) {
+                  e.preventDefault(); // Prevent the form from submitting in the traditional way
 
-            $("Submit").click(function(){
-                var data = $('#form').serialize();
-                $.ajax({
-                    type	: 'POST',
-                    url	: "proses-komen.php",
-                    data: data,
+                  var isi_komen = $('#comment').val();
+                  var nama = $('#name-comment').val();
+                  var id_berita = $('#id_berita_comment').val();
+                  var action = 'formComment';
 
-                    cache	: false,
-                    success	: function(data){
-                        $('tampil').load("single-post.php");
+                  $.ajax({
+                    type: 'POST',
+                    url: 'proses-input.php', // Change this to the actual processing file
+                    data: {
+                      isi_komen: isi_komen,
+                      nama: nama,
+                      id_berita: id_berita,
+                      action: action
+                    },
+                    success: function(response) {
+                      $('#notification-comment').html(response).fadeIn();
+
+                      // Munculkan notifikasi selama 5 detik, lalu hilangkan
+                      setTimeout(function() {
+                        $('#notification-comment').fadeOut();
+                      }, 3000);
+
+                      $('#comment').val('');
+                      $('#name-comment').val('');
+                      $('#id_berita_comment').val('');
                     }
+                  });
                 });
-            });
-        });
-    </script>
+              });
+            </script>
+            <!-- ajax -->
 
           </div> <!-- end content box -->
         </div> <!-- end post content -->
