@@ -51,7 +51,7 @@
 
 						<a class="btn btn-primary" style="margin-bottom:10px" href="tambah_penulis.php"> Tambah Penulis </a>
 
-						<table id="data-penulis" class="table table-striped table-bordered">
+						<table id="data-penulis" class="table table-striped table-bordered border-top">
 							<thead>
 								<tr>
 									<th>No</th>

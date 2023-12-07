@@ -49,7 +49,7 @@
 
                         <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_berita.php"> Tambah Berita </a>
 
-                        <table id="data-berita" class="table table-striped table-bordered">
+                        <table id="data-berita" class="table table-striped table-bordered border-top">
                             <thead>
                                 <tr>
                                     <th>No</th>

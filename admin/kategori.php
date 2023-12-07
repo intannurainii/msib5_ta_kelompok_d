@@ -49,7 +49,7 @@
 
                         <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_kategori.php"> Tambah Kategori </a>
 
-                        <table id="data-kategori" class="table table-striped table-bordered">
+                        <table id="data-kategori" class="table table-striped table-bordered border-top">
                             <thead>
                                 <tr>
                                     <th style="width:5%">No</th>

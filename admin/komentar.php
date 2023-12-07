@@ -49,7 +49,7 @@
 						$query = mysqli_query($conn, "SELECT * FROM komen ORDER BY id_komen ASC");
 						?>
 
-						<table id="data-komen" class="table table-striped table-bordered">
+						<table id="data-komen" class="table table-striped table-bordered border-top">
 							<thead>
 								<tr>
 									<th>No</th>
