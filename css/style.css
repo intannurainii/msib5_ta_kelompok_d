@@ -4969,7 +4969,10 @@ dd {
     object-fit: cover!important;
 }
 
-li.active a{
+li.active>a{
 	color: #2D95E3!important;
+}
+#back-to-top{
+	background-color: #2D95E3;
 }
 /* side bar */

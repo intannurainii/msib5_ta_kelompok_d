@@ -1,6 +1,3 @@
-<?php
-$currentPage = basename($_SERVER['SCRIPT_NAME']);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,6 +70,7 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
     if ($result_kategori = mysqli_fetch_array($sql_berita_kategori)) {
 
       $nama_kategori = $result_kategori['nama_kategori'];
+      $currentCategories = $nama_kategori;
     ?>
       <?php include "navbar.php" ?>
 

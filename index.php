@@ -1,5 +1,4 @@
 <?php
-$currentPage = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 include "koneksi.php" ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -400,7 +399,6 @@ include "koneksi.php" ?>
           }
           ?>
         </div> <!-- end slider -->
-
       </section> <!-- end carousel posts -->
 
       <!-- Posts from categories -->
@@ -428,7 +426,7 @@ include "koneksi.php" ?>
               $result_berita = mysqli_fetch_array($sql_berita);
               $judul_berita = $result_berita['judul_berita'];
               $nama_penulis = $result_berita['nama_penulis'];
-            $id_penulis = $result_berita['id_penulis'];
+              $id_penulis = $result_berita['id_penulis'];
               $tanggal_publish = $result_berita['tanggal_publish'];
               $gambar_berita = $result_berita['gambar_berita'];
               $id_berita = $result_berita['id_berita'];

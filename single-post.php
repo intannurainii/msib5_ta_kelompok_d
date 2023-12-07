@@ -1,6 +1,3 @@
-<?php
-$currentPage = 'single-post';
-?>
 <!DOCTYPE html>
 <html lang="en">
 

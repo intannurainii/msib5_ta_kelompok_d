@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $result = mysqli_query($conn, "INSERT INTO `komen` (`id_berita`, `nama`, `isi_komen`) VALUES ('$id_berita','$nama','$isi');");
 
             if ($result) {
-                echo '<div class="alert alert-success" role="alert">Your message has been sent successfully</div>';
+                echo '<div class="alert alert-success" role="alert">Your reply has been successfully sent</div>';
             } else {
                 echo '<div class="alert alert-danger" role="alert">Failed to send message</div>';
             }

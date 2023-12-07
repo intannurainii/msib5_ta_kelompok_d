@@ -1,4 +1,3 @@
-<?php $currentPage = basename($_SERVER['SCRIPT_FILENAME'], '.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 

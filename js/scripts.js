@@ -302,11 +302,14 @@
       center: false,
       items: 1,
       loop: true,
+      autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
       nav: true,
       dots: false,
       margin: 30,
       lazyLoad: true,
-      navSpeed: 500,
+      navSpeed: 800,
       navText: ['<i class="ui-arrow-left">','<i class="ui-arrow-right">'],
       responsive:{
         768:{
@@ -323,11 +326,14 @@
       center: false,
       items: 1,
       loop: true,
+            autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
       nav: true,
       dots: false,
       margin: 20,
       lazyLoad: true,
-      navSpeed: 500,
+      navSpeed: 800,
       navText: ['<i class="ui-arrow-left">','<i class="ui-arrow-right">'],
       responsive:{
         768:{
