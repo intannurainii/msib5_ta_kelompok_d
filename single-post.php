@@ -275,18 +275,21 @@
             </article> <!-- end standard post -->
 
             <!-- Comments -->
+            <div id="tampil">
             <div class="entry-comments">
               <div class="title-wrap title-wrap--line">
                 <?php
                 include 'koneksi.php';
-                $query = mysqli_query($conn, "SELECT * FROM komen Where id_berita = $id_berita ");
-                $data_komen = mysqli_query($conn, "SELECT * FROM komen where id_berita=$id_berita");
-                $jumlah_komen = mysqli_num_rows($data_komen);
+                $sql = "SELECT * FROM komen Where id_berita = $id_berita ";
+                $hasil=mysqli_query($conn,$sql);
+                $jumlah_komen = mysqli_num_rows($hasil);
+               
                 ?>
                 <h3 class="section-title"><?php echo $jumlah_komen; ?> comments</h3>
               </div>
               <?php
               while ($result = mysqli_fetch_array($query)) {
+                
               ?>
                 <ul class="comment-list">
                   <li class="comment">
@@ -310,13 +313,14 @@
               }
               ?>
             </div> <!-- end comments -->
+            </div>
 
             <!-- Comment Form -->
             <div id="respond" class="comment-respond">
               <div class="title-wrap">
                 <h5 class="comment-respond__title section-title">Leave a Reply</h5>
               </div>
-              <form id="form" class="comment-form" method="post" action="proses-input.php">
+              <form id="form" class="comment-form" method="post">
                 <p class="comment-form-comment">
                   <label for="comment">Comment</label>
                   <textarea id="comment" name="isi_komen" rows="5" required="required"></textarea>
@@ -333,12 +337,31 @@
                 </div>
 
                 <p class="comment-form-submit">
-                  <input type="submit" id="komen" name="komen" class="btn btn-lg btn-color" value="Post a Comment">
+                  <input type="submit" id="Submit" name="submit" class="btn btn-lg btn-color" value="Post a Comment">
                 </p>
 
               </form>
             </div> <!-- end comment form -->
+            <script type="text/javascript">
+        $(document).ready(function(){
 
+         $('tampil').load("single-post.php");
+
+            $("Submit").click(function(){
+                var data = $('#form').serialize();
+                $.ajax({
+                    type	: 'POST',
+                    url	: "proses-komen.php",
+                    data: data,
+
+                    cache	: false,
+                    success	: function(data){
+                        $('tampil').load("single-post.php");
+                    }
+                });
+            });
+        });
+    </script>
 
           </div> <!-- end content box -->
         </div> <!-- end post content -->
