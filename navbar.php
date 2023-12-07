@@ -14,7 +14,7 @@
                             <li <?php echo ($currentPage == 'index') ? 'class="active"' : ''; ?>>
                                 <a href="index.php">Home</a>
                             </li>
-                            <li class="nav__dropdown" <?php echo ($currentPage == 'categories') ? 'class="active"' : ''; ?>>
+                            <li class="nav__dropdown <?php echo ($currentPage == 'categories') ? 'active' : ''; ?>">
                                 <a href="#">Categories</a>
                                 <ul class="nav__dropdown-menu">
                                     <?php
@@ -26,7 +26,7 @@
                                         $id_kategori = $result['id_kategori'];
 
                                     ?>
-                                        <li <?php echo ($currentPage == $result['nama_kategori']) ? 'class="active"' : ''; ?>><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $menu_kategori ?></a></li>
+                                        <li><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $menu_kategori ?></a></li>
 
                                     <?php
                                     };

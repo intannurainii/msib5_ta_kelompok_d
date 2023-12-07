@@ -103,29 +103,30 @@
             <div class="row justify-content-center">
               <div class="col-lg-12">
                 <!-- Contact Form -->
-                <form id="contact-form" class="contact-form mt-4 mb-30" method="post" action="proses-input.php">
+                <form id="contact-form" class="contact-form mt-4 mb-30" method="post">
                   <div class="contact-name">
                     <label for="name">Name
                       <abbr title="required" class="required">*</abbr></label>
-                    <input name="name" id="name" type="text" />
+                    <input name="name" id="name-contact" type="text" />
                   </div>
                   <div class="contact-email">
                     <label for="email">Email
                       <abbr title="required" class="required">*</abbr></label>
-                    <input name="email" id="email" type="email" />
+                    <input name="email" id="email-contact" type="email" />
                   </div>
                   <div class="contact-subject">
                     <label for="email">Subject</label>
-                    <input name="subject" id="subject" type="text" />
+                    <input name="subject" id="subject-contact" type="text" />
                   </div>
                   <div class="contact-message">
                     <label for="message">Message
                       <abbr title="required" class="required">*</abbr></label>
-                    <textarea id="message" name="message" rows="" required="required"></textarea>
+                    <textarea id="message-contact" name="message" rows="" required="required"></textarea>
                   </div>
                   <input type="submit" id="contact" name="contact" class="btn btn-lg btn-color" value="Send Message">
                   <!-- <div id="msg" class="message"></div> -->
                 </form>
+                <div id="notification-contact"></div>
               </div>
             </div>
           </div>
@@ -134,6 +135,48 @@
       <!-- end post content -->
     </div>
     <!-- end main container -->
+    <!-- ajax -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('#contact-form').submit(function(e) {
+          e.preventDefault(); // Prevent the form from submitting in the traditional way
+
+          var name = $('#name-contact').val();
+          var email = $('#email-contact').val();
+          var subject = $('#subject-contact').val();
+          var message = $('#message-contact').val();
+          var action = 'contactForm';
+
+          $.ajax({
+            type: 'POST',
+            url: 'proses-input.php', // Change this to the actual processing file
+            data: {
+              name: name,
+              email: email,
+              subject: subject,
+              message: message,
+              action : action
+            },
+            success: function(response) {
+              $('#notification-contact').html(response).fadeIn();
+
+              // Munculkan notifikasi selama 5 detik, lalu hilangkan
+              setTimeout(function() {
+                $('#notification-contact').fadeOut();
+              }, 3000);
+
+              $('#name-contact').val('');
+              $('#email-contact').val('');
+              $('#subject-contact').val('');
+              $('#message-contact').val('');
+            }
+          });
+        });
+      });
+    </script>
+    <!-- ajax -->
 
     <!-- Footer -->
     <?php include "footer.php" ?>
