@@ -78,12 +78,14 @@
                     e.preventDefault(); // Prevent the form from submitting in the traditional way
 
                     var email = $('#email-sidebar').val();
+                    var action = 'newsLetter';
 
                     $.ajax({
                         type: 'POST',
                         url: 'proses-input.php', // Change this to the actual processing file
                         data: {
-                            email: email
+                            email: email,
+                            action: action
                         },
                         success: function(response) {
                             $('#notification-sidebar').html(response).fadeIn();
