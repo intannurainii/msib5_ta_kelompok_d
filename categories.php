@@ -78,7 +78,7 @@
       <div class="container">
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
-            <a href="index.html" class="breadcrumbs__url">Home</a>
+            <a href="index.php" class="breadcrumbs__url">Home</a>
           </li>
           <li class="breadcrumbs__item breadcrumbs__item--current">
             <?php echo $nama_kategori ?>
