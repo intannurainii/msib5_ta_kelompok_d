@@ -143,10 +143,9 @@
                     Universitas Islam Sultan Agung
                     Semarang</p>
                   <ul class="social-icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100034984849959"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/intan-nur-aini-047122284/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/intannur.ainii/?hl=en"><i class="fa fa-instagram"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -165,7 +164,6 @@
                   </p>
                   <ul class="social-icons">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                   </ul>
@@ -186,7 +184,6 @@
                   </p>
                   <ul class="social-icons">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                   </ul>
@@ -208,7 +205,6 @@
                   </p>
                   <ul class="social-icons">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                   </ul>
