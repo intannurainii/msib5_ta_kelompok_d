@@ -279,42 +279,45 @@
 
             <!-- Comments -->
             <div id="tampil">
-              <div class="entry-comments">
-                <div class="title-wrap title-wrap--line">
+              <div class="entry-comments" id="komen">
+                <div class="title-wrap title-wrap--line" id="total_komen">
                   <?php
                   include 'koneksi.php';
-                  $sql = "SELECT * FROM komen Where id_berita = $id_berita ";
+                  $sql = "SELECT * FROM komen Where id_berita = $id_berita order by tgl desc";
                   $hasil = mysqli_query($conn, $sql);
                   $jumlah_komen = mysqli_num_rows($hasil);
 
                   ?>
                   <h3 class="section-title"><?php echo $jumlah_komen; ?> comments</h3>
                 </div>
-                <?php
-                while ($result = mysqli_fetch_array($hasil)) {
+                <div id="komen-wrapper">
+                  <?php
+                  while ($result = mysqli_fetch_array($hasil)) {
 
-                ?>
-                  <ul class="comment-list">
-                    <li class="comment">
-                      <div class="comment-body">
-                        <div class="comment-avatar">
-                          <img alt="" src="img/content/single/komen1.jpg" height="42" width="42">
-                        </div>
-                        <div class="comment-text">
-                          <h6 class="comment-author">
-                            <p><?= $result['nama']; ?></p>
-                          </h6>
-                          <div class="comment-metadata">
-                            <a href="#" class="comment-date"><?= $result['tgl']; ?></a>
+                  ?>
+
+                    <ul class="comment-list">
+                      <li class="comment">
+                        <div class="comment-body">
+                          <div class="comment-avatar">
+                            <img alt="" src="img/content/single/komen1.jpg" height="42" width="42">
                           </div>
-                          <p><?php echo $result['isi_komen']; ?></p>
+                          <div class="comment-text">
+                            <h6 class="comment-author">
+                              <p><?= $result['nama']; ?></p>
+                            </h6>
+                            <div class="comment-metadata">
+                              <a href="#" class="comment-date"><?= $result['tgl']; ?></a>
+                            </div>
+                            <p><?php echo $result['isi_komen']; ?></p>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  </ul>
-                <?php
-                }
-                ?>
+                      </li>
+                    </ul>
+                  <?php
+                  }
+                  ?>
+                </div>
               </div> <!-- end comments -->
             </div>
 
@@ -330,7 +333,6 @@
                 </p>
 
                 <div class="row row-20">
-                  <input name="id_berita" id="id_berita_comment" type="hidden" value="<?php echo $id_berita ?>">
                   <div class="col-lg-12">
                     <label for="name">Name: *</label>
                     <input name="nama" id="name-comment" type="text">
@@ -342,6 +344,7 @@
                 <p class="comment-form-submit">
                   <input type="submit" id="Submit" name="submit" class="btn btn-lg btn-color" value="Post a Comment">
                 </p>
+                <input name="id_berita" id="id_berita_comment" type="hidden" value="<?php echo $id_berita ?>">
 
               </form>
               <div id="notification-comment"></div>
@@ -369,16 +372,19 @@
                       action: action
                     },
                     success: function(response) {
-                      $('#notification-comment').html(response).fadeIn();
+                      console.log(response.message);
+                      console.log(response.komen);
+                      $('#notification-comment').html(response.message).fadeIn();
+                      $('#total_komen').html(response.total_komen).fadeIn();
+                      $('#komen-wrapper').prepend(response.komen).fadeIn();
 
                       // Munculkan notifikasi selama 5 detik, lalu hilangkan
                       setTimeout(function() {
                         $('#notification-comment').fadeOut();
-                      }, 3000);
+                      }, 30000);
 
                       $('#comment').val('');
                       $('#name-comment').val('');
-                      $('#id_berita_comment').val('');
                     }
                   });
                 });

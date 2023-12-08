@@ -4981,4 +4981,8 @@ li.active>a{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+#komen-wrapper{
+	max-height: 285px;
+	overflow-y: auto;
+}
 /* side bar */
