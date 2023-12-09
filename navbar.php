@@ -2,6 +2,14 @@
 $currentPage = basename($_SERVER['SCRIPT_FILENAME'], '.php');
 
 ?>
+<?php 
+session_start();
+include 'koneksi.php';
+if(isset($_SESSION['kd_cs'])){
+
+	$kode_cs = $_SESSION['kd_cs'];
+}
+?>
 <header class="nav">
     <div class="nav__holder nav--sticky">
         <div class="container relative">
@@ -44,7 +52,34 @@ $currentPage = basename($_SERVER['SCRIPT_FILENAME'], '.php');
                         <li <?php echo ($currentPage == 'contact') ? 'class="active"' : ''; ?>>
                             <a href="contact.php">Contact Us</a>
                         </li>
+                     
+                        <?php 
+                        if(!isset($_SESSION['user'])){
+                            ?>
+    
+                        <li class="nav__dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="bi bi-file-person-fill"></i> Akun <span class="caret"></span></a>
+							<ul class="nav__dropdown-menu">
+								<li><a href="user_login.php">Login</a></li>
+								<li><a href="register.php">Register</a></li>
+							</ul>
+						</li>
+                        <?php 
+					}else{
+						?>
+						<li class="nav__dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> <?= $_SESSION['user']; ?> <span class="caret"></span></a>
+							<ul class="nav__dropdown-menu">
+								<li><a href="proses/logout.php">LogOut</a></li>
+							</ul>
+						</li>
+
+						<?php 
+					}
+					?>
                     </ul>
+
+                    
                     <!-- end menu -->
                 </nav>
                 <!-- end nav-wrap -->
