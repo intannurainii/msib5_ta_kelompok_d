@@ -4985,4 +4985,16 @@ li.active>a{
 	max-height: 285px;
 	overflow-y: auto;
 }
+li.like-view{
+	display: flex;
+}
+.like{
+	display: flex;
+	align-items: center;
+	margin-left: 16px;
+}
+#like-button{
+	font-size: 16px;
+	color: red;
+}
 /* side bar */

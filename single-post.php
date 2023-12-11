@@ -1,5 +1,5 @@
 <?php
-echo $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
+$curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +28,13 @@ echo $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
 
   <!-- Lazyload (must be placed in head in order to work) -->
   <script src="js/lazysizes.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- icon -->
+
 
 </head>
 
@@ -44,7 +51,10 @@ echo $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
   <div class="content-overlay"></div>
   <main class="main oh" id="main">
     <!-- Navigation -->
-    <?php include "navbar.php" ?> <!-- end navigation -->
+    <?php include "navbar.php";
+    include "functions.php"
+
+    ?> <!-- end navigation -->
     <?php
 
     include "BgColorByCategory.php";
@@ -119,6 +129,24 @@ echo $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
                 <h1 class="single-post__entry-title">
                   <?php echo $judul_berita ?>
                 </h1>
+                <?php
+                if (isUserLoggedIn()) {
+                  $id_customer = $_SESSION['kd_cs'];
+                  // check liked
+                  $query_cek_like = "SELECT id FROM like_berita WHERE id_customer = '$id_customer' AND id_berita = '$id_berita'";
+                  $result_cek_like = mysqli_query($conn, $query_cek_like);
+                  $isLiked = ($result_cek_like && $result_cek_like->num_rows > 0);
+                  $query_hitung_like = "SELECT COUNT(*) AS hitung_like FROM like_berita WHERE id_berita = '$id_berita'";
+                  $result_hitung_like = mysqli_query($conn, $query_hitung_like);
+                  $total_like = ($result_hitung_like) ? $result_hitung_like->fetch_assoc()['hitung_like'] : 0;
+                  // Assuming you have Boxicons loaded in your project
+                  $likeIconClass = ($isLiked) ? 'bx bxs-heart' : 'bx bx-heart';
+
+                  // check liked
+
+                }
+                ?>
+
 
                 <div class="entry__meta-holder">
                   <ul class="entry__meta">
@@ -132,13 +160,72 @@ echo $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
                   </ul>
 
                   <ul class="entry__meta">
-                    <li class="entry__meta-views">
-                      <i class="ui-eye"></i>
-                      <span><?php echo $views ?></span>
+                    <li class="like-view">
+                      <div class="view">
+                        <i class="ui-eye"></i>
+                        <span><?php echo $views ?></span>
+                      </div>
+                      <?php if (isUserLoggedIn()) : ?>
+                      <div class="like">
+                          <i id='like-button' class='<?php echo $likeIconClass ?> ml-2'></i>
+                          <span class='like-count'><?php echo $total_like ?></span>
+                        </div>
+                        <?php endif; ?>
                     </li>
                   </ul>
                 </div>
               </div> <!-- end entry header -->
+
+              <!-- script like -->
+              <?php
+              echo
+              "<script>
+                  $(document).ready(function() {
+                    $('#like-button').click(function() {
+                      const id_berita = $id_berita;
+                      const button = $(this);
+
+                      $.ajax({
+                        type: 'POST',
+                        url: 'like_berita.php',
+                        data: {
+                          id_berita: id_berita
+                        },
+                        success: function(response) {
+                          // alert(response);
+                          $('#like-button').toggleClass('bx-heart bxs-heart');
+
+                          // Update the like count
+                          updateLikeCount(id_berita);
+                        },
+                        error: function() {
+                          alert('Error liking/unliking news.');
+                        }
+                      });
+                    });
+
+                    function updateLikeCount(id_berita) {
+                      const likeCountElement = $('.like-count');
+                      if (likeCountElement.length) {
+                        $.ajax({
+                          type: 'GET',
+                          url: 'total_like_berita.php',
+                          data: {
+                            id_berita: id_berita
+                          },
+                          success: function(likeCount) {
+                            likeCountElement.text(likeCount);
+                          },
+                          error: function() {
+                            console.error('Error getting like count.');
+                          }
+                        });
+                      }
+                    }
+                  });
+                </script>"
+              ?>
+              <!-- script like -->
 
               <div class="entry__img-holder">
                 <img src="img/berita/<?php echo $gambar_berita ?>" alt="" class="entry__img">
@@ -164,12 +251,12 @@ echo $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
                       </a>
 
                     </div>
+                    <!-- share fb -->
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v18.0&appId=342624831719798" nonce="49iQ42bj"></script>
+                    <div class="fb-share-button" data-href="<?php echo $curent_url ?>" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan Yuk</a></div>
+                    <!-- share fb -->
                   </div>
-                  <!-- share fb -->
-                  <div id="fb-root"></div>
-                  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v18.0&appId=342624831719798" nonce="49iQ42bj"></script>
-                  <div class="fb-share-button" data-href="<?php echo $curent_url ?>" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan Yuk</a></div>
-                  <!-- share fb -->
                 </div> <!-- share -->
 
 
