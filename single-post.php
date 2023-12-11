@@ -1,8 +1,11 @@
+<?php
+echo $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Deus | Single Post</title>
+  <title>Single Post</title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -147,7 +150,7 @@
                 <div class="entry__share">
                   <div class="sticky-col">
                     <div class="socials socials--rounded socials--large">
-                      <a class="social social-facebook" href="#" title="facebook" target="_blank" aria-label="facebook">
+                      <a class="social social-facebook" id="shareFb" href="#" title="facebook" target="_blank" aria-label="facebook">
                         <i class="ui-facebook"></i>
                       </a>
                       <a class="social social-twitter" href="#" title="twitter" target="_blank" aria-label="twitter">
@@ -159,9 +162,16 @@
                       <a class="social social-pinterest" href="#" title="pinterest" target="_blank" aria-label="pinterest">
                         <i class="ui-pinterest"></i>
                       </a>
+
                     </div>
                   </div>
+                  <!-- share fb -->
+                  <div id="fb-root"></div>
+                  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v18.0&appId=342624831719798" nonce="49iQ42bj"></script>
+                  <div class="fb-share-button" data-href="<?php echo $curent_url ?>" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan Yuk</a></div>
+                  <!-- share fb -->
                 </div> <!-- share -->
+
 
                 <div class="entry__article">
                   <p>
@@ -199,7 +209,8 @@
                 </div>
               </div> <!-- end newsletter wide -->
               <!-- ajax -->
-              <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+              <script src="https://code.jquery.com/jquery-3.6.4.min.js">
+              </script>
 
               <script>
                 $(document).ready(function() {
@@ -426,6 +437,7 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/modernizr.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="social-share.js"></script>
 
 </body>
 
