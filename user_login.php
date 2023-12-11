@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Deus | About</title>
+  <title>Deus | Login User</title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -24,6 +24,9 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Lazyload (must be placed in head in order to work) -->
   <script src="js/lazysizes.min.js"></script>
@@ -78,35 +81,40 @@
           </div>
         </div>
       </section>
-      <section class="section" >
-      <div class="container" style="padding-bottom: 250px;">
-		<h2 style=" width: 100%; border-bottom: 4px solid #2D95E3"><b>Login</b></h2>
-<br>
-<br>
-<br>
-<form action="proses/login.php" method="POST">
-		<div class="form-group">
-			<label for="exampleInputEmail1">username</label>
-			<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username" style="width: 500px;">
-		</div>
-		
-		<div class="form-group">
-			<label for="exampleInputEmail1">Password</label>
-			<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password" name="pass" style="width: 500px;">
-		</div>
-		<button type="submit" class="btn btn-success">Login</button>
-		<a href="register.php" class="btn btn-primary">Daftar</a>
-	</form>
-</div>
 
-</section>
+      <section class="section" >
+        <div class="container" style="padding-bottom: 200px;">  
+          <h2 style=" width: 100%; border-bottom: 4px solid #2D95E3">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <b>Login</b>
+          </h2>
+          <br>
+          <br>
+          <br>
+          <form action="proses/login.php" method="POST">
+            <div class="form-group" style="margin-left:150px">
+              <img src="login/images/img-01.png" alt="IMG" style="float:left; margin-right:100px"><br>
+              <label for="exampleInputEmail1">Username</label><br>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username" style="width: 500px;"><br>
+
+              <label for="exampleInputEmail1">Password</label><br>
+              <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password" name="pass" style="width: 500px;"><br>
+
+              <button type="submit" class="btn btn-success" style="padding:5px 10px">Login</button>
+              <a href="register.php" class="btn btn-primary" style="padding:5px 10px">Daftar</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    
     <!-- Footer -->
     <?php include "footer.php" ?>
     <!-- end footer -->
 
     <div id="back-to-top">
       <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
-      </div>
+    </div>
 
   </main> <!-- end main-wrapper -->
 

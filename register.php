@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Deus | About</title>
+  <title>Deus | Register</title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -24,6 +24,9 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Lazyload (must be placed in head in order to work) -->
   <script src="js/lazysizes.min.js"></script>
@@ -78,72 +81,76 @@
           </div>
         </div>
       </section>
+      
       <section class="section" >
-      <div class="container" style="padding-bottom: 250px;">
-	<h2 style=" width: 100%; border-bottom: 4px solid #2D95E3"><b>Register</b></h2>
-    <br>
-    <br>
-    <br>
-	<form action="proses/register.php" method="POST">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Nama</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nama" name="nama" required>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Email</label>
-					<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email" required>
-				</div>
-			</div>
-		</div>
+        <div class="container" style="padding-bottom: 250px;">
+          <h2 style=" width: 100%; border-bottom: 4px solid #2D95E3">
+            <i class="fa-solid fa-address-card"></i>
+            <b>Register</b>
+          </h2>
+          <br>
+          <br>
+          <br>
+          <form action="proses/register.php" method="POST">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Nama</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nama" name="nama" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email" required>
+                </div>
+              </div>
+            </div>
 
-		<div class="row">
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">username</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Username" name="username" required >
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">No Tepl</label>
-					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="+62" name="telp" required >
-				</div>
-			</div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">username</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Username" name="username" required >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">No Tepl</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="+62" name="telp" required >
+                </div>
+              </div>
+            </div>
 
-		</div>
 
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Konfirmasi Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Konfirmasi Password" name="konfirmasi" required>
+                </div>
+              </div>
+            </div><br>
 
-		<div class="row">
-			
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Password</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleInputPassword1">Konfirmasi Password</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Konfirmasi Password" name="konfirmasi" required>
-				</div>
-			</div>
-		</div>
+            <button type="submit" class="btn btn-success" style="padding:5px 10px">Register</button>
+          </form>
+        </div>
+      </section>
+    </div>
 
-		<button type="submit" class="btn btn-success">Register</button>
-	</form>
-</div>
-</section>
     <!-- Footer -->
     <?php include "footer.php" ?>
     <!-- end footer -->
 
     <div id="back-to-top">
       <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
-      </div>
+    </div>
 
   </main> <!-- end main-wrapper -->
 
