@@ -44,7 +44,7 @@
                     <div class="col-md-12">
                         <?php
                         include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT * from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis ORDER BY id_berita ASC");
+                        $query = mysqli_query($conn, "SELECT *, COUNT(lb.id_berita) as jumlah_like from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis left join like_berita as lb on b.id_berita = lb.id_berita GROUP BY b.id_berita ORDER BY jumlah_like DESC");
                         ?>
 
                         <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_berita.php"> Tambah Berita </a>
@@ -59,6 +59,7 @@
                                     <th>Content</th>
                                     <th>Tanggal Publish</th>
                                     <th>Penulis</th>
+                                    <th>Like</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -79,6 +80,7 @@
                                     <td id="isi_berita_admin"><?php echo $data["isi_berita"] ?></td>
                                     <td><?php echo $data["tanggal_publish"] ?></td>
                                     <td><?php echo $data["nama_penulis"] ?></td>
+                                    <td><?php echo $data["jumlah_like"] ?></td>
                                     <td> <a href="edit_berita.php?id_berita=<?php echo $data["id_berita"] ?>" class="btn btn-warning" style="padding:2px 12px; margin-bottom:10px"> Edit </a>
                                     <a href="proses_hapus.php?berita=<?php echo $data["id_berita"] ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data <?php echo $judul_berita ?>?')" class="btn btn-danger" style="padding:2px"> Delete </a></td>
                                 </tr>
