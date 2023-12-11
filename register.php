@@ -81,7 +81,7 @@
           </div>
         </div>
       </section>
-      
+
       <section class="section" >
         <div class="container" style="padding-bottom: 250px;">
           <h2 style=" width: 100%; border-bottom: 4px solid #2D95E3">
@@ -110,13 +110,13 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputPassword1">username</label>
+                  <label for="exampleInputPassword1">Username</label>
                   <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Username" name="username" required >
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="exampleInputPassword1">No Tepl</label>
+                  <label for="exampleInputPassword1">No Telp</label>
                   <input type="text" class="form-control" id="exampleInputPassword1" placeholder="+62" name="telp" required >
                 </div>
               </div>
