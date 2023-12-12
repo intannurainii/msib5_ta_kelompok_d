@@ -143,8 +143,8 @@
                     Universitas Islam Sultan Agung
                     Semarang</p>
                   <ul class="social-icons">
-                    <li><a href="https://www.facebook.com/profile.php?id=100034984849959"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/intan-nur-aini-047122284/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/login.php/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/home"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="https://www.instagram.com/intannur.ainii/?hl=en"><i class="fa fa-instagram"></i></a></li>
                   </ul>
                 </div>
@@ -163,9 +163,9 @@
                     <br>Bali
                   </p>
                   <ul class="social-icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/login.php/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/home"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://instagram.com/krisss.nu?igshid=MzMyNGUyNmU2YQ"><i class="fa fa-instagram"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -183,9 +183,9 @@
                     <br>Palembang
                   </p>
                   <ul class="social-icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/login.php/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/home"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://instagram.com/trisatiaraa_?igshid=YTQwZjQ0NmI0OA=="><i class="fa fa-instagram"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -204,9 +204,9 @@
                     <br>Bandung
                   </p>
                   <ul class="social-icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/login.php/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/home"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://instagram.com/mr.adriansyah_?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a></li>
                   </ul>
                 </div>
               </div>

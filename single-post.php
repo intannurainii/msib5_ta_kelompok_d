@@ -237,16 +237,13 @@ $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
                 <div class="entry__share">
                   <div class="sticky-col">
                     <div class="socials socials--rounded socials--large">
-                      <a class="social social-facebook" id="shareFb" href="#" title="facebook" target="_blank" aria-label="facebook">
-                        <i class="ui-facebook"></i>
-                      </a>
-                      <a class="social social-twitter" href="#" title="twitter" target="_blank" aria-label="twitter">
+                      <a class="social social-twitter" href="https://twitter.com/intent/tweet" title="twitter" target="_blank" aria-label="twitter">
                         <i class="ui-twitter"></i>
                       </a>
-                      <a class="social social-google-plus" href="#" title="google" target="_blank" aria-label="google">
+                      <a class="social social-google-plus" href="https://support.google.com/answer/2451065?hl=en" title="google" target="_blank" aria-label="google">
                         <i class="ui-google"></i>
                       </a>
-                      <a class="social social-pinterest" href="#" title="pinterest" target="_blank" aria-label="pinterest">
+                      <a class="social social-pinterest" href="https://www.pinterest.com/pin/create/button/?description=LinkedIn%20Share%20Button%3A%20How%20to%20Add%20to%20Your%20Website%20-%20ShareThis&media=https%3A%2F%2Fsharethis.com%2Fwp-content%2Fuploads%2F2017%2F02%2Finline.jpg&url=https%3A%2F%2Fsharethis.com%2Fsocial-media-buttons%2Flinkedin-share-button%2F" title="pinterest" target="_blank" aria-label="pinterest">
                         <i class="ui-pinterest"></i>
                       </a>
 
@@ -256,8 +253,8 @@ $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v18.0&appId=342624831719798" nonce="49iQ42bj"></script>
                     <div class="fb-share-button" data-href="<?php echo $curent_url ?>" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan Yuk</a></div>
                     <!-- share fb -->
-                  </div>
-                </div> <!-- share -->
+                </div>
+              </div> <!-- share -->
 
 
                 <div class="entry__article">
