@@ -14,7 +14,7 @@
     <!-- Sidebar -->
 	<section id="sidebar">
 		<a href="#" class="nav-link" id="brand">
-		<img src="../img/logo_default.png"  alt="logo" width="140px" />
+			<img src="../img/logo_default.png"  alt="logo" width="140px"/>
 			<span class="text" style="margin-left: 70px;">Admin</span>
 		</a>
 		<ul class="side-menu top">
