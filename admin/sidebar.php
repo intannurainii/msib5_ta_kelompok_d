@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../img/favicon.png"/>
     <title>Sidebar</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -13,8 +14,8 @@
     <!-- Sidebar -->
 	<section id="sidebar">
 		<a href="#" class="nav-link" id="brand">
-			<i class='bx bxs-smile'></i>
-			<span class="text">Admin</span>
+		<img src="../img/logo_default.png"  alt="logo" width="140px" />
+			<span class="text" style="margin-left: 70px;">Admin</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="<?php if($page=='index'){echo 'active';} ?>">
