@@ -1,9 +1,10 @@
         <?php
-        $query_berita = "SELECT *, COUNT(like_berita.id_berita) AS jumlah_like
-                        FROM berita LEFT JOIN kategori on berita.id_kategori = kategori.id_kategori LEFT JOIN penulis on penulis.id_penulis = berita.id_penulis
+        $query_berita = "SELECT berita.*, kategori.*, penulis.*, COUNT(like_berita.id_berita) AS jumlah_like FROM berita 
+                        LEFT JOIN kategori on berita.id_kategori = kategori.id_kategori 
+                        LEFT JOIN penulis on penulis.id_penulis = berita.id_penulis
                         LEFT JOIN like_berita ON berita.id_berita = like_berita.id_berita
-                        GROUP BY berita.id_berita  
-                        ORDER BY `jumlah_like` DESC limit 5";
+                        GROUP BY berita.id_berita 
+                        ORDER BY jumlah_like DESC limit 5";
         $sql_berita = mysqli_query($conn, $query_berita);
         ?>
 
