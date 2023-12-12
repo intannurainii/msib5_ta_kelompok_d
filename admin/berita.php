@@ -47,7 +47,12 @@
                     <div class="col-md-12">
                         <?php
                         include '../koneksi.php';
-                        $query = mysqli_query($conn, "SELECT *, COUNT(lb.id_berita) as jumlah_like from berita as b join kategori as kat on b.id_kategori = kat.id_kategori join penulis as p on b.id_penulis = p.id_penulis left join like_berita as lb on b.id_berita = lb.id_berita GROUP BY b.id_berita ORDER BY jumlah_like DESC");
+                        $query = mysqli_query($conn, "SELECT berita.*, kategori.*, penulis.*, COUNT(like_berita.id_berita) AS jumlah_like FROM berita 
+                        LEFT JOIN kategori on berita.id_kategori = kategori.id_kategori 
+                        LEFT JOIN penulis on penulis.id_penulis = berita.id_penulis
+                        LEFT JOIN like_berita ON berita.id_berita = like_berita.id_berita
+                        GROUP BY berita.id_berita 
+                        ORDER BY jumlah_like DESC;");
                         ?>
 
                         <a class="btn btn-primary" style="margin-bottom:10px" href="tambah_berita.php"> Tambah Berita </a>
