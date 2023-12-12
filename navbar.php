@@ -1,13 +1,14 @@
+
+
 <?php
 $currentPage = basename($_SERVER['SCRIPT_FILENAME'], '.php');
-
 ?>
-<?php 
+<?php
 session_start();
 include 'koneksi.php';
-if(isset($_SESSION['kd_cs'])){
+if (isset($_SESSION['kd_cs'])) {
 
-	$kode_cs = $_SESSION['kd_cs'];
+    $kode_cs = $_SESSION['kd_cs'];
 }
 ?>
 <header class="nav">
@@ -21,7 +22,7 @@ if(isset($_SESSION['kd_cs'])){
                 </a>
 
                 <!-- Nav-wrap -->
-                <nav class="flex-child nav__wrap d-none d-lg-block">
+                <nav class="flex-child nav__wrap d-none d-lg-flex justify-content-between">
                     <ul class="nav__menu">
                         <li <?php echo ($currentPage == 'index') ? 'class="active"' : ''; ?>>
                             <a href="index.php">Home</a>
@@ -36,7 +37,7 @@ if(isset($_SESSION['kd_cs'])){
                                 while ($result = mysqli_fetch_array($sql)) {
                                     $menu_kategori = $result['nama_kategori'];
                                     $id_kategori = $result['id_kategori'];
-                                    ?>
+                                ?>
                                     <?php echo ($currentPage !== 'categories') ? ($currentCategories = "") : ''; ?>
                                     <li <?php echo ($currentCategories == $menu_kategori) ? 'class="active"' : ''; ?>><a href="categories.php?kategori=<?php echo $id_kategori ?>"><?php echo $menu_kategori ?></a></li>
 
@@ -52,34 +53,36 @@ if(isset($_SESSION['kd_cs'])){
                         <li <?php echo ($currentPage == 'contact') ? 'class="active"' : ''; ?>>
                             <a href="contact.php">Contact Us</a>
                         </li>
-                     
-                        <?php 
-                        if(!isset($_SESSION['user'])){
-                            ?>
-    
-                        <li class="nav__dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="bi bi-file-person-fill"></i> Akun <span class="caret"></span></a>
-							<ul class="nav__dropdown-menu">
-								<li><a href="user_login.php">Login</a></li>
-								<li><a href="register.php">Register</a></li>
-							</ul>
-						</li>
-                        <?php 
-					}else{
-						?>
-						<li class="nav__dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> <?= $_SESSION['user']; ?> <span class="caret"></span></a>
-							<ul class="nav__dropdown-menu">
-								<li><a href="proses/logout.php">LogOut</a></li>
-							</ul>
-						</li>
 
-						<?php 
-					}
-					?>
+                    </ul>
+                    <ul class="nav__menu">
+                        <?php
+                        if (!isset($_SESSION['user'])) {
+                        ?>
+
+                            <li class="nav__dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class='bx bxs-user-circle'></i> Akun <span class="caret"></span></a>
+                                <ul class="nav__dropdown-menu">
+                                    <li><a href="user_login.php">Login</a></li>
+                                    <li><a href="register.php">Register</a></li>
+                                </ul>
+                            </li>
+                        <?php
+                        } else {
+                        ?>
+                            <li class="nav__dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-user"></i> <?= $_SESSION['user']; ?> <span class="caret"></span></a>
+                                <ul class="nav__dropdown-menu">
+                                    <li><a href="proses/logout.php">LogOut</a></li>
+                                </ul>
+                            </li>
+
+                        <?php
+                        }
+                        ?>
                     </ul>
 
-                    
+
                     <!-- end menu -->
                 </nav>
                 <!-- end nav-wrap -->
