@@ -11,7 +11,7 @@
                             <p class="copyright">
                                 &copy; <script>
                                     document.querySelector(".copyright").innerHTML += new Date().getFullYear();
-                                </script> Deus | Made by <a href="https://deothemes.com">DeoThemes</a>
+                                </script> ONews | Made by <a href="about.php">OneNews</a>
                             </p>
                             <div class="socials socials--large socials--rounded mb-24">
                                 <a href="https://www.facebook.com/detikcom/" class="social social-facebook" aria-label="facebook"><i class="ui-facebook"></i></a>
