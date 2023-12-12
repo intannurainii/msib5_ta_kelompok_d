@@ -99,7 +99,7 @@
 				<input type="checkbox" id="editors_picks" name="editors_picks" value="1">
 
 				<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:50px; margin-left:25%">
-				<button class="btn btn-secondary" style="margin-top:50px; margin-left:3%" onclick="window.location.href='berita.php'">Cancel</button>
+				<a class="btn btn-secondary" style="margin-top:50px; margin-left:3%" href="berita.php">Cancel</a>
 			</form>
 			<!-- Tambahkan skrip JavaScript -->
 <script>

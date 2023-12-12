@@ -51,7 +51,7 @@
                 <input id="nama_kategori" type="text" onkeyup="checkform()" name="nama_kategori" class="form-control">
                 
                 <input id="submit" class="btn btn-primary" type="submit" name="submit" value="Simpan" style="margin-top:20px; margin-left:380px">    
-                <button class="btn btn-secondary" style="margin-top:20px; margin-left:3px" onclick="window.location.href='kategori.php'">Cancel</button>
+                <a class="btn btn-secondary" style="margin-top:20px; margin-left:3px" href="kategori.php">Cancel</a>
             </form>
         </main>
 	</section>
