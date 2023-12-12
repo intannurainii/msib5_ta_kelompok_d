@@ -6,7 +6,7 @@
                     <div class="col-lg-3 col-md-6">
                         <aside class="widget widget-logo">
                             <a href="index.php">
-                                <img src="img/logo_default_white.png" srcset="img/logo_default_white.png 1x, img/logo_default_white@2x.png 2x" class="logo__img" alt="">
+                                <img src="img/logo_default_white.png" srcset="img/logo_default_white.png 1x, img/logo_default_white@2x.png 2x" class="logo__img" alt="" width="260px">
                             </a>
                             <p class="copyright">
                                 &copy; <script>
