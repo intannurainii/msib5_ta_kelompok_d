@@ -64,25 +64,10 @@
           <a href="register.php" class="breadcrumbs__url">Login</a>
         </li>
       </ul>
-    </div>
+    </div><br>
     
     <div class="main-container container" id="main-container">
-      <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/logindanregister.jpg)">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-              <div class="cta-content">
-                <br>
-                <br>
-                <h2><em>Login</em></h2>
-                <p>Silahkan Login !</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" >
+      <section class="section">
         <div class="container" style="padding-bottom: 200px;">  
           <h2 style=" width: 100%; border-bottom: 4px solid #2D95E3">
             <i class="fa-solid fa-right-to-bracket"></i>
