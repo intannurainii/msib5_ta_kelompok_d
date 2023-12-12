@@ -18,7 +18,7 @@ if (isset($_SESSION['kd_cs'])) {
 
                 <!-- Logo -->
                 <a href="index.php" class="logo">
-                    <img class="logo__img" src="img/logo_default.png" srcset="img/logo_default.png 1x, img/logo_default@2x.png 2x" alt="logo" />
+                    <img class="logo__img" src="img/logo_default.png" srcset="img/logo_default.png 1x, img/logo_default@2x.png 2x" alt="logo" width="140px" />
                 </a>
 
                 <!-- Nav-wrap -->
