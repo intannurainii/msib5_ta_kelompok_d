@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Deus | Contact</title>
+<title>OneNews | Contac Us</title>
 
   <meta charset="utf-8" />
   <!--[if IE

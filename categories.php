@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Deus | Categories</title>
+<title>OneNews | Category</title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->

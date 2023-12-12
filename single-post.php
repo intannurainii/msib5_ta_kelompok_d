@@ -5,7 +5,7 @@ $curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
 <html lang="en">
 
 <head>
-  <title>Single Post</title>
+<title>OneNews | Single Post</title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
