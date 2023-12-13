@@ -61,18 +61,12 @@
           <a href="index.php" class="breadcrumbs__url">Home</a>
         </li>
         <li class="breadcrumbs__item">
-          <a href="register.php" class="breadcrumbs__url">Login</a>
+          <a href="user_login.php" class="breadcrumbs__url">Login</a>
         </li>
       </ul>
     </div><br>
     
     <div class="main-container container" id="main-container">
-      <section class="section">
-        <div class="container" style="padding-bottom: 200px;">  
-          <h2 style=" width: 100%; border-bottom: 4px solid #2D95E3">
-            <i class="fa-solid fa-right-to-bracket"></i>
-            <b>Login</b>
-          </h2>
           <br>
           <br>
           <br>
@@ -92,8 +86,17 @@
         </div>
       </section>
     </div>
-    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <!-- Footer -->
+    <br>
+    <br>
+    <br>
+
     <?php include "footer.php" ?>
     <!-- end footer -->
 

@@ -4,7 +4,7 @@ include "koneksi.php" ?>
 <html lang="en">
 
 <head>
-  <title>OneNews | Home 1 Default</title>
+  <title>OneNews | Home </title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
