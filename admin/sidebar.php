@@ -11,6 +11,14 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+
+	<?php 
+	session_start();
+	if($_SESSION['status']!="login"){
+		header("location:../login/index.php?pesan=belum_login");
+	}
+	?>
+
     <!-- Sidebar -->
 	<section id="sidebar">
 		<a href="#" class="nav-link" id="brand" style="margin-left:50px">

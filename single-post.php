@@ -1,5 +1,5 @@
 <?php
-$curent_url = 'https://localhost.com' . $_SERVER['REQUEST_URI'];
+$curent_url = 'https://kampusmerdeka.kemdikbud.go.id/' . $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
