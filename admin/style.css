@@ -198,8 +198,9 @@ body {
 }
 
 #content main .box-info {
-	display: flex;
-	gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
 	margin-top: 36px;
 }
 #content main .box-info li {
