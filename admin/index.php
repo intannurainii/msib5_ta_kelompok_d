@@ -69,7 +69,7 @@
 							<p>Kategori</p>
 						</span>
 					</li>
-				</a><br>
+				</a>
 				<a href="penulis.php">
 					<li>
 						<i class='bx bxs-user' style="background:#FFE0D3; color:#FD7238"></i>

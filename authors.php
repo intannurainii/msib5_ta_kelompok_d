@@ -102,6 +102,7 @@
                 $gambar_berita = $result_kategori['gambar_berita'];
                 $isi_berita = $result_kategori['isi_berita'];
                 $id_berita = $result_kategori['id_berita'];
+                $id_kategori = $result_kategori['id_kategori'];
               ?>
                 <div class="col-md-6">
                   <article class="entry card">
